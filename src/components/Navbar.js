@@ -59,7 +59,7 @@ function Navbar() {
           <List>
             <ListItem>Home</ListItem>
             <ListItem>About Me</ListItem>
-            <ListItem>Works</ListItem>
+            <ListItem>Projects</ListItem>
             <ListItem>Contact</ListItem>
           </List>
         </Links>
