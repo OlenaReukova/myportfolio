@@ -51,7 +51,7 @@ const Desc = styled.p`
 `;
 
 const Button = styled.button`
-  background-color: grey;
+  background-color: #f45050;
   color: white;
   font-weight: 500;
   width: 100px;

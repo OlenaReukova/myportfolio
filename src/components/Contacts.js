@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Map from './Map';
 
 const Section = styled.div`
   height: 100vh;
@@ -72,7 +73,9 @@ const Contacts = () => {
             <Button>Send</Button>
           </Form>
         </Left>
-        <Right></Right>
+        <Right>
+          <Map></Map>
+        </Right>
       </Container>
     </Section>
   );
