@@ -51,7 +51,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-function Navbar() {
+const Navbar = () => {
   return (
     <Section>
       <Container>
@@ -70,6 +70,6 @@ function Navbar() {
       </Container>
     </Section>
   );
-}
+};
 
 export default Navbar;

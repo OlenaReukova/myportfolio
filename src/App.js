@@ -1,8 +1,9 @@
-import './App.css';
+import React from 'react';
+// import './App.css';
 import Hero from './components/Hero';
 import Who from './components/Who';
 import Works from './components/Works';
-import Contacts from './components/Contacts';
+import Contact from './components/Contact';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -28,7 +29,7 @@ function App() {
       <Hero />
       <Who />
       <Works />
-      <Contacts />
+      <Contact />
     </Container>
   );
 }

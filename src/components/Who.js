@@ -62,7 +62,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-function Who() {
+const Who = () => {
   return (
     <Section>
       <Container>
@@ -81,6 +81,6 @@ function Who() {
       </Container>
     </Section>
   );
-}
+};
 
 export default Who;
