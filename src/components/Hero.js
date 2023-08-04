@@ -10,9 +10,9 @@ const Section = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media only screen and (max-width: 768px) {
+  /* @media only screen and (max-width: 768px) {
     height: 200vh;
-  }
+  } */
 `;
 
 const Container = styled.div`
@@ -40,6 +40,7 @@ const Left = styled.div`
   @media only screen and (max-width: 768px) {
     flex: 1;
     align-items: center;
+    width: 80%;
   }
 `;
 
@@ -47,6 +48,7 @@ const Title = styled.h1`
   font-size: 74px;
 
   @media only screen and (max-width: 768px) {
+    font-size: 40px;
     text-align: center;
   }
 `;
@@ -84,6 +86,10 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 40px;
+  }
 `;
 
 const Right = styled.div`
@@ -106,18 +112,20 @@ const Img = styled.img`
   left: 0;
   right: 0;
   margin: auto;
-  animation: animate 2s infinite ease alternate;
+  /* animation: animate 2s infinite ease alternate; */
 
   @media only screen and (max-width: 768px) {
     width: 300px;
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
 
-  @keyframes animate {
+  /* @keyframes animate {
     to {
       transform: translateY(20px);
     }
-  }
+  } */
 `;
 
 const Hero = () => {
