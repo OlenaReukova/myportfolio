@@ -17,6 +17,13 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const Left = styled.div`
@@ -31,6 +38,7 @@ const Title = styled.h1`
   font-size: 74px;
   @media only screen and (max-width: 768px) {
     font-size: 40px;
+    text-align: center;
   }
 `;
 
@@ -65,6 +73,7 @@ const Subtitle = styled.h2`
 const Desc = styled.p`
   font-size: 24px;
   color: lightgray;
+  padding: 10px;
 `;
 
 const Button = styled.button`
