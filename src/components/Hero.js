@@ -137,11 +137,9 @@ const Hero = () => {
           <Title>Think.Make.Solve</Title>
           <WhatIDo>
             <Line src='./img/line.png' />
-            <Subtitle>What I Do</Subtitle>
+            <Subtitle>Hello, A little bit about me</Subtitle>
           </WhatIDo>
-          <Desc>
-            I enjoy creating delightful, human-centered digital experieces
-          </Desc>
+          <Desc>I enjoy creating delightful, human-centered app</Desc>
           <Button>Learn More </Button>
         </Left>
         <Right>
