@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const data = [
+  'Radio App',
+  'E-commerce App',
   'CYF progress tracker',
   'Artificial Intelligence',
   'Hotel booking website',
