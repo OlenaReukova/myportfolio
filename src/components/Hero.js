@@ -1,6 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar from './Navbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faLinkedin,
+  faGithub,
+  faHtml5,
+  faCss3Alt,
+  faSquareJs,
+  faReact,
+  faFigma,
+  faNode,
+} from '@fortawesome/free-brands-svg-icons';
 
 const Section = styled.div`
   height: 100vh;
@@ -35,7 +46,7 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  /* gap: 20px; */
 
   @media only screen and (max-width: 768px) {
     flex: 1;
@@ -56,11 +67,7 @@ const Title = styled.h1`
 const WhatIDo = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
-`;
-
-const Line = styled.img`
-  height: 5px;
+  /* gap: 10px; */
 `;
 
 const Subtitle = styled.h2`
@@ -77,20 +84,20 @@ const Desc = styled.p`
   }
 `;
 
-const Button = styled.button`
-  background-color: #f45050;
-  color: white;
-  font-weight: 500;
-  width: 100px;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+// const Button = styled.button`
+//   background-color: #f45050;
+//   color: white;
+//   font-weight: 500;
+//   width: 100px;
+//   padding: 10px;
+//   border: none;
+//   border-radius: 5px;
+//   cursor: pointer;
 
-  @media only screen and (max-width: 768px) {
-    margin-bottom: 40px;
-  }
-`;
+//   @media only screen and (max-width: 768px) {
+//     margin-bottom: 40px;
+//   }
+// `;
 
 const Right = styled.div`
   flex: 3;
@@ -103,7 +110,7 @@ const Right = styled.div`
 `;
 
 const Img = styled.img`
-  width: 800px;
+  width: 600px;
   height: 600px;
   object-fit: contain;
   position: absolute;
@@ -128,23 +135,84 @@ const Img = styled.img`
   } */
 `;
 
+const Icons = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+`;
 const Hero = () => {
   return (
     <Section>
       <Navbar />
       <Container>
         <Left>
-          <Title>Think.Make.Solve</Title>
+          <Title>Full Stack Developer</Title>
           <WhatIDo>
-            <Line src='./img/line.png' />
-            <Subtitle>Hello, A little bit about me</Subtitle>
+            <Subtitle>
+              Hi, I'm Olena Reukova. A pessionate Full Stack Web Developer based
+              in London.
+            </Subtitle>
           </WhatIDo>
           <Desc>I enjoy creating delightful, human-centered app</Desc>
-          <Button>Learn More </Button>
+          <Icons>
+            <a href='https://www.linkedin.com/in/olenareukova/'>
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                style={{ color: '#fcfcfd' }}
+                size='2x'
+              />
+            </a>
+            <a href='https://github.com/OlenaReukova'>
+              <FontAwesomeIcon
+                icon={faGithub}
+                style={{ color: '#fcfcfd' }}
+                size='2x'
+              />
+            </a>
+          </Icons>
+          <Desc>
+            Tech Stack
+            <Icons>
+              <FontAwesomeIcon
+                icon={faHtml5}
+                style={{ color: '#ea3f06' }}
+                size='2x'
+              />
+              <FontAwesomeIcon
+                icon={faCss3Alt}
+                style={{
+                  color: '#095ef1',
+                }}
+                size='2x'
+              />
+              <FontAwesomeIcon
+                icon={faSquareJs}
+                style={{ color: '#eef207' }}
+                size='2x'
+              />
+              <FontAwesomeIcon
+                icon={faReact}
+                style={{ color: '#13beb3' }}
+                size='2x'
+              />
+              <FontAwesomeIcon
+                icon={faFigma}
+                style={{ color: '#dd0ed6' }}
+                size='2x'
+              />
+              <FontAwesomeIcon
+                icon={faNode}
+                style={{ color: '#07ed22' }}
+                size='2x'
+              />
+            </Icons>
+          </Desc>
+          {/* <Button>Learn More </Button> */}
         </Left>
         <Right>
           {/*3d model*/}
-          <Img alt='' src='./img/Myproject.png'></Img>
+          <Img alt='' src='./img/photo.jpeg'></Img>
         </Right>
       </Container>
     </Section>
