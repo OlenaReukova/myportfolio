@@ -33,6 +33,7 @@ const Title = styled.h1`
 
 const Form = styled.form`
   width: 500px;
+  /* border-color: black; */
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -45,13 +46,16 @@ const Form = styled.form`
 const Input = styled.input`
   padding: 20px;
   background-color: white;
-  border: none;
+  border-color: black;
+  border-width: 1px;
+  /* border: none; */
   border-radius: 5px;
 `;
 
 const TextArea = styled.textarea`
   padding: 20px;
-  border: none;
+  border-color: black;
+  /* border: none; */
   border-radius: 5px;
 `;
 
