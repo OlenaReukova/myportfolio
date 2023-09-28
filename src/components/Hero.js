@@ -71,12 +71,12 @@ const WhatIDo = styled.div`
 `;
 
 const Subtitle = styled.h2`
-  color: white;
+  color: #696969;
 `;
 
 const Desc = styled.p`
   font-size: 24px;
-  color: lightgray;
+  color: #696969;
 
   @media only screen and (max-width: 768px) {
     padding: 20px;
