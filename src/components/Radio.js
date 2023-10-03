@@ -123,12 +123,12 @@ const Img = styled.img`
   } */
 `;
 
-const Icons = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  gap: 10px;
-  align-items: center;
-`;
+// const Icons = styled.div`
+//   display: flex;
+//   justify-content: flex-start;
+//   gap: 10px;
+//   align-items: center;
+// `;
 
 const Radio = () => {
   return (
