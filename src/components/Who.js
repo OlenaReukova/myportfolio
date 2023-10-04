@@ -74,12 +74,12 @@ const Img = styled.img`
 `;
 
 const Subtitle = styled.h2`
-  color: white;
+  color: #696969;
 `;
 
 const Desc = styled.p`
   font-size: 24px;
-  color: lightgray;
+  color: #696969;
   /* padding: 10px; */
 `;
 
