@@ -54,12 +54,12 @@ const ListItem = styled.li`
   font-size: 60px;
   font-weight: bold;
   cursor: pointer;
-  color: white;
+  color: #696969;
   position: relative;
 
   @media only screen and (max-width: 768px) {
     font-size: 24px;
-    color: white;
+    color: #696969;
     -webkit-text-stroke: 0px;
   }
 
