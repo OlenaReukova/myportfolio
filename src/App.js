@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Who from './components/Who';
 import Works from './components/Works';
 import Contact from './components/Contact';
+import Radio from './components/Radio';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -15,12 +16,12 @@ const Container = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  color: white;
+  /* color: white;
   background: linear-gradient(
     89.7deg,
     rgb(0, 32, 95) 2.8%,
-    rgb(132, 53, 142) 97.8%
-  );
+    rgb(132, 53, 142) 97.8% */
+  /* ); */
 `;
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Hero />
       <Who />
       <Works />
+      <Radio />
       <Contact />
     </Container>
   );
