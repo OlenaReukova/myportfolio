@@ -150,11 +150,11 @@ const Hero = () => {
           <Title>Full Stack Developer</Title>
           <WhatIDo>
             <Subtitle>
-              Hi, I'm Olena Reukova. A pessionate Full Stack Web Developer based
-              in London.
+              Hi, I'm Olena, a passionate Full Stack Web Developer based in
+              London.
             </Subtitle>
           </WhatIDo>
-          <Desc>I enjoy creating delightful, human-centered app</Desc>
+          <Desc>I enjoy creating delightful, human-centered apps.</Desc>
           <Icons>
             <a href='https://www.linkedin.com/in/olenareukova/'>
               <FontAwesomeIcon
