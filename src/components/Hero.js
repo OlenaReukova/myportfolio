@@ -159,14 +159,14 @@ const Hero = () => {
             <a href='https://www.linkedin.com/in/olenareukova/'>
               <FontAwesomeIcon
                 icon={faLinkedin}
-                style={{ color: '#fcfcfd' }}
+                style={{ color: '#0077b5' }}
                 size='2x'
               />
             </a>
             <a href='https://github.com/OlenaReukova'>
               <FontAwesomeIcon
                 icon={faGithub}
-                style={{ color: '#fcfcfd' }}
+                style={{ color: '#171515' }}
                 size='2x'
               />
             </a>
