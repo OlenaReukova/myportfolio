@@ -20,7 +20,7 @@ const Map = () => {
       <Geographies
         geography='/features.json'
         fill='transparent'
-        stroke='#696969'
+        stroke='#FFFFFF'
         strokeWidth={0.5}>
         {({ geographies }) =>
           geographies.map((geo) => (
@@ -33,11 +33,11 @@ const Map = () => {
         dx={-90}
         dy={-30}
         connectorProps={{
-          stroke: '#696969',
+          stroke: '#FFFFFF',
           strokeWidth: 2,
           strokeLinecap: 'round',
         }}>
-        <text x='-8' textAnchor='end' alignmentBaseline='middle' fill='#696969'>
+        <text x='-8' textAnchor='end' alignmentBaseline='middle' fill='#FFFFFF'>
           {'London'}
         </text>
       </Annotation>

@@ -46,6 +46,7 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* margin-left: 0px; */
   /* gap: 20px; */
 
   @media only screen and (max-width: 768px) {
@@ -71,12 +72,12 @@ const WhatIDo = styled.div`
 `;
 
 const Subtitle = styled.h2`
-  color: #696969;
+  color: white;
 `;
 
 const Desc = styled.p`
   font-size: 24px;
-  color: #696969;
+  color: lightgray;
 
   @media only screen and (max-width: 768px) {
     padding: 20px;
@@ -159,14 +160,14 @@ const Hero = () => {
             <a href='https://www.linkedin.com/in/olenareukova/'>
               <FontAwesomeIcon
                 icon={faLinkedin}
-                style={{ color: '#0077b5' }}
+                style={{ color: '#fcfcfd' }}
                 size='2x'
               />
             </a>
             <a href='https://github.com/OlenaReukova'>
               <FontAwesomeIcon
                 icon={faGithub}
-                style={{ color: '#171515' }}
+                style={{ color: '#fcfcfd' }}
                 size='2x'
               />
             </a>
