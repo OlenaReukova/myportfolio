@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import Who from './components/Who';
 import Works from './components/Works';
 import Contact from './components/Contact';
-import Radio from './components/Radio';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -30,7 +29,6 @@ function App() {
       <Hero />
       <Who />
       <Works />
-      <Radio />
       <Contact />
     </Container>
   );
