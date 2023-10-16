@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
-// import Radioapp from '/public/img/Radioapp.png';
-// import Triumphapp from '/public/img/Triumphapp.png';
-// import AIapp from '/public/img/AIapp.png';
 
 const CardContainer = styled.div`
   display: flex;
@@ -12,12 +9,6 @@ const CardContainer = styled.div`
   justify-content: space-around;
   align-items: stretch;
   align-content: stretch;
-  /* width: 100vw;
-  height: 100vh; */
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* background: #1f2229; */
   overflow: hidden;
 `;
 const Title = styled.h1`
@@ -46,13 +37,6 @@ const Cards = () => {
           githubLink={'https://github.com/OlenaReukova/radio-app'}
         />
         <Separator />
-        {/* <Card
-          title={'CYF Progress Tracker'}
-          imgUrl={'/img/PTapp.png'}
-          websiteLink={'https://starter-kit-j8jj.onrender.com/'}
-          githubLink={'https://github.com/BoshraM/ldn9-Ctrl-Shift-Learn'}
-        />
-        <Separator /> */}
         <Card
           title={'Triumph'}
           imgUrl={'/img/Triumphapp.png'}
