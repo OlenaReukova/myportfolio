@@ -1,8 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import Cube from './Cube';
-// import { Canvas } from '@react-three/fiber';
-// import { OrbitControls } from '@react-three/drei';
 
 const Section = styled.div`
   height: 100vh;
@@ -31,7 +28,6 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* gap: 20px; */
 
   @media only screen and (max-width: 768px) {
     display: none;
@@ -51,7 +47,6 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* gap: 20px; */
 
   @media only screen and (max-width: 768px) {
     align-items: center;
@@ -63,7 +58,6 @@ const Right = styled.div`
 const WhatIDo = styled.div`
   display: flex;
   align-items: center;
-  /* gap: 10px; */
 `;
 
 const Img = styled.img`
@@ -80,7 +74,6 @@ const Subtitle = styled.h2`
 const Desc = styled.p`
   font-size: 24px;
   color: lightgray;
-  /* padding: 10px; */
 `;
 
 // const Button = styled.button`
@@ -100,15 +93,6 @@ const Who = () => {
       <Container>
         <Left>
           <Img alt='' src='./img/asas.jpg'></Img>
-          {/* {' '}
-          <Canvas camera={{ position: [5, 5, 5], fov: 25 }}>
-            <Suspense fallback={null}>
-              <ambientLight intensity={0.5} />
-              <directionalLight position={[3, 2, 1]} />
-              <Cube />
-              <OrbitControls enableZoom={false} autoRotate />
-            </Suspense>
-          </Canvas> */}
         </Left>
         <Right>
           <Title>“Everything you can imagine is real.” ― Pablo Picasso</Title>
