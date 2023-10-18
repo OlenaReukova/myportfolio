@@ -39,7 +39,6 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  /* color: black; */
   cursor: pointer;
 `;
 
