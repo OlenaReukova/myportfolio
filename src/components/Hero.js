@@ -20,10 +20,6 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
-  /* @media only screen and (max-width: 768px) {
-    height: 200vh;
-  } */
 `;
 
 const Container = styled.div`
@@ -46,8 +42,6 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* margin-left: 0px; */
-  /* gap: 20px; */
 
   @media only screen and (max-width: 768px) {
     flex: 1;
@@ -68,7 +62,6 @@ const Title = styled.h1`
 const WhatIDo = styled.div`
   display: flex;
   align-items: center;
-  /* gap: 10px; */
 `;
 
 const Subtitle = styled.h2`
@@ -120,7 +113,6 @@ const Img = styled.img`
   left: 0;
   right: 0;
   margin: auto;
-  /* animation: animate 2s infinite ease alternate; */
 
   @media only screen and (max-width: 768px) {
     width: 300px;
@@ -128,12 +120,6 @@ const Img = styled.img`
     flex-direction: column;
     gap: 25px;
   }
-
-  /* @keyframes animate {
-    to {
-      transform: translateY(20px);
-    }
-  } */
 `;
 
 const Icons = styled.div`
@@ -212,7 +198,6 @@ const Hero = () => {
           {/* <Button>Learn More </Button> */}
         </Left>
         <Right>
-          {/*3d model*/}
           <Img alt='' src='./img/photo.jpeg'></Img>
         </Right>
       </Container>
