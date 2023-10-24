@@ -1,5 +1,4 @@
 import React from 'react';
-// import './App.css';
 import Hero from './components/Hero';
 import Who from './components/Who';
 import Works from './components/Works';
