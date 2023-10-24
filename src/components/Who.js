@@ -92,7 +92,7 @@ const Who = () => {
     <Section>
       <Container>
         <Left>
-          <Img alt='' src='./img/rrr.png'></Img>
+          <Img alt='' src='./img/paraglider.png'></Img>
         </Left>
         <Right>
           <Title>“Everything you can imagine is real.” ― Pablo Picasso</Title>
