@@ -66,6 +66,10 @@ const WhatIDo = styled.div`
 
 const Subtitle = styled.h2`
   color: white;
+  @media only screen and (max-width: 768px) {
+    /* padding: 20px; */
+    text-align: center;
+  }
 `;
 
 const Desc = styled.p`
@@ -73,9 +77,15 @@ const Desc = styled.p`
   color: lightgray;
 
   @media only screen and (max-width: 768px) {
-    padding: 20px;
+    /* padding: 20px; */
     text-align: center;
   }
+`;
+
+const TechContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 `;
 
 // const Button = styled.button`
@@ -134,11 +144,10 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Full Stack Developer</Title>
+          <Title>Software Engineer</Title>
           <WhatIDo>
             <Subtitle>
-              Hi, I'm Olena, a passionate Full Stack Web Developer based in
-              London.
+              Hi, I'm Olena, a passionate Software Engineer based in London.
             </Subtitle>
           </WhatIDo>
           <Desc>I enjoy creating delightful, human-centered apps.</Desc>
@@ -158,7 +167,7 @@ const Hero = () => {
               />
             </a>
           </Icons>
-          <Desc>
+          <TechContainer>
             Tech Stack
             <Icons>
               <FontAwesomeIcon
@@ -194,7 +203,7 @@ const Hero = () => {
                 size='2x'
               />
             </Icons>
-          </Desc>
+          </TechContainer>
           {/* <Button>Learn More </Button> */}
         </Left>
         <Right>

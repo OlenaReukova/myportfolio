@@ -10,7 +10,7 @@ const CardWrapper = styled.div`
 `;
 
 const CardImage = styled.div`
-  background-image: url(${({ background }) => background});
+  background-image: url(${(props) => props.$background});
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
@@ -54,7 +54,7 @@ const LinkText = styled.a`
 const Card = ({ title, imgUrl, text, websiteLink, githubLink }) => {
   return (
     <CardWrapper>
-      <CardImage background={imgUrl} />
+      <CardImage $background={imgUrl} />
       <CardTextWrapper>
         <CardTextTitle>{title}</CardTextTitle>
         <CardTextBody>{text}</CardTextBody>
