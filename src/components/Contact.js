@@ -57,9 +57,11 @@ const TextArea = styled.textarea`
 `;
 
 const Button = styled.button`
-  background-color: #5930e5;
+  background-color: transparent;
+  border-color: grey;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   color: white;
-  border: none;
+  /* border: none; */
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
