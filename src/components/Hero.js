@@ -168,39 +168,39 @@ const Hero = () => {
             </a>
           </Icons>
           <TechContainer>
-            Tech Stack
+            <Desc>Tech Stack</Desc>
             <Icons>
               <FontAwesomeIcon
                 icon={faHtml5}
                 style={{ color: '#ea3f06' }}
-                size='2x'
+                size='3x'
               />
               <FontAwesomeIcon
                 icon={faCss3Alt}
                 style={{
                   color: '#095ef1',
                 }}
-                size='2x'
+                size='3x'
               />
               <FontAwesomeIcon
                 icon={faSquareJs}
                 style={{ color: '#eef207' }}
-                size='2x'
+                size='3x'
               />
               <FontAwesomeIcon
                 icon={faReact}
                 style={{ color: '#13beb3' }}
-                size='2x'
+                size='3x'
               />
               <FontAwesomeIcon
                 icon={faFigma}
                 style={{ color: '#dd0ed6' }}
-                size='2x'
+                size='3x'
               />
               <FontAwesomeIcon
                 icon={faNode}
                 style={{ color: '#07ed22' }}
-                size='2x'
+                size='3x'
               />
             </Icons>
           </TechContainer>

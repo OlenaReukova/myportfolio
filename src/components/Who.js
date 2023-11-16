@@ -34,13 +34,13 @@ const Left = styled.div`
   }
 `;
 
-const Title = styled.h1`
-  font-size: 74px;
-  @media only screen and (max-width: 768px) {
-    font-size: 40px;
-    text-align: center;
-  }
-`;
+// const Title = styled.h1`
+//   font-size: 74px;
+//   @media only screen and (max-width: 768px) {
+//     font-size: 40px;
+//     text-align: center;
+//   }
+// `;
 
 const Right = styled.div`
   flex: 2;
@@ -92,10 +92,10 @@ const Who = () => {
     <Section>
       <Container>
         <Left>
-          <Img alt='' src='./img/paraglider.png'></Img>
+          <Img alt='' src='./img/about.png'></Img>
         </Left>
         <Right>
-          <Title>“Everything you can imagine is real.” ― Pablo Picasso</Title>
+          {/* <Title>“Everything you can imagine is real.” ― Pablo Picasso</Title> */}
           <WhatIDo>
             {/* <Line src='./img/line.png' /> */}
             <Subtitle>About me</Subtitle>

@@ -32,12 +32,21 @@ const NavLinks = styled.ul`
 const NavItem = styled.li`
   margin-right: 20px;
   color: white;
+  font-size: 24px;
 `;
 
-const linkStyle = {
-  color: 'white',
-  textDecoration: 'none',
-};
+const StyledLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #001f3f;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0.2rem 0.2rem;
+  }
+`;
 
 // const Links = styled.div`
 //   display: flex;
@@ -87,31 +96,19 @@ const Navbar = () => {
         <nav>
           <NavLinks>
             <NavItem>
-              <Link to='/' style={linkStyle}>
-                Home
-              </Link>
+              <StyledLink to='/'>Home</StyledLink>
             </NavItem>
             <NavItem>
-              <Link to='/who' style={linkStyle}>
-                About Me
-              </Link>
+              <StyledLink to='/who'>About Me</StyledLink>
             </NavItem>
             <NavItem>
-              <Link to='/works' style={linkStyle}>
-                Projects
-              </Link>
+              <StyledLink to='/works'>Projects</StyledLink>
             </NavItem>
             <NavItem>
-              <Link to='/contact' style={linkStyle}>
-                Contact
-              </Link>
+              <StyledLink to='/contact'>Contact</StyledLink>
             </NavItem>
           </NavLinks>
         </nav>
-        {/* <Icons>
-          <Icon src='./img/search.png'></Icon>
-          <Button>Hire Now</Button>
-        </Icons> */}
       </Container>
     </Section>
   );
