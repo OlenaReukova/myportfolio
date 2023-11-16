@@ -1,9 +1,11 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Hero from './components/Hero';
 import Who from './components/Who';
 import Works from './components/Works';
 import Contact from './components/Contact';
 import styled from 'styled-components';
+import Navbar from './components/Navbar';
 
 const Container = styled.div`
   height: 100vh;
@@ -24,12 +26,20 @@ const Container = styled.div`
 
 function App() {
   return (
-    <Container>
-      <Hero />
-      <Who />
-      <Works />
-      <Contact />
-    </Container>
+    <Router>
+      <Container>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Hero />} />
+          <Route path='/who' element={<Who />} />
+          <Route path='/works' element={<Works />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+        <Who />
+        <Works />
+        <Contact />
+      </Container>
+    </Router>
   );
 }
 

@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Section = styled.div`
   display: flex;
+  scroll-snap-align: center;
   justify-content: center;
 
   @media only screen and (max-width: 768px) {
@@ -16,31 +18,46 @@ const Container = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding: 10px 20px;
+
   @media only screen and (max-width: 768px) {
     width: 100%;
     padding: 10px;
   }
 `;
-
-const Links = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 50px;
-`;
-
-const List = styled.ul`
-  display: flex;
-  gap: 20px;
+const NavLinks = styled.ul`
   list-style: none;
-
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
+  display: flex;
 `;
 
-const ListItem = styled.li`
-  cursor: pointer;
+const NavItem = styled.li`
+  margin-right: 20px;
+  color: white;
 `;
+
+const linkStyle = {
+  color: 'white',
+  textDecoration: 'none',
+};
+
+// const Links = styled.div`
+//   display: flex;
+//   align-items: center;
+//   gap: 50px;
+// `;
+
+// const List = styled.ul`
+//   display: flex;
+//   gap: 20px;
+//   list-style: none;
+
+//   @media only screen and (max-width: 768px) {
+//     display: none;
+//   }
+// `;
+
+// const ListItem = styled.li`
+//   cursor: pointer;
+// `;
 
 // const Icon = styled.img`
 //   width: 20px;
@@ -67,14 +84,30 @@ const Navbar = () => {
   return (
     <Section>
       <Container>
-        <Links>
-          <List>
-            <ListItem>Home</ListItem>
-            <ListItem>About Me</ListItem>
-            <ListItem>Projects</ListItem>
-            <ListItem>Contact</ListItem>
-          </List>
-        </Links>
+        <nav>
+          <NavLinks>
+            <NavItem>
+              <Link to='/' style={linkStyle}>
+                Home
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to='/who' style={linkStyle}>
+                About Me
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to='/works' style={linkStyle}>
+                Projects
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to='/contact' style={linkStyle}>
+                Contact
+              </Link>
+            </NavItem>
+          </NavLinks>
+        </nav>
         {/* <Icons>
           <Icon src='./img/search.png'></Icon>
           <Button>Hire Now</Button>

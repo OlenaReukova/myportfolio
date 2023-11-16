@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLinkedin,
@@ -141,7 +141,7 @@ const Icons = styled.div`
 const Hero = () => {
   return (
     <Section>
-      <Navbar />
+      {/* <Navbar /> */}
       <Container>
         <Left>
           <Title>Software Engineer</Title>
