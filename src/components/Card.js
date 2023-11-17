@@ -2,8 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const CardWrapper = styled.div`
-  width: 800px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  width: 600px;
   margin: 20px auto;
+  flex: calc(33% - 42px);
   border-radius: 18px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   text-align: center;
@@ -11,10 +16,12 @@ const CardWrapper = styled.div`
 
 const CardImage = styled.div`
   background-image: url(${(props) => props.$background});
+  width: 100%;
+  vertical-align: middle;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-size: cover;
-  height: 410px;
+  min-height: 15rem;
 `;
 
 const CardTextWrapper = styled.div`
@@ -27,13 +34,16 @@ const CardTextTitle = styled.h2`
 `;
 
 const CardTextBody = styled.p`
+  text-align: left;
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
 `;
 
 const CardStatWrapper = styled.div`
-  background: #5930e5;
+  margin-top: auto;
+
+  /* background: #5930e5; */
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 `;
@@ -49,6 +59,13 @@ const CardStats = styled.div`
 const LinkText = styled.a`
   color: #fff;
   text-decoration: none;
+  &:hover {
+    font-size: 20px;
+    color: #001f3f;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0.2rem 0.2rem;
+  }
 `;
 
 const Card = ({ title, imgUrl, text, websiteLink, githubLink }) => {
