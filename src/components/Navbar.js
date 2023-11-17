@@ -32,7 +32,7 @@ const NavLinks = styled.ul`
 const NavItem = styled.li`
   margin-right: 20px;
   color: white;
-  font-size: 24px;
+  font-size: 18px;
 `;
 
 const StyledLink = styled(Link)`
