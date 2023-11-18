@@ -36,8 +36,13 @@ const CardTextTitle = styled.h2`
 const CardTextBody = styled.p`
   text-align: left;
   color: #fff;
-  font-size: 20px;
   font-weight: 300;
+`;
+
+const CardSubtitle = styled.p`
+  text-align: left;
+  color: #fff;
+  font-size: 0.8rem;
 `;
 
 const CardStatWrapper = styled.div`
@@ -68,12 +73,13 @@ const LinkText = styled.a`
   }
 `;
 
-const Card = ({ title, imgUrl, text, websiteLink, githubLink }) => {
+const Card = ({ title, imgUrl, text, subtitle, websiteLink, githubLink }) => {
   return (
     <CardWrapper>
       <CardImage $background={imgUrl} />
       <CardTextWrapper>
         <CardTextTitle>{title}</CardTextTitle>
+        <CardSubtitle>{subtitle}</CardSubtitle>
         <CardTextBody>{text}</CardTextBody>
       </CardTextWrapper>
       <CardStatWrapper>
