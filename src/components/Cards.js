@@ -60,6 +60,8 @@ const Cards = () => {
               <br />
               Back end was built with Node.js, Express server, React.js, React
               router, PostgreSQL and Node.js database migration.
+              <br />
+              <br /> Responsive web design
             </>
           }
           websiteLink={'https://starter-kit-j8jj.onrender.com/'}
@@ -82,7 +84,7 @@ const Cards = () => {
           imgUrl={'/img/AIapp.png'}
           subtitle={'Team project'}
           text={
-            'An application that provides customers with AI-powered tools for generating video and photo content. Built with JavaScript, HTML5, CSS3. Applied a mobile-first approach. This project is the result of a collaborative effort by three team members.'
+            'An MVP application that provides customers with AI-powered tools for generating video and photo content. Front end was built with JavaScript, HTML5, CSS3. Applied a mobile-first approach. This project is the result of a collaborative effort by three team members.'
           }
           websiteLink={'https://cyf-ofm-buddy-group-project.netlify.app/#'}
           githubLink={'https://github.com/momahboobian/Buddy-Groups-Challenge'}
@@ -99,25 +101,25 @@ const Cards = () => {
         />
         <Separator />
         <Card
-          title={'Triumph'}
-          imgUrl={'/img/Triumphapp.png'}
+          title={'Tv Show'}
+          imgUrl={'/img/movie.png'}
           subtitle={'Personal project'}
           text={
-            'E-commerce project built using React.js, Firebase for the login page, Material UI for design. Rect.js methods:React props,State provider and Reducer,read context API, state hooks.'
+            'A dynamic TV show project using vanilla JavaScript and DOM, making it simple for users to explore their favourite shows.'
           }
-          websiteLink={'https://ubiquitous-empanada-60d82a.netlify.app/'}
-          githubLink={'https://github.com/OlenaReukova/eShop-react'}
+          websiteLink={'https://cyf-olenareukova-tv.netlify.app/'}
+          githubLink={'https://github.com/OlenaReukova/tv-show-dom-project'}
         />
         <Separator />
         <Card
-          title={'Artificial Intelligence'}
-          imgUrl={'/img/AIapp.png'}
+          title={'A passenger counter'}
+          imgUrl={'/img/counter.png'}
           subtitle={'Personal project'}
           text={
-            'An application that provides customers with AI-powered tools for generating video and photo content. Built with JavaScript, HTML5, CSS3. Applied a mobile-first approach. This project is the result of a collaborative effort by three team members.'
+            'A passenger counter allows user to count the number of people in the train. This application was built with JavaScript'
           }
-          websiteLink={'https://cyf-ofm-buddy-group-project.netlify.app/#'}
-          githubLink={'https://github.com/momahboobian/Buddy-Groups-Challenge'}
+          websiteLink={'https://magical-malasada-c11910.netlify.app/'}
+          githubLink={'https://github.com/OlenaReukova/a-passenger-counter-app'}
         />
       </CardContainer>
     </div>
