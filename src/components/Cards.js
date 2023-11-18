@@ -62,8 +62,8 @@ const Cards = () => {
               router, PostgreSQL and Node.js database migration.
             </>
           }
-          websiteLink={'https://radio-app-swart.vercel.app/'}
-          githubLink={'https://github.com/OlenaReukova/radio-app'}
+          websiteLink={'https://starter-kit-j8jj.onrender.com/'}
+          githubLink={'https://github.com/BoshraM/ldn9-Ctrl-Shift-Learn'}
         />
         <Separator />
         <Card
