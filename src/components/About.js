@@ -87,10 +87,10 @@ const Desc = styled.p`
 //   cursor: pointer;
 // `;
 
-const Who = () => {
+const About = () => {
   return (
     <Section>
-      <Container>
+      <Container id='who'>
         <Left>
           <Img alt='' src='./img/about.png'></Img>
         </Left>
@@ -117,4 +117,4 @@ const Who = () => {
   );
 };
 
-export default Who;
+export default About;
