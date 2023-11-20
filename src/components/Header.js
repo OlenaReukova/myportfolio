@@ -2,22 +2,25 @@ import React, { useState } from 'react';
 import logo from './logo.png';
 import styled from 'styled-components';
 
-const Section = styled.div`
-  display: flex;
-  scroll-snap-align: center;
-  justify-content: center;
+// const Section = styled.div`
+//   height: 100vh;
+//   scroll-snap-align: center;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: space-between;
 
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-  }
-`;
+//   @media only screen and (max-width: 768px) {
+//     width: 100%;
+//   }
+// `;
 
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1280px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   padding: 1.5rem 0;
   position: relative;
@@ -68,8 +71,21 @@ const Container = styled.div`
     }
   }
 `;
+const Logo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  span {
+    font-size: 1.8rem;
+  }
 
+  /* h1 {
+    font-weight: 600;
+    font-size: 1.2rem;
+  } */
+`;
 const Nav = styled.div`
+  font-size: 1.2rem;
   @media (max-width: 640px) {
     position: fixed;
     display: flex;
@@ -115,46 +131,34 @@ const Nav = styled.div`
     }
   }
 `;
-const Logo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  span {
-    font-size: 1.8rem;
-  }
-
-  h1 {
-    font-weight: 600;
-    font-size: 1.2rem;
-  }
-`;
 const Header = () => {
   const [bar, setBar] = useState(false);
   return (
-    <Section>
-      <Container bar={bar}>
-        <Logo>
-          <img src={logo} alt='logo' width={60} height={50} />
-        </Logo>
-        <Nav bar={bar}>
-          <span>
-            <a href='#home'>Home</a>
-          </span>
-          <span>
-            <a href='#who'>About Me</a>
-          </span>
-          <span>
-            <a href='#works'>Projects</a>
-          </span>
-          <span>
-            <a href='#contact'>Contact</a>
-          </span>
-        </Nav>
-        <div onClick={() => setBar(!bar)} className='bars'>
-          <div className='bar'></div>
-        </div>
-      </Container>
-    </Section>
+    // <Section>
+    <Container bar={bar}>
+      <Logo>
+        <img src={logo} alt='logo' width={60} height={50} />
+      </Logo>
+      {/* <h1>Portfolio</h1> */}
+      <Nav bar={bar}>
+        <span>
+          <a href='#home'>Home</a>
+        </span>
+        <span>
+          <a href='#who'>About Me</a>
+        </span>
+        <span>
+          <a href='#works'>Projects</a>
+        </span>
+        <span>
+          <a href='#contact'>Contact</a>
+        </span>
+      </Nav>
+      <div onClick={() => setBar(!bar)} className='bars'>
+        <div className='bar'></div>
+      </div>
+    </Container>
+    // </Section>
   );
 };
 
