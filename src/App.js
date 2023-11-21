@@ -6,7 +6,6 @@ import Contact from './components/Contact';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  max-width: 1280px;
   height: 100vh;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;

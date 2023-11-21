@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  max-width: 1280px;
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
