@@ -20,7 +20,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   max-width: 1280px;
-  width: 100%;
+  width: 96%;
   margin: 0 auto;
   padding: 1.5rem 0;
   position: relative;
@@ -90,7 +90,11 @@ const Nav = styled.div`
     position: fixed;
     display: flex;
     flex-direction: column;
-    background-color: #01be96;
+    background: linear-gradient(
+      89.7deg,
+      rgb(0, 32, 95) 2.8%,
+      rgb(132, 53, 142) 97.8%
+    );
     inset: 0;
     justify-content: center;
     align-items: center;

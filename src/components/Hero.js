@@ -14,18 +14,34 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const Section = styled.div`
-  height: 100vh;
+  /* height: 100vh;
+  max-width: 1280px;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
 `;
 
 const Container = styled.div`
+  display: flex;
+  gap: 2rem;
+  padding-top: 3rem;
+  width: 96%;
+  max-width: 1280px;
+  margin: 0 auto;
+  z-index: 1;
+  @media (max-width: 840px) {
+    width: 90%;
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+
   height: 100vh;
   scroll-snap-align: center;
-  width: 1400px;
+
   display: flex;
   justify-content: space-between;
 

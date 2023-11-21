@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
+  max-width: 1280px;
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
@@ -9,18 +10,26 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
+  max-width: 1280px;
+  display: flex;
+  gap: 2rem;
+  padding-top: 3rem;
+  width: 96%;
+  max-width: 1280px;
+  margin: 0 auto;
+  z-index: 1;
+  @media (max-width: 840px) {
+    width: 90%;
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+
   height: 100vh;
   scroll-snap-align: center;
-  width: 1400px;
-  display: flex;
-  justify-content: space-between;
 
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  justify-content: space-between;
 `;
 
 const Left = styled.div`
@@ -103,7 +112,8 @@ const About = () => {
           <Desc>
             As a dedicated Full Stack Developer, I possess a wide range of
             skills in HTML, CSS, JavaScript, React.js, Node.js, Express.js, and
-            PostgreSQL. I excel at designing and maintaining responsive websites
+            PostgreSQL. <br></br>
+            <br></br>I excel at designing and maintaining responsive websites
             that offer a seamless user experience. My expertise lies in crafting
             dynamic and engaging interfaces by writing clean code and utilizing
             development tools and techniques. I am also a team player who
