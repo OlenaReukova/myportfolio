@@ -31,6 +31,16 @@ const Container = styled.div`
   justify-content: space-between;
 `;
 
+const Title = styled.h1`
+  font-size: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 40px;
+    text-align: center;
+  }
+`;
 const Left = styled.div`
   flex: 2;
   display: flex;
@@ -69,19 +79,32 @@ const WhatIDo = styled.div`
 `;
 
 const Img = styled.img`
-  width: 600px;
-  height: 600px;
-  object-fit: contain;
+  width: 400px;
+  height: 300px;
+  /* object-fit: contain; */
   margin: auto;
+  border-radius: 20px;
+  transition: all ease 0.2s;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 `;
 
-const Subtitle = styled.h2`
-  color: white;
-`;
+// const Subtitle = styled.h2`
+//   color: white;
+// `;
 
 const Desc = styled.p`
   font-size: 24px;
-  color: lightgray;
+  color: white;
+  font-weight: normal;
+`;
+
+const Af = styled.p`
+  font-size: 18px;
+  font-weight: normal;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-style: italic;
 `;
 
 // const Button = styled.button`
@@ -103,14 +126,15 @@ const About = () => {
           <Img alt='' src='./img/about.png'></Img>
         </Left>
         <Right>
+          <Title>About Me</Title>
           {/* <Title>“Everything you can imagine is real.” ― Pablo Picasso</Title> */}
           <WhatIDo>
             {/* <Line src='./img/line.png' /> */}
-            <Subtitle>About me</Subtitle>
+            {/* <Subtitle>About me</Subtitle> */}
           </WhatIDo>
           <Desc>
-            As a dedicated Full Stack Developer, I possess a wide range of
-            skills in HTML, CSS, JavaScript, React.js, Node.js, Express.js, and
+            As a dedicated Software Engineer, I possess a wide range of skills
+            in HTML, CSS, JavaScript, React.js, Node.js, Express.js, and
             PostgreSQL. <br></br>
             <br></br>I excel at designing and maintaining responsive websites
             that offer a seamless user experience. My expertise lies in crafting
@@ -119,6 +143,9 @@ const About = () => {
             thrives in collaborating with cross-functional teams to develop
             outstanding web applications.
           </Desc>
+          <Af>
+            "Everything you can imagine is real.” <br></br>-Pablo Picasso
+          </Af>
           {/* <Button>See my projects </Button> */}
         </Right>
       </Container>
