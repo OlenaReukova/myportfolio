@@ -78,7 +78,7 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 74px;
+  font-size: 60px;
 
   @media only screen and (max-width: 768px) {
     font-size: 40px;
@@ -92,6 +92,9 @@ const WhatIDo = styled.div`
 `;
 
 const Subtitle = styled.h2`
+  font-weight: normal;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: white;
   @media only screen and (max-width: 768px) {
     /* padding: 20px; */
@@ -100,8 +103,10 @@ const Subtitle = styled.h2`
 `;
 
 const Desc = styled.p`
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 24px;
-  color: lightgray;
+  color: white;
 
   @media only screen and (max-width: 768px) {
     /* padding: 20px; */
@@ -113,6 +118,8 @@ const TechContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
+  padding-top: 10px;
+  padding-bottom: 10px;
 `;
 
 // const Button = styled.button`
@@ -164,6 +171,9 @@ const Icons = styled.div`
   justify-content: flex-start;
   gap: 10px;
   align-items: center;
+  a:hover {
+    transform: scale(1.5);
+  }
 `;
 const Hero = () => {
   return (
@@ -173,7 +183,10 @@ const Hero = () => {
           <Title>Software Engineer</Title>
           <WhatIDo>
             <Subtitle>
-              Hi, I'm Olena, a passionate Software Engineer based in London.
+              Hi, I'm Olena, a passionate Software Engineer having an experience
+              of building Web application with
+              JavaScript/Reactjs/Nodejs/PostgreSQL and some other libraries and
+              frameworks.
             </Subtitle>
           </WhatIDo>
           <Desc>I enjoy creating delightful, human-centered apps.</Desc>
