@@ -8,6 +8,8 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 
   @media only screen and (max-width: 768px) {
     width: 100%;
