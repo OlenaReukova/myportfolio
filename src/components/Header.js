@@ -10,7 +10,13 @@ const Section = styled.div`
   justify-content: space-between;
   position: sticky;
   top: 0;
-
+  z-index: 9999;
+  border-bottom: 1px solid;
+  background: linear-gradient(
+    89.7deg,
+    rgb(0, 32, 95) 2.8%,
+    rgb(132, 53, 142) 97.8%
+  );
   @media only screen and (max-width: 768px) {
     width: 100%;
   }
@@ -22,6 +28,7 @@ const Container = styled.div`
   justify-content: space-between;
   max-width: 1280px;
   width: 96%;
+  max-height: 60px;
   margin: 0 auto;
   padding: 1.5rem 0;
   position: relative;
@@ -153,7 +160,14 @@ const Header = () => {
     <Section>
       <Container bar={bar}>
         <Logo>
-          <img src={logo} alt='logo' width={60} height={50} />
+          <img
+            src={logo}
+            alt='logo'
+            width={50}
+            height={40}
+            border-radius={50}
+            border={1}
+          />
         </Logo>
         {/* <h1>Portfolio</h1> */}
         <Nav bar={bar}>
