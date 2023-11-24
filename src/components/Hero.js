@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from './Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLinkedin,
@@ -169,7 +168,6 @@ const Icons = styled.div`
 const Hero = () => {
   return (
     <Section>
-      <Header />
       <Container id='home'>
         <Left>
           <Title>Software Engineer</Title>

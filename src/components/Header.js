@@ -2,18 +2,17 @@ import React, { useState } from 'react';
 import logo from './logo.png';
 import styled from 'styled-components';
 
-// const Section = styled.div`
-//   height: 100vh;
-//   scroll-snap-align: center;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: space-between;
+const Section = styled.div`
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 
-//   @media only screen and (max-width: 768px) {
-//     width: 100%;
-//   }
-// `;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
 
 const Container = styled.div`
   display: flex;
@@ -138,31 +137,31 @@ const Nav = styled.div`
 const Header = () => {
   const [bar, setBar] = useState(false);
   return (
-    // <Section>
-    <Container bar={bar}>
-      <Logo>
-        <img src={logo} alt='logo' width={60} height={50} />
-      </Logo>
-      {/* <h1>Portfolio</h1> */}
-      <Nav bar={bar}>
-        <span>
-          <a href='#home'>Home</a>
-        </span>
-        <span>
-          <a href='#who'>About Me</a>
-        </span>
-        <span>
-          <a href='#works'>Projects</a>
-        </span>
-        <span>
-          <a href='#contact'>Contact</a>
-        </span>
-      </Nav>
-      <div onClick={() => setBar(!bar)} className='bars'>
-        <div className='bar'></div>
-      </div>
-    </Container>
-    // </Section>
+    <Section>
+      <Container bar={bar}>
+        <Logo>
+          <img src={logo} alt='logo' width={60} height={50} />
+        </Logo>
+        {/* <h1>Portfolio</h1> */}
+        <Nav bar={bar}>
+          <span>
+            <a href='#home'>Home</a>
+          </span>
+          <span>
+            <a href='#who'>About Me</a>
+          </span>
+          <span>
+            <a href='#works'>Projects</a>
+          </span>
+          <span>
+            <a href='#contact'>Contact</a>
+          </span>
+        </Nav>
+        <div onClick={() => setBar(!bar)} className='bars'>
+          <div className='bar'></div>
+        </div>
+      </Container>
+    </Section>
   );
 };
 

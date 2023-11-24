@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Works from './components/Works';
@@ -25,6 +26,7 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
+      <Header />
       <Hero />
       <About />
       <Works />
