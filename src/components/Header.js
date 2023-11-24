@@ -136,6 +136,17 @@ const Nav = styled.div`
 `;
 const Header = () => {
   const [bar, setBar] = useState(false);
+
+  const handleLinkClick = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    if (window.innerWidth <= 640) {
+      setBar(false);
+    }
+  };
   return (
     <Section>
       <Container bar={bar}>
@@ -145,16 +156,24 @@ const Header = () => {
         {/* <h1>Portfolio</h1> */}
         <Nav bar={bar}>
           <span>
-            <a href='#home'>Home</a>
+            <a href='#home' onClick={() => handleLinkClick('home')}>
+              Home
+            </a>
           </span>
           <span>
-            <a href='#who'>About Me</a>
+            <a href='#who' onClick={() => handleLinkClick('who')}>
+              About Me
+            </a>
           </span>
           <span>
-            <a href='#works'>Projects</a>
+            <a href='#works' onClick={() => handleLinkClick('works')}>
+              Projects
+            </a>
           </span>
           <span>
-            <a href='#contact'>Contact</a>
+            <a href='#contact' onClick={() => handleLinkClick('contact')}>
+              Contact
+            </a>
           </span>
         </Nav>
         <div onClick={() => setBar(!bar)} className='bars'>
