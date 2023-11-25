@@ -86,7 +86,7 @@ const Subtitle = styled.h2`
   @media only screen and (max-width: 768px) {
     padding: 10px; /* Adjust padding for smaller screens */
     max-width: 90%; /* Adjust maximum width for smaller screens */
-    font-size: 18px; /* Adjust font size for smaller screens */
+    font-size: 24px; /* Adjust font size for smaller screens */
     text-align: center; /* Horizontally center the text */
     margin: 0 auto; /* Center the text within the container */
   }
