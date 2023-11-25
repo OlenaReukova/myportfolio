@@ -6,6 +6,10 @@ const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* For mobile, switch to a column layout */
+  }
   /* flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -81,11 +85,9 @@ const Cards = () => {
               </LinkWithBackground>{' '}
               , product managers can manage cohorts and add trainees. <br />
               <br />
-              Front end was build with Figma, React.js, Recharts charting
-              library. <br />
-              <br />
-              Back end was built with Node.js, Express server, React.js, React
-              router, PostgreSQL and Node.js database migration.
+              Project built using Figma, React.js, Recharts charting library,
+              Node.js, Express server, React.js, React router, PostgreSQL and
+              Node.js database migration.
               <br />
               <br /> Responsive web design
             </>
@@ -128,7 +130,7 @@ const Cards = () => {
         <Separator />
         <Card
           title={'Tv Show'}
-          imgUrl={'/img/movie.png'}
+          imgUrl={'/img/movie.jpg'}
           subtitle={'Personal project'}
           text={
             'A dynamic TV show project using vanilla JavaScript and DOM, making it simple for users to explore their favourite shows.'

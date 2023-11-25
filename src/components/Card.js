@@ -8,7 +8,7 @@ const CardWrapper = styled.div`
   flex-direction: column;
   margin: 10px;
   padding: 10px;
-  width: 100%; /* Occupy full width */
+  width: calc(33.33% - 20px); /* For three cards in a row */
   max-width: 600px; /* Set a maximum width for larger screens */
   margin: 20px auto;
   border-radius: 18px;
@@ -17,22 +17,11 @@ const CardWrapper = styled.div`
   justify-content: space-around;
   justify-content: space-between;
 
-  /* @media (min-width: 340px) {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 90%;
-  } */
-
-  @media (min-width: 576px) {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
+  @media (max-width: 768px) {
+    width: calc(100% - 20px); /* For mobile, cards in a single column */
   }
-  @media (min-width: 768) {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
+  @media (max-width: 1200px) {
+    width: calc(80% - 20px); /* For tablets, two cards in a row */
   }
 `;
 
@@ -52,7 +41,7 @@ const CardTextWrapper = styled.div`
 
 const CardTextTitle = styled.h2`
   margin-top: 0px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 `;
 
 const CardTextBody = styled.p`

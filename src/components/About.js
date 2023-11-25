@@ -66,6 +66,12 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  @media only screen and (max-width: 320px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; /* Example of a style change for smaller screens */
+  }
   @media only screen and (max-width: 768px) {
     align-items: center;
     text-align: center;

@@ -83,10 +83,6 @@ const Subtitle = styled.h2`
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
-  @media only screen and (max-width: 768px) {
-    /* padding: 20px; */
-    text-align: center;
-  }
 `;
 
 const Desc = styled.p`
