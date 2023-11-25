@@ -34,12 +34,19 @@ const CardContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 74px;
+  font-size: 60px;
   display: flex;
   justify-content: center;
 `;
 const LinkWithBackground = styled.a`
-  background-color: white;
+  background-color: none;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  :hover {
+    color: blue;
+  }
 `;
 const Separator = styled.span`
   margin-left: 10px;

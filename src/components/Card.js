@@ -1,25 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BsGithub } from 'react-icons/bs';
+import { FaGlobe } from 'react-icons/fa';
 
 const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px;
   padding: 10px;
-  width: 600px;
+  width: 100%; /* Occupy full width */
+  max-width: 600px; /* Set a maximum width for larger screens */
   margin: 20px auto;
-  flex: calc(33% - 42px);
   border-radius: 18px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   text-align: center;
+  justify-content: space-around;
+  justify-content: space-between;
+
   /* @media (min-width: 340px) {
-  }
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 90%;
+  } */
+
   @media (min-width: 576px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
   }
   @media (min-width: 768) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
   }
-  @media (min-width: 992px) {
-  } */
 `;
 
 const CardImage = styled.div`
@@ -48,6 +62,7 @@ const CardTextBody = styled.p`
 `;
 
 const CardSubtitle = styled.p`
+  padding: 10px 0;
   text-align: left;
   color: #fff;
   font-size: 0.8rem;
@@ -55,7 +70,10 @@ const CardSubtitle = styled.p`
 
 const CardStatWrapper = styled.div`
   margin-top: auto;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   /* background: #5930e5; */
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -70,14 +88,27 @@ const CardStats = styled.div`
 `;
 
 const LinkText = styled.a`
-  color: #fff;
+  background-color: none;
+  color: white;
   text-decoration: none;
-  &:hover {
-    font-size: 20px;
-    color: #001f3f;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 0.2rem 0.2rem;
+  font-weight: bold;
+  font-size: 26px;
+  :hover {
+    color: blue;
+  }
+`;
+const IconB = styled(BsGithub)`
+  color: white;
+  margin-right: 5px;
+  :hover {
+    color: blue;
+  }
+`;
+const IconG = styled(FaGlobe)`
+  color: white;
+  margin-right: 5px;
+  :hover {
+    color: blue;
   }
 `;
 
@@ -93,12 +124,12 @@ const Card = ({ title, imgUrl, text, subtitle, websiteLink, githubLink }) => {
       <CardStatWrapper>
         <CardStats>
           <LinkText href={websiteLink} target='_blank'>
-            website
+            <IconG />
           </LinkText>
         </CardStats>
         <CardStats>
           <LinkText href={githubLink} target='_blank'>
-            github
+            <IconB />
           </LinkText>
         </CardStats>
       </CardStatWrapper>
