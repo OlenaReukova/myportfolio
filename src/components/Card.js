@@ -31,7 +31,10 @@ const CardImage = styled.div`
   vertical-align: middle;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  background-size: contain;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   min-height: 15rem;
 `;
 

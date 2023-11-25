@@ -65,16 +65,14 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  align-items: center; /* Center horizontally */
+  margin: auto;
   @media only screen and (max-width: 320px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px; /* Example of a style change for smaller screens */
+    font-size: 20px;
+    text-align: center; /* Center text for smaller screens */
   }
+
   @media only screen and (max-width: 768px) {
-    align-items: center;
-    text-align: center;
     width: 80%;
   }
 `;
