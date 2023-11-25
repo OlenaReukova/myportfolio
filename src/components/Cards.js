@@ -12,25 +12,25 @@ const CardContainer = styled.div`
   align-items: stretch;
   align-content: stretch;
   overflow: hidden; */
-  @media (min-width: 340px) {
+  /* @media (min-width: 340px) {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     max-width: 90%;
-  }
+  } */
 
-  @media (min-width: 576px) {
+  /* @media (min-width: 576px) {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     max-width: 90%;
-  }
-  @media (min-width: 768) {
+  } */
+  /* @media (min-width: 768) {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     max-width: 90%;
-  }
+  } */
 `;
 
 const Title = styled.h1`

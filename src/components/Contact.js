@@ -72,7 +72,8 @@ const Button = styled.button`
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   color: white;
   /* border: none; */
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: normal;
   cursor: pointer;
   border-radius: 5px;
   padding: 20px;

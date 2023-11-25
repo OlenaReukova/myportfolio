@@ -12,14 +12,14 @@ const CardWrapper = styled.div`
   border-radius: 18px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   text-align: center;
-  @media (min-width: 340px) {
+  /* @media (min-width: 340px) {
   }
   @media (min-width: 576px) {
   }
   @media (min-width: 768) {
   }
   @media (min-width: 992px) {
-  }
+  } */
 `;
 
 const CardImage = styled.div`
