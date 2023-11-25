@@ -13,7 +13,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const Section = styled.div`
-  height: 100vh;
+  /* height: 100vh; */
+  /* margin-top: 10px; */
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;

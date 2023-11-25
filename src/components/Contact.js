@@ -13,12 +13,17 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  max-width: 1280px;
-  width: 100%;
-  height: 100%;
   display: flex;
+  gap: 2rem;
+  padding-top: 3rem;
+  width: 96%;
+  max-width: 1280px;
+  margin: 0px auto;
+  z-index: 1;
+  height: 100vh;
+  scroll-snap-align: center;
+  -webkit-box-pack: justify;
   justify-content: space-between;
-  gap: 50px;
 `;
 
 const Left = styled.div`
