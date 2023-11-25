@@ -133,7 +133,7 @@ const About = () => {
             {/* <Subtitle>About me</Subtitle> */}
           </WhatIDo>
           <Desc>
-            As a dedicated Software Engineer, I possess a wide range of skills
+            As a dedicated Software Developer, I possess a wide range of skills
             in HTML, CSS, JavaScript, React.js, Node.js, Express.js, and
             PostgreSQL. <br></br>
             <br></br>I excel at designing and maintaining responsive websites

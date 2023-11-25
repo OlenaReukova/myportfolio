@@ -180,11 +180,11 @@ const Hero = () => {
     <Section>
       <Container id='home'>
         <Left>
-          <Title>Software Engineer</Title>
+          <Title>Software Developer</Title>
           <WhatIDo>
             <Subtitle>
-              Hi, I'm Olena, a passionate Software Engineer having an experience
-              of building Web application with
+              Hi, I'm Olena, a passionate Software Developer having an
+              experience of building Web application with
               JavaScript/Reactjs/Nodejs/PostgreSQL and some other libraries and
               frameworks.
             </Subtitle>
