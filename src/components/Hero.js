@@ -161,11 +161,14 @@ const Icons = styled.div`
   justify-content: flex-start;
   gap: 10px;
   align-items: center;
-  a:hover {
+  /* a:hover {
     transform: scale(1.5);
-  }
+  } */
 `;
 const Hero = () => {
+  const openLinkInNewTab = (url) => {
+    window.open(url, '_blank').focus();
+  };
   return (
     <Section>
       <Container id='home'>
@@ -181,20 +184,26 @@ const Hero = () => {
           </WhatIDo>
           <Desc>I enjoy creating delightful, human-centered apps.</Desc>
           <Icons>
-            <a href='https://www.linkedin.com/in/olenareukova/'>
+            <div
+              onClick={() =>
+                openLinkInNewTab('https://www.linkedin.com/in/olenareukova/')
+              }>
               <FontAwesomeIcon
                 icon={faLinkedin}
-                style={{ color: '#fcfcfd' }}
+                style={{ color: '#fcfcfd', cursor: 'pointer' }}
                 size='2x'
               />
-            </a>
-            <a href='https://github.com/OlenaReukova'>
+            </div>
+            <div
+              onClick={() =>
+                openLinkInNewTab('https://github.com/OlenaReukova')
+              }>
               <FontAwesomeIcon
                 icon={faGithub}
-                style={{ color: '#fcfcfd' }}
+                style={{ color: '#fcfcfd', cursor: 'pointer' }}
                 size='2x'
               />
-            </a>
+            </div>
           </Icons>
           <TechContainer>
             <Desc>Tech Stack</Desc>
