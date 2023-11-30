@@ -169,6 +169,15 @@ const Hero = () => {
   const openLinkInNewTab = (url) => {
     window.open(url, '_blank').focus();
   };
+
+  const handleIconClick = (url) => {
+    openLinkInNewTab(url);
+  };
+
+  const handleTouchStart = (url) => {
+    // Perform the same action as a click event when touched
+    openLinkInNewTab(url);
+  };
   return (
     <Section>
       <Container id='home'>
@@ -186,7 +195,10 @@ const Hero = () => {
           <Icons>
             <div
               onClick={() =>
-                openLinkInNewTab('https://www.linkedin.com/in/olenareukova/')
+                handleIconClick('https://www.linkedin.com/in/olenareukova/')
+              }
+              onTouchStart={() =>
+                handleTouchStart('https://www.linkedin.com/in/olenareukova/')
               }>
               <FontAwesomeIcon
                 icon={faLinkedin}
@@ -195,8 +207,9 @@ const Hero = () => {
               />
             </div>
             <div
-              onClick={() =>
-                openLinkInNewTab('https://github.com/OlenaReukova')
+              onClick={() => handleIconClick('https://github.com/OlenaReukova')}
+              onTouchStart={() =>
+                handleTouchStart('https://github.com/OlenaReukova')
               }>
               <FontAwesomeIcon
                 icon={faGithub}
