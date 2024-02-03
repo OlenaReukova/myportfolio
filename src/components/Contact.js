@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import Map from './Map';
 
 const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,8 +18,6 @@ const Container = styled.div`
   max-width: 1280px;
   margin: 0px auto;
   z-index: 1;
-  height: 100vh;
-  scroll-snap-align: center;
   -webkit-box-pack: justify;
   justify-content: space-between;
 `;

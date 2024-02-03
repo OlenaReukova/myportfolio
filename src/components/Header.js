@@ -3,7 +3,6 @@ import logo from './logo.png';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;

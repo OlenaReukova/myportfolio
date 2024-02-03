@@ -13,9 +13,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const Section = styled.div`
-  height: 100vh;
   margin-top: 10px;
-  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +29,6 @@ const Container = styled.div`
   margin: 0px auto;
   z-index: 1;
   height: 100vh;
-  scroll-snap-align: center;
   -webkit-box-pack: justify;
   justify-content: space-between;
 
@@ -138,8 +135,8 @@ const Right = styled.div`
 `;
 
 const Img = styled.img`
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -166,18 +163,6 @@ const Icons = styled.div`
   } */
 `;
 const Hero = () => {
-  const openLinkInNewTab = (url) => {
-    window.open(url, '_blank').focus();
-  };
-
-  const handleIconClick = (url) => {
-    openLinkInNewTab(url);
-  };
-
-  const handleTouchStart = (url) => {
-    // Perform the same action as a click event when touched
-    openLinkInNewTab(url);
-  };
   return (
     <Section>
       <Container id='home'>
@@ -193,30 +178,23 @@ const Hero = () => {
           </WhatIDo>
           <Desc>I enjoy creating delightful, human-centered apps.</Desc>
           <Icons>
-            <div
-              onClick={() =>
-                handleIconClick('https://www.linkedin.com/in/olenareukova/')
-              }
-              onTouchStart={() =>
-                handleTouchStart('https://www.linkedin.com/in/olenareukova/')
-              }>
+            <a
+              href='https://www.linkedin.com/in/olenareukova/'
+              target='__blank'>
               <FontAwesomeIcon
                 icon={faLinkedin}
                 style={{ color: '#fcfcfd', cursor: 'pointer' }}
                 size='2x'
               />
-            </div>
-            <div
-              onClick={() => handleIconClick('https://github.com/OlenaReukova')}
-              onTouchStart={() =>
-                handleTouchStart('https://github.com/OlenaReukova')
-              }>
+            </a>
+
+            <a href='https://github.com/OlenaReukova' target='__blank'>
               <FontAwesomeIcon
                 icon={faGithub}
                 style={{ color: '#fcfcfd', cursor: 'pointer' }}
                 size='2x'
               />
-            </div>
+            </a>
           </Icons>
           <TechContainer>
             <Desc>Tech Stack</Desc>

@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Section = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
   display: flex;
   justify-content: center;
 `;
@@ -24,9 +22,6 @@ const Container = styled.div`
   @media (max-width: 640px) {
     flex-direction: column;
   }
-
-  height: 100vh;
-  scroll-snap-align: center;
 
   justify-content: space-between;
 `;
