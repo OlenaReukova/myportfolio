@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faLinkedin,
   faGithub,
-  faHtml5,
-  faCss3Alt,
-  faSquareJs,
-  faReact,
-  faFigma,
-  faNode,
+  // faHtml5,
+  // faCss3Alt,
+  // faSquareJs,
+  // faReact,
+  // faFigma,
+  // faNode,
 } from '@fortawesome/free-brands-svg-icons';
 
 const Section = styled.div`
@@ -64,9 +64,10 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 60px;
+  font-size: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-weight: 200;
 
   @media only screen and (max-width: 768px) {
     font-size: 40px;
@@ -74,29 +75,35 @@ const Title = styled.h1`
   }
 `;
 
-// const WhatIDo = styled.div`
-//   display: flex;
-//   align-items: center;
-// `;
+const Subtitle = styled.h2`
+  font-size: 60px;
+  font-weight: 800;
+`;
 
 const Desc = styled.p`
-  font-size: 24px;
   color: white;
   font-weight: normal;
+  font-size: 1.2rem;
+  margin: 40px 0px;
+  width: 50%;
+  padding-left: 0.4rem;
+  padding-top: 0.4rem;
+  border-left: 1px solid white;
 
   @media only screen and (max-width: 768px) {
     /* padding: 20px; */
     text-align: center;
+    width: 100%;
   }
 `;
 
-const TechContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  padding-top: 10px;
-  padding-bottom: 10px;
-`;
+// const TechContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: start;
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+// `;
 
 // const Button = styled.button`
 //   background-color: #f45050;
@@ -114,7 +121,7 @@ const TechContainer = styled.div`
 // `;
 
 const Right = styled.div`
-  flex: 3;
+  flex: 2;
   position: relative;
 
   @media only screen and (max-width: 768px) {
@@ -144,12 +151,16 @@ const Img = styled.img`
 
 const Icons = styled.div`
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 1rem;
   align-items: center;
   padding: 0.6rem 0.4rem;
   a:hover {
     transform: scale(1.5);
+    background-color: #83348d;
+  }
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
   }
 `;
 const Hero = () => {
@@ -157,13 +168,12 @@ const Hero = () => {
     <Section>
       <Container id='home'>
         <Left>
-          <Title>Software Developer</Title>
+          <Title>SOFTWARE DEVELOPER</Title>
+          <Subtitle>OLENA REUKOVA</Subtitle>
           <Desc>
-            Hi, I'm Olena, a passionate Software Developer having an experience
-            of building Web application with
-            JavaScript/Reactjs/Nodejs/PostgreSQL and some other libraries and
-            frameworks. <br></br>
-            <br></br>I enjoy creating delightful, human-centered apps.
+            Hi, I'm a Full-Stack Web Developer, currently based in London.
+            <br></br>
+            <br></br>
           </Desc>
           <Icons>
             <a
@@ -184,7 +194,7 @@ const Hero = () => {
               />
             </a>
           </Icons>
-          <TechContainer>
+          {/* <TechContainer>
             <Desc>Tech Stack</Desc>
             <Icons>
               <FontAwesomeIcon
@@ -220,7 +230,7 @@ const Hero = () => {
                 size='3x'
               />
             </Icons>
-          </TechContainer>
+          </TechContainer> */}
           {/* <Button>Learn More </Button> */}
         </Left>
         <Right>
