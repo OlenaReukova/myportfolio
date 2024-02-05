@@ -13,7 +13,6 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const Section = styled.div`
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +22,6 @@ const Section = styled.div`
 const Container = styled.div`
   display: flex;
   gap: 2rem;
-  padding-top: 3rem;
   width: 96%;
   max-width: 1280px;
   margin: 0px auto;
@@ -54,15 +52,21 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
 
+  margin: auto;
+  @media only screen and (max-width: 320px) {
+    font-size: 20px;
+    text-align: center; /* Center text for smaller screens */
+  }
+
   @media only screen and (max-width: 768px) {
-    flex: 1;
-    align-items: center;
     width: 80%;
   }
 `;
 
 const Title = styled.h1`
   font-size: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @media only screen and (max-width: 768px) {
     font-size: 40px;
@@ -70,30 +74,15 @@ const Title = styled.h1`
   }
 `;
 
-const WhatIDo = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const Subtitle = styled.h2`
-  font-weight: normal;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: white;
-  @media only screen and (max-width: 768px) {
-    padding: 10px; /* Adjust padding for smaller screens */
-    max-width: 90%; /* Adjust maximum width for smaller screens */
-    font-size: 24px; /* Adjust font size for smaller screens */
-    text-align: center; /* Horizontally center the text */
-    margin: 0 auto; /* Center the text within the container */
-  }
-`;
+// const WhatIDo = styled.div`
+//   display: flex;
+//   align-items: center;
+// `;
 
 const Desc = styled.p`
-  padding-top: 10px;
-  padding-bottom: 10px;
   font-size: 24px;
   color: white;
+  font-weight: normal;
 
   @media only screen and (max-width: 768px) {
     /* padding: 20px; */
@@ -155,12 +144,13 @@ const Img = styled.img`
 
 const Icons = styled.div`
   display: flex;
-  justify-content: flex-start;
-  gap: 10px;
+  justify-content: center;
+  gap: 1rem;
   align-items: center;
-  /* a:hover {
+  padding: 0.6rem 0.4rem;
+  a:hover {
     transform: scale(1.5);
-  } */
+  }
 `;
 const Hero = () => {
   return (
@@ -168,15 +158,13 @@ const Hero = () => {
       <Container id='home'>
         <Left>
           <Title>Software Developer</Title>
-          <WhatIDo>
-            <Subtitle>
-              Hi, I'm Olena, a passionate Software Developer having an
-              experience of building Web application with
-              JavaScript/Reactjs/Nodejs/PostgreSQL and some other libraries and
-              frameworks.
-            </Subtitle>
-          </WhatIDo>
-          <Desc>I enjoy creating delightful, human-centered apps.</Desc>
+          <Desc>
+            Hi, I'm Olena, a passionate Software Developer having an experience
+            of building Web application with
+            JavaScript/Reactjs/Nodejs/PostgreSQL and some other libraries and
+            frameworks. <br></br>
+            <br></br>I enjoy creating delightful, human-centered apps.
+          </Desc>
           <Icons>
             <a
               href='https://www.linkedin.com/in/olenareukova/'
@@ -184,7 +172,7 @@ const Hero = () => {
               <FontAwesomeIcon
                 icon={faLinkedin}
                 style={{ color: '#fcfcfd', cursor: 'pointer' }}
-                size='2x'
+                size='3x'
               />
             </a>
 
@@ -192,7 +180,7 @@ const Hero = () => {
               <FontAwesomeIcon
                 icon={faGithub}
                 style={{ color: '#fcfcfd', cursor: 'pointer' }}
-                size='2x'
+                size='3x'
               />
             </a>
           </Icons>

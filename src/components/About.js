@@ -78,8 +78,7 @@ const WhatIDo = styled.div`
 `;
 
 const Img = styled.img`
-  width: 400px;
-  height: 300px;
+  width: 100%;
   /* object-fit: contain; */
   margin: auto;
   border-radius: 20px;
