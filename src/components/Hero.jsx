@@ -105,20 +105,28 @@ const Desc = styled.p`
 //   padding-bottom: 10px;
 // `;
 
-// const Button = styled.button`
-//   background-color: #f45050;
-//   color: white;
-//   font-weight: 500;
-//   width: 100px;
-//   padding: 10px;
-//   border: none;
-//   border-radius: 5px;
-//   cursor: pointer;
+const Button = styled.button`
+  /* display: block; */
+  background-color: white;
+  color: #082162;
+  font-size: 1.2rem;
+  font-weight: 800;
+  width: 50px;
+  height: 50px;
+  /* padding: 10px; */
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  :hover {
+    transform: scale(1.5);
+    background-color: #83348d;
+    color: white;
+  }
 
-//   @media only screen and (max-width: 768px) {
-//     margin-bottom: 40px;
-//   }
-// `;
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+`;
 
 const Right = styled.div`
   flex: 2;
@@ -164,6 +172,11 @@ const Icons = styled.div`
   }
 `;
 const Hero = () => {
+  const downloadCV = () => {
+    const cvURL =
+      'https://drive.google.com/file/d/16Ux47obBOXzVUB_FclEGW39kTiQN2hLD/view?usp=sharing';
+    window.open(cvURL, '_blank');
+  };
   return (
     <Section>
       <Container id='home'>
@@ -185,7 +198,6 @@ const Hero = () => {
                 size='3x'
               />
             </a>
-
             <a href='https://github.com/OlenaReukova' target='__blank'>
               <FontAwesomeIcon
                 icon={faGithub}
@@ -193,6 +205,7 @@ const Hero = () => {
                 size='3x'
               />
             </a>
+            <Button onClick={downloadCV}> CV</Button>
           </Icons>
           {/* <TechContainer>
             <Desc>Tech Stack</Desc>

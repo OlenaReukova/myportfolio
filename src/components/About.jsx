@@ -91,7 +91,7 @@ const Img = styled.img`
 // `;
 
 const Desc = styled.p`
-  font-size: 24px;
+  font-size: 1.2rem;
   color: white;
   font-weight: normal;
 `;
@@ -136,10 +136,10 @@ const About = () => {
             PostgreSQL. <br></br>
             <br></br>I excel at designing and maintaining responsive websites
             that offer a seamless user experience. My expertise lies in crafting
-            dynamic and engaging interfaces by writing clean code and utilizing
-            development tools and techniques. I am also a team player who
-            thrives in collaborating with cross-functional teams to develop
-            outstanding web applications.
+            dynamic and engaging interfaces by creating elegant and functional
+            digital solutions and utilizing development tools and techniques. I
+            am also a team player who thrives in collaborating with
+            cross-functional teams to develop outstanding web applications.
           </Desc>
           <Af>
             "Everything you can imagine is real.” <br></br>-Pablo Picasso

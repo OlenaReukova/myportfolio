@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import logo from './logo.png';
+// import logo from './logo.png';
 import styled from 'styled-components';
 
 const Section = styled.div`
@@ -7,9 +7,10 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  width: 100%;
+  position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   border-bottom: 1px solid;
   background: linear-gradient(
     89.7deg,
@@ -78,18 +79,8 @@ const Container = styled.div`
     }
   }
 `;
-const Logo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  span {
-    font-size: 1.8rem;
-  }
-
-  /* h1 {
-    font-weight: 600;
-    font-size: 1.2rem;
-  } */
+const Logo = styled.p`
+  font-size: 1.6rem;
 `;
 const Nav = styled.div`
   font-size: 1.2rem;
@@ -159,14 +150,15 @@ const Header = () => {
     <Section>
       <Container bar={bar}>
         <Logo>
-          <img
+          Olena Reukova
+          {/* <img
             src={logo}
             alt='logo'
             width={50}
             height={40}
             border-radius={50}
-            border={1}
-          />
+            border={0}
+          /> */}
         </Logo>
         {/* <h1>Portfolio</h1> */}
         <Nav bar={bar}>
