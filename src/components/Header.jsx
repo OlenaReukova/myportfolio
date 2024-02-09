@@ -10,7 +10,6 @@ const Section = styled.div`
   position: fixed;
   top: 0;
   z-index: 999;
-  border-bottom: 1px solid;
   background: linear-gradient(
     89.7deg,
     rgb(0, 32, 95) 2.8%,
