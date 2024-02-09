@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import logo from './logo.png';
 import styled from 'styled-components';
 
 const Section = styled.div`
@@ -149,18 +148,7 @@ const Header = () => {
   return (
     <Section>
       <Container bar={bar}>
-        <Logo>
-          Olena Reukova
-          {/* <img
-            src={logo}
-            alt='logo'
-            width={50}
-            height={40}
-            border-radius={50}
-            border={0}
-          /> */}
-        </Logo>
-        {/* <h1>Portfolio</h1> */}
+        <Logo>Olena Reukova</Logo>
         <Nav bar={bar}>
           <span>
             <a href='#home' onClick={() => handleLinkClick('home')}>
