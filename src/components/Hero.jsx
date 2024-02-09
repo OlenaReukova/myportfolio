@@ -117,10 +117,11 @@ const Button = styled.button`
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: 5px 5px 5px 5px rgba(10, 1, 51, 0.5);
   :hover {
     transform: scale(1.5);
-    background-color: #83348d;
-    color: white;
+    /* background-color: #83348d;
+    color: white; */
   }
 
   @media only screen and (max-width: 768px) {
@@ -160,12 +161,12 @@ const Img = styled.img`
 const Icons = styled.div`
   display: flex;
   /* justify-content: center; */
-  gap: 1rem;
+  gap: 1.4rem;
   align-items: center;
   padding: 0.6rem 0.4rem;
   a:hover {
     transform: scale(1.5);
-    background-color: #83348d;
+    /* background-color: #83348d; */
   }
   @media only screen and (max-width: 768px) {
     justify-content: center;
@@ -194,14 +195,22 @@ const Hero = () => {
               target='__blank'>
               <FontAwesomeIcon
                 icon={faLinkedin}
-                style={{ color: '#fcfcfd', cursor: 'pointer' }}
+                style={{
+                  color: '#fcfcfd',
+                  cursor: 'pointer',
+                  boxShadow: '5px 5px 5px 5px rgba(10, 1, 51, 0.5)',
+                }}
                 size='3x'
               />
             </a>
             <a href='https://github.com/OlenaReukova' target='__blank'>
               <FontAwesomeIcon
                 icon={faGithub}
-                style={{ color: '#fcfcfd', cursor: 'pointer' }}
+                style={{
+                  color: '#fcfcfd',
+                  cursor: 'pointer',
+                  boxShadow: '5px 5px 5px 5px rgba(10, 1, 51, 0.5)',
+                }}
                 size='3x'
               />
             </a>
