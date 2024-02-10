@@ -29,7 +29,7 @@ const Container = styled.div`
 const Works = () => {
   return (
     <Section>
-      <Container id='works'>
+      <Container id='projects'>
         {/* <Left> */}
         <Cards />
         {/* <List>

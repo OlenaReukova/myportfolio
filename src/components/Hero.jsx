@@ -198,7 +198,7 @@ const Hero = () => {
                 style={{
                   color: '#fcfcfd',
                   cursor: 'pointer',
-                  boxShadow: '5px 5px 5px 5px rgba(10, 1, 51, 0.5)',
+                  boxShadow: '0px 5px 5px 0px rgba(10, 1, 51, 0.5)',
                 }}
                 size='3x'
               />
@@ -209,7 +209,7 @@ const Hero = () => {
                 style={{
                   color: '#fcfcfd',
                   cursor: 'pointer',
-                  boxShadow: '5px 5px 5px 5px rgba(10, 1, 51, 0.5)',
+                  boxShadow: '0px 5px 5px 0px rgba(10, 1, 51, 0.5)',
                 }}
                 size='3x'
               />

@@ -79,6 +79,7 @@ const Container = styled.div`
 `;
 const Logo = styled.p`
   font-size: 1.6rem;
+  cursor: pointer;
 `;
 const Nav = styled.div`
   font-size: 1.2rem;
@@ -144,10 +145,13 @@ const Header = () => {
       setBar(false);
     }
   };
+  const handleLogoClick = () => {
+    handleLinkClick('home');
+  };
   return (
     <Section>
       <Container bar={bar}>
-        <Logo>Olena Reukova</Logo>
+        <Logo onClick={handleLogoClick}>Olena Reukova</Logo>
         <Nav bar={bar}>
           <span>
             <a href='#home' onClick={() => handleLinkClick('home')}>
@@ -160,7 +164,7 @@ const Header = () => {
             </a>
           </span>
           <span>
-            <a href='#works' onClick={() => handleLinkClick('works')}>
+            <a href='#projects' onClick={() => handleLinkClick('works')}>
               Projects
             </a>
           </span>

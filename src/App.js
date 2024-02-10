@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
-import Works from './components/Works';
+import Projects from './components/Projects';
 import Contact from './components/Contact';
 import styled from 'styled-components';
 
@@ -28,7 +28,7 @@ function App() {
       <Header />
       <Hero />
       <About />
-      <Works />
+      <Projects />
       <Contact />
     </Container>
   );
