@@ -13,6 +13,7 @@ import {
 const CardContainer = styled.div`
   width: 300px;
   border: 1px solid #ccc;
+  box-shadow: rgba(10, 1, 51, 0.5) 5px 5px 5px 5px;
   border-radius: 5px;
   padding: 20px;
   margin: 10px;

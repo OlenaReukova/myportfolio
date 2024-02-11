@@ -64,11 +64,6 @@ const Right = styled.div`
   }
 `;
 
-const WhatIDo = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 const Img = styled.img`
   width: 100%;
   margin: auto;
@@ -101,7 +96,9 @@ const About = () => {
           <Img alt='' src='./img/about.png'></Img>
         </Left>
         <Right>
-          <WhatIDo></WhatIDo>
+          <Af>
+            "Everything you can imagine is real.” <br></br>-Pablo Picasso
+          </Af>
           <Desc>
             As a dedicated Software Developer, I possess a wide range of skills
             in HTML, CSS, JavaScript, React.js, Node.js, Express.js, PostgreSQL,
@@ -113,9 +110,7 @@ const About = () => {
             am also a team player who thrives in collaborating with
             cross-functional teams to develop outstanding web applications.
           </Desc>
-          <Af>
-            "Everything you can imagine is real.” <br></br>-Pablo Picasso
-          </Af>
+
           <SkillCard />
         </Right>
       </Container>
