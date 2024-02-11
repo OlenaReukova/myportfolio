@@ -85,9 +85,22 @@ const Cards = () => {
               </LinkWithBackground>{' '}
               , product managers can manage cohorts and add trainees. <br />
               <br />
-              Project built using Figma, React.js, Recharts charting library,
-              Node.js, Express server, React.js, React router, PostgreSQL and
-              Node.js database migration.
+              Project built using{' '}
+              <span style={{ fontWeight: 'bold' }}>Figma</span>,{' '}
+              <span style={{ fontWeight: 'bold' }}>React.js</span>,{' '}
+              <span style={{ fontWeight: 'bold' }}>Recharts </span>
+              charting library,{' '}
+              <span style={{ fontWeight: 'bold' }}>Node.js </span>,
+              <span style={{ fontWeight: 'bold' }}>Express </span>
+              server, <span style={{ fontWeight: 'bold' }}>
+                React{' '}
+              </span> router,{' '}
+              <span style={{ fontWeight: 'bold' }}>PostgreSQL </span>
+              and{' '}
+              <span style={{ fontWeight: 'bold' }}>
+                Node.js database migration
+              </span>
+              .
               <br />
               <br /> Responsive web design
             </>
@@ -101,7 +114,25 @@ const Cards = () => {
           imgUrl={'/img/Triumphapp.png'}
           subtitle={'Personal project'}
           text={
-            'E-commerce project built using React.js, Firebase for the login page, Material UI for design. Rect.js methods:React props,State provider and Reducer,read context API, state hooks.'
+            <>
+              This is an MVP of an e-commerce website. Users can navigate to the
+              checkout page, add items to their cart, remove items from the
+              cart, and log in for authentication.
+              <br />
+              <br />
+              The project is built using{' '}
+              <span style={{ fontWeight: 'bold' }}>React.js</span>, with{' '}
+              <span style={{ fontWeight: 'bold' }}>Firebase </span>
+              handling the login functionality and{' '}
+              <span style={{ fontWeight: 'bold' }}>Material UI </span>
+              used for the design. Within the React.js framework, methods such
+              as React props, State provider with Reducer, reading context API,
+              and utilizing state hooks are employed for effective data
+              management and enhanced user experience.
+              <br />
+              <br />
+              Responsive web design
+            </>
           }
           websiteLink={'https://ubiquitous-empanada-60d82a.netlify.app/'}
           githubLink={'https://github.com/OlenaReukova/eShop-react'}
@@ -112,7 +143,23 @@ const Cards = () => {
           imgUrl={'/img/AIapp.png'}
           subtitle={'Team project'}
           text={
-            'An MVP application that provides customers with AI-powered tools for generating video and photo content. Front end was built with JavaScript, HTML5, CSS3. Applied a mobile-first approach. This project is the result of a collaborative effort by three team members.'
+            <>
+              This MVP application offers customers AI-powered tools for
+              generating video and photo content. <br />
+              <br />
+              This project is the result of a collaborative effort by three team
+              members, aiming to deliver the MVP app through the first
+              experience of teamwork using Agile methodology. <br />
+              <br />
+              Front end was built with{' '}
+              <span style={{ fontWeight: 'bold' }}>Figma</span>,
+              <span style={{ fontWeight: 'bold' }}> JavaScript</span>,
+              <span style={{ fontWeight: 'bold' }}> HTML5</span>, and
+              <span style={{ fontWeight: 'bold' }}> CSS3</span>. <br />
+              <br />
+              <br />
+              Responsive web design with a mobile-first approach.
+            </>
           }
           websiteLink={'https://cyf-ofm-buddy-group-project.netlify.app/#'}
           githubLink={'https://github.com/momahboobian/Buddy-Groups-Challenge'}
@@ -122,7 +169,16 @@ const Cards = () => {
           imgUrl={'/img/Radioapp.png'}
           subtitle={'Personal project'}
           text={
-            'The radio app with clickable music types. This project was built with React.js, Vite, the RadioBrowser API, and the React H5 Audio Player component.'
+            <>
+              The radio app features clickable music types, with a simple and
+              user-friendly interface.
+              <br />
+              <br /> This project was built with React.js, Vite, the
+              RadioBrowser API, and the React H5 Audio Player component.
+              <br />
+              <br />
+              Responsive web design.
+            </>
           }
           websiteLink={'https://radio-app-swart.vercel.app/'}
           githubLink={'https://github.com/OlenaReukova/radio-app'}
@@ -133,7 +189,17 @@ const Cards = () => {
           imgUrl={'/img/movie.jpg'}
           subtitle={'Personal project'}
           text={
-            'A dynamic TV show project using vanilla JavaScript and DOM, making it simple for users to explore their favourite shows.'
+            <>
+              A dynamic TV show allows users to search for episodes by name or
+              choose from a list. Simple for users to explore their favourite
+              shows.
+              <br />
+              <br />
+              This application was built with JavaScript and DOM.
+              <br />
+              <br />
+              Responsive web design.
+            </>
           }
           websiteLink={'https://cyf-olenareukova-tv.netlify.app/'}
           githubLink={'https://github.com/OlenaReukova/tv-show-dom-project'}
@@ -144,7 +210,17 @@ const Cards = () => {
           imgUrl={'/img/counter.png'}
           subtitle={'Personal project'}
           text={
-            'A passenger counter allows user to count the number of people in the train. This application was built with JavaScript'
+            <>
+              A passenger counter allows user to count the number of people in
+              the train. <br />
+              <br />
+              <br />
+              This application was built with JavaScript.
+              <br />
+              <br />
+              <br />
+              Responsive web design.
+            </>
           }
           websiteLink={'https://magical-malasada-c11910.netlify.app/'}
           githubLink={'https://github.com/OlenaReukova/a-passenger-counter-app'}
