@@ -8,8 +8,8 @@ const CardWrapper = styled.div`
   flex-direction: column;
   margin: 10px;
   padding: 10px;
-  width: calc(33.33% - 20px); /* For three cards in a row */
-  max-width: 600px; /* Set a maximum width for larger screens */
+  width: calc(33.33% - 20px); /*  three cards in a row */
+  max-width: 600px; /*  maximum width for larger screens */
   margin: 20px auto;
   border-radius: 18px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
@@ -66,7 +66,6 @@ const CardStatWrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* background: #5930e5; */
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 `;

@@ -30,17 +30,7 @@ const Works = () => {
   return (
     <Section>
       <Container id='projects'>
-        {/* <Left> */}
         <Cards />
-        {/* <List>
-            {data.map((item) => (
-              <ListItem key={item} text={item}>
-                {item}
-              </ListItem>
-            ))}
-          </List> */}
-        {/* </Left> */}
-        {/* <Right></Right> */}
       </Container>
     </Section>
   );

@@ -1,16 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faLinkedin,
-  faGithub,
-  // faHtml5,
-  // faCss3Alt,
-  // faSquareJs,
-  // faReact,
-  // faFigma,
-  // faNode,
-} from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Section = styled.div`
   display: flex;
@@ -55,7 +46,7 @@ const Left = styled.div`
   margin: auto;
   @media only screen and (max-width: 320px) {
     font-size: 20px;
-    text-align: center; /* Center text for smaller screens */
+    text-align: center;
   }
 
   @media only screen and (max-width: 768px) {
@@ -91,41 +82,28 @@ const Desc = styled.p`
   border-left: 1px solid white;
 
   @media only screen and (max-width: 768px) {
-    /* padding: 20px; */
     text-align: center;
     width: 100%;
   }
 `;
 
-// const TechContainer = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: start;
-//   padding-top: 10px;
-//   padding-bottom: 10px;
-// `;
-
 const Button = styled.button`
-  /* display: block; */
   background-color: white;
   color: #082162;
   font-size: 1.2rem;
   font-weight: 800;
   width: 50px;
   height: 50px;
-  /* padding: 10px; */
   border: none;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 5px 5px 5px 5px rgba(10, 1, 51, 0.5);
   :hover {
     transform: scale(1.5);
-    /* background-color: #83348d;
-    color: white; */
   }
 
   @media only screen and (max-width: 768px) {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
 `;
 
@@ -160,14 +138,13 @@ const Img = styled.img`
 
 const Icons = styled.div`
   display: flex;
-  /* justify-content: center; */
   gap: 1.4rem;
   align-items: center;
   padding: 0.6rem 0.4rem;
   a:hover {
     transform: scale(1.5);
-    /* background-color: #83348d; */
   }
+
   @media only screen and (max-width: 768px) {
     justify-content: center;
   }
@@ -216,44 +193,6 @@ const Hero = () => {
             </a>
             <Button onClick={downloadCV}> CV</Button>
           </Icons>
-          {/* <TechContainer>
-            <Desc>Tech Stack</Desc>
-            <Icons>
-              <FontAwesomeIcon
-                icon={faHtml5}
-                style={{ color: '#ea3f06' }}
-                size='3x'
-              />
-              <FontAwesomeIcon
-                icon={faCss3Alt}
-                style={{
-                  color: '#095ef1',
-                }}
-                size='3x'
-              />
-              <FontAwesomeIcon
-                icon={faSquareJs}
-                style={{ color: '#eef207' }}
-                size='3x'
-              />
-              <FontAwesomeIcon
-                icon={faReact}
-                style={{ color: '#13beb3' }}
-                size='3x'
-              />
-              <FontAwesomeIcon
-                icon={faFigma}
-                style={{ color: '#dd0ed6' }}
-                size='3x'
-              />
-              <FontAwesomeIcon
-                icon={faNode}
-                style={{ color: '#07ed22' }}
-                size='3x'
-              />
-            </Icons>
-          </TechContainer> */}
-          {/* <Button>Learn More </Button> */}
         </Left>
         <Right>
           <Img alt='' src='./img/photo.jpeg'></Img>
