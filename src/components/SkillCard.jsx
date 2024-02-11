@@ -87,8 +87,8 @@ const backendSkills = [
 const SkillCard = () => {
   return (
     <div style={{ display: 'flex' }}>
-      <Card title='Frontend Developer' skills={frontendSkills} />
-      <Card title='Backend Developer' skills={backendSkills} />
+      <Card title='Frontend Development' skills={frontendSkills} />
+      <Card title='Backend Development' skills={backendSkills} />
     </div>
   );
 };
