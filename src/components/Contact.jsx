@@ -8,12 +8,14 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding-top: 80px;
+  min-height: calc(100vh - 30px);
 `;
 
 const Container = styled.div`
   display: flex;
   gap: 2rem;
-  padding-top: 3rem;
+  /* padding-top: 3rem; */
   width: 96%;
   max-width: 1280px;
   margin: 0px auto;
@@ -26,7 +28,6 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
 
   @media only screen and (max-width: 768px) {
     justify-content: center;
@@ -63,20 +64,30 @@ const TextArea = styled.textarea`
 `;
 
 const Button = styled.button`
-  background-color: transparent;
-  border-color: grey;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  color: white;
-  /* border: none; */
-  font-size: 1.2rem;
-  font-weight: normal;
+  display: inline-block;
+  outline: none;
   cursor: pointer;
-  border-radius: 5px;
-  padding: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 14px 24px;
+  border: none;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
+    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+  background: linear-gradient(
+    to right,
+    rgb(230, 30, 77) 0%,
+    rgb(227, 28, 95) 50%,
+    rgb(215, 4, 102) 100%
+  );
+  color: #fff;
 `;
 
 const Right = styled.div`
-  flex: 1;
+  flex: 2;
+  display: flex;
+  align-items: center;
 
   @media only screen and (max-width: 768px) {
     display: none;

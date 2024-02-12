@@ -26,7 +26,7 @@ const Container = styled.div`
   }
 `;
 
-const Works = () => {
+const Projects = () => {
   return (
     <Section>
       <Container id='projects'>
@@ -36,4 +36,4 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default Projects;
