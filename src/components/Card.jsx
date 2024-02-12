@@ -8,8 +8,8 @@ const CardWrapper = styled.div`
   flex-direction: column;
   margin: 10px;
   padding: 10px;
-  width: calc(33.33% - 20px); /*  three cards in a row */
-  max-width: 600px; /*  maximum width for larger screens */
+  width: calc(33.33% - 20px);
+  max-width: 600px;
   margin: 20px auto;
   border-radius: 18px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
@@ -18,10 +18,10 @@ const CardWrapper = styled.div`
   justify-content: space-between;
 
   @media (max-width: 768px) {
-    width: calc(100% - 20px); /* For mobile, cards in a single column */
+    width: calc(100% - 20px);
   }
   @media (max-width: 1200px) {
-    width: calc(80% - 20px); /* For tablets, two cards in a row */
+    width: calc(80% - 20px);
   }
 `;
 

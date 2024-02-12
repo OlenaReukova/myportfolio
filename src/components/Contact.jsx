@@ -15,12 +15,10 @@ const Section = styled.div`
 const Container = styled.div`
   display: flex;
   gap: 2rem;
-  /* padding-top: 3rem; */
   width: 96%;
   max-width: 1280px;
   margin: 0px auto;
   z-index: 1;
-  -webkit-box-pack: justify;
   justify-content: space-between;
 `;
 
@@ -97,27 +95,47 @@ const Right = styled.div`
 const Contact = () => {
   const ref = useRef();
   const [success, setSuccess] = useState(null);
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const errors = {};
+    if (!ref.current.name.value.trim()) {
+      errors.name = 'Name is required';
+    }
+    if (!ref.current.email.value.trim()) {
+      errors.email = 'Email is required';
+    } else if (!/^\S+@\S+\.\S+$/.test(ref.current.email.value.trim())) {
+      errors.email = 'Invalid email format';
+    }
+    return errors;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        'service_wr8c149',
-        'template_va0waf2',
-        ref.current,
-        'jbb-FyJ6Bb0yJ74s0'
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setSuccess(true);
-        },
-        (error) => {
-          console.log(error.text);
-          setSuccess(false);
-        }
-      );
+    const errors = validateForm();
+
+    if (Object.keys(errors).length === 0) {
+      emailjs
+        .sendForm(
+          'service_wr8c149',
+          'template_va0waf2',
+          ref.current,
+          'jbb-FyJ6Bb0yJ74s0'
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setSuccess(true);
+          },
+          (error) => {
+            console.log(error.text);
+            setSuccess(false);
+          }
+        );
+    } else {
+      setErrors(errors);
+    }
   };
 
   return (
@@ -126,19 +144,34 @@ const Contact = () => {
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Contact Me</Title>
-            <Input placeholder='Name' name='name'></Input>
-            <Input placeholder='Email' name='email'></Input>
+            <Input
+              placeholder='Name'
+              name='name'
+              autoComplete='name'
+              style={{ borderColor: errors.name && 'red' }}
+            />
+            {errors.name && <span style={{ color: 'red' }}>{errors.name}</span>}
+            <Input
+              placeholder='Email'
+              name='email'
+              autoComplete='email'
+              style={{ borderColor: errors.email && 'red' }}
+            />
+            {errors.email && (
+              <span style={{ color: 'red' }}>{errors.email}</span>
+            )}
             <TextArea
               placeholder='Write your message'
               name='message'
-              rows={10}></TextArea>
+              rows={10}
+            />
             <Button type='submit'>Send</Button>
             {success &&
               "Your message has been sent. I'll get back to you soon."}
           </Form>
         </Left>
         <Right>
-          <Map></Map>
+          <Map />
         </Right>
       </Container>
     </Section>
