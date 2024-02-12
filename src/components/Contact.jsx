@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import Map from './Map';
+import Footer from './Footer';
 
 const Section = styled.div`
   display: flex;
@@ -174,6 +175,7 @@ const Contact = () => {
           <Map />
         </Right>
       </Container>
+      <Footer />
     </Section>
   );
 };

@@ -11,7 +11,7 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  padding-top: 80px;
+  padding-top: 65px;
   max-width: 1280px;
   display: flex;
   flex-direction: column;

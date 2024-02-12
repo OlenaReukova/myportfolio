@@ -42,7 +42,6 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   margin: auto;
   @media only screen and (max-width: 320px) {
     font-size: 20px;

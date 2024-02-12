@@ -6,18 +6,20 @@ const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 80px;
-  height: 100vh;
-  row-gap: 40px;
+  justify-content: space-between;
+  padding-top: 65px;
 `;
 
 const Container = styled.div`
-  max-width: 1280px;
   display: flex;
   gap: 2rem;
   width: 96%;
-  margin: 0 auto;
+  max-width: 1280px;
+  margin: 0px auto;
   z-index: 1;
+  height: 100vh;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
 
   @media (max-width: 840px) {
     width: 90%;
@@ -41,10 +43,10 @@ const Title = styled.h1`
 `;
 
 const Left = styled.div`
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
 
   @media only screen and (max-width: 768px) {
     display: none;
@@ -52,11 +54,8 @@ const Left = styled.div`
 `;
 
 const Right = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex: 2;
+  position: relative;
 
   @media only screen and (max-width: 768px) {
     width: 80%;
@@ -65,8 +64,7 @@ const Right = styled.div`
 `;
 
 const Img = styled.img`
-  width: 100%;
-  margin: auto;
+  width: 80%;
   border-radius: 20px;
   transition: all ease 0.2s;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
@@ -76,6 +74,7 @@ const Desc = styled.p`
   font-size: 1.2rem;
   color: white;
   font-weight: normal;
+  padding: 0 0 0 15px;
 `;
 
 const Af = styled.p`
@@ -85,6 +84,7 @@ const Af = styled.p`
   padding-top: 10px;
   padding-bottom: 10px;
   font-style: italic;
+  padding-left: 30px;
 `;
 
 const About = () => {
@@ -93,7 +93,7 @@ const About = () => {
       <Title>About Me</Title>
       <Container>
         <Left>
-          <Img alt='' src='./img/about.png'></Img>
+          <Img alt='' src='./img/aboutme.jpg'></Img>
         </Left>
         <Right>
           <Af>
@@ -110,7 +110,6 @@ const About = () => {
             am also a team player who thrives in collaborating with
             cross-functional teams to develop outstanding web applications.
           </Desc>
-
           <SkillCard />
         </Right>
       </Container>
