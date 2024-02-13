@@ -10,7 +10,12 @@ const Section = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-top: 80px;
-  min-height: calc(100vh - 30px);
+  height: 100vh;
+  @media only screen and (max-width: 768px) {
+    justify-content: start;
+    padding-top: 60px; /* Adjust padding for smaller screens */
+    gap: 80px;
+  }
 `;
 
 const Container = styled.div`

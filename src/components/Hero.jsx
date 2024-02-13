@@ -21,19 +21,12 @@ const Container = styled.div`
   -webkit-box-pack: justify;
   justify-content: space-between;
 
-  @media (max-width: 840px) {
-    width: 90%;
-  }
-
-  @media (max-width: 640px) {
-    flex-direction: column;
-  }
-
   @media only screen and (max-width: 768px) {
-    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 65px;
+    gap: 0rem;
   }
 `;
 
@@ -43,13 +36,11 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   margin: auto;
-  @media only screen and (max-width: 320px) {
-    font-size: 20px;
-    text-align: center;
-  }
 
   @media only screen and (max-width: 768px) {
     width: 80%;
+    text-align: center;
+    flex: 0;
   }
 `;
 
@@ -100,10 +91,6 @@ const Button = styled.button`
   :hover {
     transform: scale(1.5);
   }
-
-  @media only screen and (max-width: 768px) {
-    margin-bottom: 0px;
-  }
 `;
 
 const Right = styled.div`
@@ -128,7 +115,7 @@ const Img = styled.img`
   margin: auto;
 
   @media only screen and (max-width: 768px) {
-    width: 300px;
+    width: 80%;
     display: flex;
     flex-direction: column;
     gap: 25px;

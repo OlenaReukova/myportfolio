@@ -21,12 +21,11 @@ const Container = styled.div`
   -webkit-box-pack: justify;
   justify-content: space-between;
 
-  @media (max-width: 840px) {
-    width: 90%;
-  }
-
-  @media (max-width: 640px) {
+  @media only screen and (max-width: 768px) {
+    width: 96%;
     flex-direction: column;
+    align-items: center;
+    height: auto;
   }
 `;
 
@@ -49,7 +48,8 @@ const Left = styled.div`
   align-items: flex-start;
 
   @media only screen and (max-width: 768px) {
-    display: none;
+    width: 100%;
+    align-items: center;
   }
 `;
 
@@ -74,17 +74,23 @@ const Desc = styled.p`
   font-size: 1.2rem;
   color: white;
   font-weight: normal;
-  padding: 0 0 0 15px;
+  margin-top: 30px;
 `;
 
 const Af = styled.p`
-  font-size: 18px;
+  display: flex;
+  justify-content: end;
+  font-size: 1rem;
   font-weight: normal;
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
   font-style: italic;
-  padding-left: 30px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 0.8rem;
+    padding-left: 100px;
+  }
 `;
 
 const About = () => {

@@ -23,6 +23,9 @@ const Container = styled.div`
 
   margin: 0 auto;
   padding: 1.5rem 0;
+  @media only screen and (max-width: 768px) {
+    padding: 0.6rem 0;
+  }
 `;
 
 const Des = styled.p`

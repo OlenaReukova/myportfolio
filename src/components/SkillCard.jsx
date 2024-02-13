@@ -10,13 +10,28 @@ import {
   faNode,
 } from '@fortawesome/free-brands-svg-icons';
 
+const CardSet = styled.div`
+  display: flex;
+  justify-content: space-between; /* Align cards with space between */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  margin-top: 30px;
+`;
+
 const CardContainer = styled.div`
-  width: 300px;
+  flex: 0 1 calc(50% - 20px); /* Each card takes 50% of the space with 20px margin */
+  max-width: calc(50% - 20px); /* Maximum width for each card */
+  margin-bottom: 20px; /* Add some bottom margin */
   border: 1px solid #ccc;
   box-shadow: rgba(10, 1, 51, 0.5) 5px 5px 5px 5px;
   border-radius: 5px;
   padding: 20px;
-  margin: 10px;
+
+  @media only screen and (max-width: 768px) {
+    flex: 0 1 calc(100% - 20px); /* Each card takes 100% of the space on smaller screens */
+    max-width: calc(
+      100% - 20px
+    ); /* Maximum width for each card on smaller screens */
+  }
 `;
 
 const Title = styled.h2`
@@ -87,10 +102,10 @@ const backendSkills = [
 
 const SkillCard = () => {
   return (
-    <div style={{ display: 'flex' }}>
+    <CardSet>
       <Card title='Frontend Development' skills={frontendSkills} />
       <Card title='Backend Development' skills={backendSkills} />
-    </div>
+    </CardSet>
   );
 };
 
