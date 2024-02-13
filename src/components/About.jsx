@@ -13,7 +13,7 @@ const Section = styled.div`
 const Container = styled.div`
   display: flex;
   gap: 2rem;
-  width: 96%;
+  width: 100%;
   max-width: 1280px;
   margin: 0px auto;
   z-index: 1;
@@ -22,7 +22,7 @@ const Container = styled.div`
   justify-content: space-between;
 
   @media only screen and (max-width: 768px) {
-    width: 96%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     height: auto;
@@ -64,10 +64,7 @@ const Right = styled.div`
 `;
 
 const Img = styled.img`
-  width: 80%;
-  border-radius: 20px;
-  transition: all ease 0.2s;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  width: 100%;
 `;
 
 const Desc = styled.p`
