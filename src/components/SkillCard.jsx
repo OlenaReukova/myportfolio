@@ -27,10 +27,8 @@ const CardContainer = styled.div`
   padding: 20px;
 
   @media only screen and (max-width: 768px) {
-    flex: 0 1 calc(100% - 20px); /* Each card takes 100% of the space on smaller screens */
-    max-width: calc(
-      100% - 20px
-    ); /* Maximum width for each card on smaller screens */
+    flex: 0 1 100%; /* Each card takes 100% of the available space */
+    max-width: 100%;
   }
 `;
 

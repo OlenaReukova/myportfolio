@@ -74,6 +74,7 @@ const Desc = styled.p`
   @media only screen and (max-width: 768px) {
     text-align: center;
     width: 100%;
+    margin: 20px 0px;
   }
 `;
 

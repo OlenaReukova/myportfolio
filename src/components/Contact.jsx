@@ -13,7 +13,7 @@ const Section = styled.div`
   height: 100vh;
   @media only screen and (max-width: 768px) {
     justify-content: start;
-    padding-top: 60px; /* Adjust padding for smaller screens */
+    padding-top: 120px; /* Adjust padding for smaller screens */
     gap: 80px;
   }
 `;
@@ -40,6 +40,9 @@ const Left = styled.div`
 
 const Title = styled.h1`
   font-weight: 200;
+  @media only screen and (max-width: 768px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Form = styled.form`
@@ -149,7 +152,7 @@ const Contact = () => {
       <Container id='contact'>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
-            <Title>Contact Me</Title>
+            <Title>Get in touch</Title>
             <Input
               placeholder='Name'
               name='name'

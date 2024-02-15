@@ -8,33 +8,8 @@ const CardContainer = styled.div`
   justify-content: space-between;
 
   @media (max-width: 768px) {
-    flex-direction: column; /* For mobile, switch to a column layout */
+    flex-direction: column;
   }
-  /* flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: stretch;
-  align-content: stretch;
-  overflow: hidden; */
-  /* @media (min-width: 340px) {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 90%;
-  } */
-
-  /* @media (min-width: 576px) {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 90%;
-  } */
-  /* @media (min-width: 768) {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 90%;
-  } */
 `;
 
 const Title = styled.h1`
@@ -43,13 +18,15 @@ const Title = styled.h1`
   justify-content: center;
   @media only screen and (max-width: 768px) {
     font-size: 40px;
+    font-weight: 200;
+    padding-bottom: 5px;
   }
 `;
 const LinkWithBackground = styled.a`
   background-color: none;
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 18px;
   :hover {
     color: blue;
@@ -88,22 +65,8 @@ const Cards = () => {
               </LinkWithBackground>{' '}
               , product managers can manage cohorts and add trainees. <br />
               <br />
-              Project built using{' '}
-              <span style={{ fontWeight: 'bold' }}>Figma</span>,{' '}
-              <span style={{ fontWeight: 'bold' }}>React.js</span>,{' '}
-              <span style={{ fontWeight: 'bold' }}>Recharts </span>
-              charting library,{' '}
-              <span style={{ fontWeight: 'bold' }}>Node.js </span>,
-              <span style={{ fontWeight: 'bold' }}>Express </span>
-              server, <span style={{ fontWeight: 'bold' }}>
-                React{' '}
-              </span> router,{' '}
-              <span style={{ fontWeight: 'bold' }}>PostgreSQL </span>
-              and{' '}
-              <span style={{ fontWeight: 'bold' }}>
-                Node.js database migration
-              </span>
-              .
+              Technologies: Figma, React.js, Recharts, Node.js, Express, React,
+              PostgreSQL, Node.js database migration .
               <br />
               <br /> Responsive web design
             </>
@@ -123,15 +86,11 @@ const Cards = () => {
               cart, and log in for authentication.
               <br />
               <br />
-              The project is built using{' '}
-              <span style={{ fontWeight: 'bold' }}>React.js</span>, with{' '}
-              <span style={{ fontWeight: 'bold' }}>Firebase </span>
-              handling the login functionality and{' '}
-              <span style={{ fontWeight: 'bold' }}>Material UI </span>
-              used for the design. Within the React.js framework, methods such
-              as React props, State provider with Reducer, reading context API,
-              and utilizing state hooks are employed for effective data
-              management and enhanced user experience.
+              Technologies: React.js, Firebase, Material UI used for the design.
+              Within the React.js framework, methods such as React props, State
+              provider with Reducer, reading context API, and utilizing state
+              hooks are employed for effective data management and enhanced user
+              experience.
               <br />
               <br />
               Responsive web design
@@ -154,11 +113,7 @@ const Cards = () => {
               members, aiming to deliver the MVP app through the first
               experience of teamwork using Agile methodology. <br />
               <br />
-              Front end was built with{' '}
-              <span style={{ fontWeight: 'bold' }}>Figma</span>,
-              <span style={{ fontWeight: 'bold' }}> JavaScript</span>,
-              <span style={{ fontWeight: 'bold' }}> HTML5</span>, and
-              <span style={{ fontWeight: 'bold' }}> CSS3</span>. <br />
+              Technologies: Figma, JavaScript, HTML5, CSS3. <br />
               <br />
               <br />
               Responsive web design with a mobile-first approach.
@@ -176,8 +131,8 @@ const Cards = () => {
               The radio app features clickable music types, with a simple and
               user-friendly interface.
               <br />
-              <br /> This project was built with React.js, Vite, the
-              RadioBrowser API, and the React H5 Audio Player component.
+              <br /> Technologies: React.js, Vite, the RadioBrowser API, and the
+              React H5 Audio Player component.
               <br />
               <br />
               Responsive web design.
@@ -198,7 +153,7 @@ const Cards = () => {
               shows.
               <br />
               <br />
-              This application was built with JavaScript and DOM.
+              Technologies: JavaScript and DOM.
               <br />
               <br />
               Responsive web design.
@@ -218,7 +173,7 @@ const Cards = () => {
               the train. <br />
               <br />
               <br />
-              This application was built with JavaScript.
+              Technologies: JavaScript.
               <br />
               <br />
               <br />
