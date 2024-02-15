@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import Map from './Map';
@@ -53,9 +53,6 @@ const Form = styled.form`
 
   @media only screen and (max-width: 768px) {
     width: 90%;
-    touch-action: manipulation; /* Disable double-tap-to-zoom on form */
-    -ms-touch-action: manipulation; /* For Internet Explorer */
-    user-scalable: no; /* Prevent zooming on form */
   }
 `;
 
@@ -109,6 +106,23 @@ const Contact = () => {
   const ref = useRef();
   const [success, setSuccess] = useState(null);
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    const handleTouchStart = () => {
+      if (
+        document.activeElement.tagName === 'INPUT' ||
+        document.activeElement.tagName === 'TEXTAREA'
+      ) {
+        document.body.style.zoom = '100%';
+      }
+    };
+
+    window.addEventListener('touchstart', handleTouchStart, { passive: false });
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart);
+    };
+  }, []);
 
   const validateForm = () => {
     const errors = {};
