@@ -12,22 +12,22 @@ import {
 
 const CardSet = styled.div`
   display: flex;
-  justify-content: space-between; /* Align cards with space between */
-  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-top: 30px;
 `;
 
 const CardContainer = styled.div`
-  flex: 0 1 calc(50% - 20px); /* Each card takes 50% of the space with 20px margin */
-  max-width: calc(50% - 20px); /* Maximum width for each card */
-  margin-bottom: 20px; /* Add some bottom margin */
+  flex: 0 1 calc(50% - 20px);
+  max-width: calc(50% - 20px);
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   box-shadow: rgba(10, 1, 51, 0.5) 5px 5px 5px 5px;
   border-radius: 5px;
   padding: 20px;
 
   @media only screen and (max-width: 768px) {
-    flex: 0 1 100%; /* Each card takes 100% of the available space */
+    flex: 0 1 100%;
     max-width: 100%;
   }
 `;

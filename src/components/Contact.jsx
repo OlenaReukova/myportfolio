@@ -13,7 +13,7 @@ const Section = styled.div`
   height: 100vh;
   @media only screen and (max-width: 768px) {
     justify-content: start;
-    padding-top: 120px; /* Adjust padding for smaller screens */
+    padding-top: 120px;
     gap: 80px;
   }
 `;

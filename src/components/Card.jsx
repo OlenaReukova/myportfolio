@@ -20,9 +20,6 @@ const CardWrapper = styled.div`
   @media (max-width: 768px) {
     width: calc(95% - 5px);
   }
-  /* @media (max-width: 1200px) {
-    width: calc(80% - 20px);
-  } */
 `;
 
 const CardImage = styled.div`
