@@ -108,7 +108,7 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
-    const handleTouchStart = () => {
+    const handleTouchStart = (event) => {
       if (
         document.activeElement.tagName === 'INPUT' ||
         document.activeElement.tagName === 'TEXTAREA'
