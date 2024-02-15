@@ -15,6 +15,7 @@ const Section = styled.div`
     justify-content: start;
     padding-top: 120px;
     gap: 80px;
+    /* height: 100hv; */
   }
 `;
 
@@ -136,6 +137,7 @@ const Contact = () => {
           (result) => {
             console.log(result.text);
             setSuccess(true);
+            ref.current.reset();
           },
           (error) => {
             console.log(error.text);

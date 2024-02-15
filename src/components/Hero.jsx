@@ -88,7 +88,6 @@ const Button = styled.button`
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 5px 5px 5px 5px rgba(10, 1, 51, 0.5);
   :hover {
     transform: scale(1.5);
   }
@@ -160,7 +159,6 @@ const Hero = () => {
                 style={{
                   color: '#fcfcfd',
                   cursor: 'pointer',
-                  boxShadow: '0px 5px 5px 0px rgba(10, 1, 51, 0.5)',
                 }}
                 size='3x'
               />
@@ -171,7 +169,6 @@ const Hero = () => {
                 style={{
                   color: '#fcfcfd',
                   cursor: 'pointer',
-                  boxShadow: '0px 5px 5px 0px rgba(10, 1, 51, 0.5)',
                 }}
                 size='3x'
               />
