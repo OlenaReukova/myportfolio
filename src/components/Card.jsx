@@ -18,11 +18,11 @@ const CardWrapper = styled.div`
   justify-content: space-between;
 
   @media (max-width: 768px) {
-    width: calc(100% - 20px);
+    width: calc(95% - 5px);
   }
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     width: calc(80% - 20px);
-  }
+  } */
 `;
 
 const CardImage = styled.div`

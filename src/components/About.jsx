@@ -58,7 +58,7 @@ const Right = styled.div`
   position: relative;
 
   @media only screen and (max-width: 768px) {
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
 `;
@@ -85,8 +85,7 @@ const Af = styled.p`
   font-style: italic;
 
   @media only screen and (max-width: 768px) {
-    font-size: 0.8rem;
-    padding-left: 100px;
+    font-size: 1rem;
   }
 `;
 
