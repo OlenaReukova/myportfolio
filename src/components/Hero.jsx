@@ -105,7 +105,7 @@ const Right = styled.div`
 
 const Img = styled.img`
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -116,9 +116,7 @@ const Img = styled.img`
 
   @media only screen and (max-width: 768px) {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+    align-items: center;
   }
 `;
 

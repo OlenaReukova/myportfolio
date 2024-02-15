@@ -21,7 +21,7 @@ const Section = styled.div`
 const Container = styled.div`
   display: flex;
   gap: 2rem;
-  width: 96%;
+  width: 100%;
   max-width: 1280px;
   margin: 0px auto;
   z-index: 1;
@@ -50,7 +50,7 @@ const Form = styled.form`
   gap: 25px;
 
   @media only screen and (max-width: 768px) {
-    width: 70%;
+    width: calc(95% - 5px);
   }
 `;
 
