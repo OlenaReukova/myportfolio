@@ -53,6 +53,9 @@ const Form = styled.form`
 
   @media only screen and (max-width: 768px) {
     width: 90%;
+    touch-action: manipulation; /* Disable double-tap-to-zoom on form */
+    -ms-touch-action: manipulation; /* For Internet Explorer */
+    user-scalable: no; /* Prevent zooming on form */
   }
 `;
 
