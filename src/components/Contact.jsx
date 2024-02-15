@@ -40,9 +40,7 @@ const Left = styled.div`
 
 const Title = styled.h1`
   font-weight: 200;
-  @media only screen and (max-width: 768px) {
-    font-size: 1.2rem;
-  }
+  font-size: 1.2rem;
 `;
 
 const Form = styled.form`
@@ -53,7 +51,7 @@ const Form = styled.form`
   gap: 25px;
 
   @media only screen and (max-width: 768px) {
-    width: calc(95% - 5px);
+    width: 90%;
   }
 `;
 
@@ -62,12 +60,14 @@ const Input = styled.input`
   background-color: white;
   border: none;
   border-radius: 5px;
+  font-size: 14px;
 `;
 
 const TextArea = styled.textarea`
   padding: 20px;
   border: none;
   border-radius: 5px;
+  font-size: 14px;
 `;
 
 const Button = styled.button`
