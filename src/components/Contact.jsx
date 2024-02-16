@@ -61,14 +61,14 @@ const Input = styled.input`
   background-color: white;
   border: none;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
 `;
 
 const TextArea = styled.textarea`
   padding: 20px;
   border: none;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
 `;
 
 const Button = styled.button`
