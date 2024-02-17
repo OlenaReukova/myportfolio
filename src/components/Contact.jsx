@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import Map from './Map';
-import Footer from './Footer';
+// import Footer from './Footer';
 
 const Section = styled.div`
   display: flex;
@@ -10,11 +10,15 @@ const Section = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-top: 80px;
-  height: 100vh;
+  padding-bottom: 60px;
+  width: 96%;
+  margin: 0 auto;
+  /* height: 100vh; */
   @media only screen and (max-width: 768px) {
     justify-content: start;
     padding-top: 120px;
     gap: 80px;
+    width: 100%;
     /* height: 100hv; */
   }
 `;
@@ -34,7 +38,7 @@ const Left = styled.div`
   display: flex;
   align-items: center;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     justify-content: center;
   }
 `;
@@ -97,7 +101,7 @@ const Right = styled.div`
   display: flex;
   align-items: center;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     display: none;
   }
 `;
@@ -185,7 +189,7 @@ const Contact = () => {
           <Map />
         </Right>
       </Container>
-      <Footer />
+      {/* <Footer /> */}
     </Section>
   );
 };

@@ -13,11 +13,10 @@ const Section = styled.div`
 const Container = styled.div`
   display: flex;
   gap: 2rem;
-  width: 100%;
+  width: 96%;
   max-width: 1280px;
   margin: 0px auto;
   z-index: 1;
-  height: 100vh;
   -webkit-box-pack: justify;
   justify-content: space-between;
 
@@ -32,7 +31,7 @@ const Container = styled.div`
 const Title = styled.h1`
   font-size: 60px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
   width: 100%;
   text-align: center;
 

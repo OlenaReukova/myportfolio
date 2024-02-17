@@ -5,6 +5,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import styled from 'styled-components';
+import Footer from './components/Footer';
 
 const Container = styled.div`
   scroll-snap-type: y mandatory;
@@ -25,6 +26,7 @@ function App() {
       <About />
       <Projects />
       <Contact />
+      <Footer />
     </Container>
   );
 }

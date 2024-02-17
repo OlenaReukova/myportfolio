@@ -13,6 +13,7 @@ const Section = styled.div`
 const Container = styled.div`
   padding-top: 65px;
   max-width: 1280px;
+  width: 96%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

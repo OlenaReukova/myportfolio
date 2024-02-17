@@ -13,18 +13,20 @@ const Section = styled.div`
 const Container = styled.div`
   display: flex;
   gap: 2rem;
-  width: 100%;
+  width: 96%;
   max-width: 1280px;
-  margin: 0px auto;
+  margin: 60px auto;
   z-index: 1;
-  height: 100vh;
+  min-height: calc(100vh - 120px);
   -webkit-box-pack: justify;
   justify-content: space-between;
 
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    width: 100%;
+    /* justify-content: center; */
+    justify-content: start;
     padding-top: 65px;
     gap: 0rem;
   }
@@ -117,6 +119,7 @@ const Img = styled.img`
   @media only screen and (max-width: 768px) {
     width: 100%;
     align-items: center;
+    position: relative;
   }
 `;
 
