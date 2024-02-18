@@ -96,7 +96,7 @@ const About = () => {
       <Title>About Me</Title>
       <Container>
         <Left>
-          <Img alt='' src='./img/aboutme.jpg'></Img>
+          <Img alt='' src='./img/about.png'></Img>
         </Left>
         <Right>
           <Af>
