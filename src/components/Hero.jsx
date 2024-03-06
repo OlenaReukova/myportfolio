@@ -139,7 +139,7 @@ const Icons = styled.div`
 const Hero = () => {
   const downloadCV = () => {
     const cvURL =
-      'https://drive.google.com/file/d/1NW-afsjowfqnoskHn_CzgwNOlL8phVjn/view?usp=sharing';
+      'https://drive.google.com/file/d/1z-UrgqmPLqD1sqB_S6BqRzi4cAsTIf99/view?usp=sharing';
     window.open(cvURL, '_blank');
   };
   return (
