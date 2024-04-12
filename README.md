@@ -1,5 +1,5 @@
 ## Olena Reukova's Portfolio
-<img width="1437" alt="portdimag" src="https://github.com/OlenaReukova/myportfolio/assets/34659641/e64d9613-25de-49ce-a6cc-794662d0f085">\
+<img width="1437" alt="portdimag" src="https://github.com/OlenaReukova/myportfolio/assets/34659641/e64d9613-25de-49ce-a6cc-794662d0f085">
 
 ## Welcome to my portfolio! 
 This portfolio showcases my skills, projects, and information about me as a Full Stack Developer. 
@@ -17,12 +17,12 @@ It includes information about my skills, projects I have worked on, and ways to 
 
 #### Features
 
-**Responsive Design.** The portfolio is designed to be fully responsive, ensuring a seamless experience across various devices.\
-**Navigation.** Easy navigation with a navbar and smooth scrolling to different sections of the portfolio.\
-**About Me.** A section providing information about my technical skills.\
-**Projects.** Showcases a selection of projects I've worked on, including descriptions, technologies used, and links to GitHub repositories and live demos.
+**Responsive Design** The portfolio is designed to be fully responsive, ensuring a seamless experience across various devices.\
+**Navigation** Easy navigation with a navbar and smooth scrolling to different sections of the portfolio.\
+**About Me** A section providing information about my technical skills.\
+**Projects** Showcases a selection of projects I've worked on, including descriptions, technologies used, and links to GitHub repositories and live demos.
 
-**Technologies Used:** React.js, Styled-Components.
+**Technologies used:** React.js, Styled-Components.
 
 #### Contact
 kronverk01@gmail.com\
