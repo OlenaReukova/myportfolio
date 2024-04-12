@@ -1,6 +1,7 @@
 ## Olena Reukova's Portfolio
+<img width="1437" alt="portdimag" src="https://github.com/OlenaReukova/myportfolio/assets/34659641/e64d9613-25de-49ce-a6cc-794662d0f085">\
 
-Welcome to my portfolio! 
+## Welcome to my portfolio! 
 This portfolio showcases my skills, projects, and information about me as a Full Stack Developer. 
 
 #### Content
