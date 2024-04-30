@@ -32,8 +32,9 @@ const Container = styled.div`
     align-items: center;
     width: 100%;
     justify-content: start;
-    padding-top: 65px;
+    /* padding-top: 65px; */
     gap: 0rem;
+    min-height: calc(100vh - 60px);
   }
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     margin-top: 65px;
@@ -51,6 +52,7 @@ const Left = styled.div`
     width: 80%;
     text-align: center;
     flex: 0;
+    padding-top: 20px;
   }
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     margin: 0;
@@ -91,7 +93,7 @@ const Right = styled.div`
 
   @media only screen and (max-width: 768px) {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
     align-items: center;
     width: 100%;

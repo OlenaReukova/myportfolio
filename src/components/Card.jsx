@@ -46,12 +46,16 @@ const CardImage = styled.div`
 
 const CardTextWrapper = styled.div`
   padding: 20px;
+  @media (max-width: 768px) {
+    padding: 20px 0px;
+  }
 `;
 
 const CardTextTitle = styled.h2`
   margin-top: 0px;
   font-size: 30px;
   text-align: left;
+  margin-bottom: 15px;
 `;
 
 const CardTextBody = styled.p`
@@ -75,6 +79,9 @@ const CardStatWrapper = styled.div`
   justify-content: flex-start;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  gap: 10px;
+  @media (max-width: 768px) {
+  }
 `;
 
 const CardStats = styled.div`

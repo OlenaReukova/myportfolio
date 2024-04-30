@@ -179,7 +179,8 @@ const Header = () => {
     }
   };
   const downloadCV = () => {
-    const cvURL = 'https://shorturl.at/qtwzR';
+    const cvURL =
+      'https://drive.google.com/file/d/1bh-Fg0qaLkWqNH0lY4nSKelt8ouwYipz/view?usp=sharing';
     window.open(cvURL, '_blank');
   };
   // const handleLogoClick = () => {

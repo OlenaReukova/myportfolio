@@ -17,6 +17,7 @@ const Title = styled.h1`
   font-size: 60px;
   font-weight: bold;
   text-align: left;
+  margin-bottom: 1.5rem;
 
   @media only screen and (max-width: 768px) {
     font-size: 40px;

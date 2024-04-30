@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Cards from './Cards';
-import backgroundImage from '../image/bkg_projects2.png';
 
 const Section = styled.div`
-  /* background-image: url(${backgroundImage}); */
   background-size: cover;
   background-position: center;
   display: flex;
