@@ -8,11 +8,12 @@ const Section = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-top: 65px;
+  background: #1f265c;
 `;
 
 const Container = styled.div`
   display: flex;
-  gap: 2rem;
+  gap: 10rem;
   width: 96%;
   max-width: 1280px;
   margin: 0px auto;
@@ -23,8 +24,12 @@ const Container = styled.div`
   @media only screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     height: auto;
+    gap: 0;
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    gap: 3rem;
   }
 `;
 
@@ -32,12 +37,11 @@ const Title = styled.h1`
   font-size: 60px;
   padding-top: 10px;
   padding-bottom: 40px;
-  width: 100%;
-  text-align: center;
+  width: 90%;
+  text-align: left;
 
   @media only screen and (max-width: 768px) {
     font-size: 40px;
-    font-weight: 200;
     padding-bottom: 30px;
   }
 `;
@@ -49,7 +53,7 @@ const Left = styled.div`
   align-items: flex-start;
 
   @media only screen and (max-width: 768px) {
-    width: 100%;
+    width: 85%;
     align-items: center;
   }
 `;
@@ -59,7 +63,7 @@ const Right = styled.div`
   position: relative;
 
   @media only screen and (max-width: 768px) {
-    width: 90%;
+    width: 80%;
     margin: auto;
   }
 `;
@@ -81,8 +85,7 @@ const Af = styled.p`
   font-size: 1rem;
   font-weight: normal;
   color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 30px;
   font-style: italic;
 
   @media only screen and (max-width: 768px) {
@@ -96,7 +99,7 @@ const About = () => {
       <Title>About Me</Title>
       <Container>
         <Left>
-          <Img alt='' src='./img/about.png'></Img>
+          <Img alt='' src='./img/about1.png'></Img>
         </Left>
         <Right>
           <Af>
@@ -105,13 +108,21 @@ const About = () => {
           <Desc>
             As a dedicated Software Developer, I possess a wide range of skills
             in HTML, CSS, JavaScript, React.js, Node.js, Express.js, PostgreSQL,
-            and various other libraries and frameworks. <br></br>
-            <br></br>I excel at designing and maintaining responsive websites
-            that offer a seamless user experience. My expertise lies in crafting
-            dynamic and engaging interfaces by creating elegant and functional
-            digital solutions and utilizing development tools and techniques. I
-            am also a team player who thrives in collaborating with
-            cross-functional teams to develop outstanding web applications.
+            and various other libraries and frameworks. I completed an intensive
+            800-hour full-stack web development course. Enthusiastic learner
+            building user-friendly websites with a focus on functionality and
+            design. Excited to collaborate and contribute to web applications
+            using my growing skillset in development tools and techniques. My
+            M.Sc. in Electrical Engineering brings a problem-solving approach to
+            web dev.<br></br>
+            <br></br>
+            <span style={{ fontSize: '16px' }}>
+              Behind the scenes:<br></br>
+              <br></br>
+              Dog walker by day, music lover by night, nature enthusiast always.
+            </span>
+            <br></br>
+            <br></br>
           </Desc>
           <SkillCard />
         </Right>

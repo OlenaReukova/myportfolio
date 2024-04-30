@@ -1,13 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import Cards from './Cards';
+import backgroundImage from '../image/bkg_projects2.png';
 
 const Section = styled.div`
-  /* height: 100vh; */
+  /* background-image: url(${backgroundImage}); */
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  background: #1f265c;
 `;
 
 const Container = styled.div`
@@ -23,13 +27,14 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
   }
 `;
 
 const Projects = () => {
   return (
-    <Section>
-      <Container id='projects'>
+    <Section id='projects'>
+      <Container>
         <Cards />
       </Container>
     </Section>

@@ -21,20 +21,27 @@ const CardContainer = styled.div`
   flex: 0 1 calc(50% - 20px);
   max-width: calc(50% - 20px);
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc;
   box-shadow: rgba(10, 1, 51, 0.5) 5px 5px 5px 5px;
-  border-radius: 5px;
+  border-radius: 5px; */
   padding: 20px;
 
   @media only screen and (max-width: 768px) {
     flex: 0 1 100%;
     max-width: 100%;
+    padding: 0px;
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    padding: 0px;
   }
 `;
 
 const Title = styled.h2`
-  font-size: 20px;
+  font-size: 30px;
   margin-bottom: 10px;
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const SkillsList = styled.ul`
@@ -46,6 +53,7 @@ const SkillItem = styled.li`
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+  font-size: 18px;
 `;
 
 const StyledImg = styled.img`
@@ -89,11 +97,11 @@ const backendSkills = [
   { icon: faReact, description: 'React' },
   { icon: faNode, description: 'Node.js' },
   {
-    icon: '/img/postgresql.png',
+    icon: <img src='/public/img/postgresql.png' alt='PostgreSQL' />,
     description: 'PostgreSQL',
   },
   {
-    icon: '/img/express.png',
+    icon: <img src='/public/img/express.png' alt='Express.js' />,
     description: 'Express.js',
   },
 ];

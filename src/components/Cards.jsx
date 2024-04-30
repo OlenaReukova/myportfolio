@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from './Card';
+import './Cards.css';
 
 const CardContainer = styled.div`
   display: flex;
@@ -14,19 +15,23 @@ const CardContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 60px;
-  display: flex;
-  justify-content: center;
+  font-weight: bold;
+  text-align: left;
+
   @media only screen and (max-width: 768px) {
     font-size: 40px;
-    font-weight: 200;
     padding-bottom: 5px;
+    padding-left: 30px;
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    padding-left: 20px;
   }
 `;
 const LinkWithBackground = styled.a`
   background-color: none;
   color: white;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: bold;
   font-size: 18px;
   :hover {
     color: blue;
@@ -35,6 +40,11 @@ const LinkWithBackground = styled.a`
 const Separator = styled.span`
   margin-left: 10px;
   margin-right: 10px;
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 `;
 
 const Cards = () => {
@@ -65,8 +75,8 @@ const Cards = () => {
               </LinkWithBackground>{' '}
               , product managers can manage cohorts and add trainees. <br />
               <br />
-              Technologies: Figma, React.js, Recharts, Node.js, Express, React,
-              PostgreSQL, Node.js database migration .
+              <strong>Technologies:</strong> Figma, React.js, Recharts, Node.js,
+              Express, React, PostgreSQL, Node.js database migration .
               <br />
               <br /> Responsive web design
             </>
@@ -86,11 +96,11 @@ const Cards = () => {
               cart, and log in for authentication.
               <br />
               <br />
-              Technologies: React.js, Firebase, Material UI used for the design.
-              Within the React.js framework, methods such as React props, State
-              provider with Reducer, reading context API, and utilizing state
-              hooks are employed for effective data management and enhanced user
-              experience.
+              <strong> Technologies:</strong> React.js, Firebase, Material UI
+              used for the design. Within the React.js framework, methods such
+              as React props, State provider with Reducer, reading context API,
+              and utilizing state hooks are employed for effective data
+              management and enhanced user experience.
               <br />
               <br />
               Responsive web design
@@ -113,7 +123,8 @@ const Cards = () => {
               members, aiming to deliver the MVP app through the first
               experience of teamwork using Agile methodology. <br />
               <br />
-              Technologies: Figma, JavaScript, HTML5, CSS3. <br />
+              <strong>Technologies:</strong> Figma, JavaScript, HTML5, CSS3.{' '}
+              <br />
               <br />
               <br />
               Responsive web design with a mobile-first approach.
@@ -131,8 +142,8 @@ const Cards = () => {
               The radio app features clickable music types, with a simple and
               user-friendly interface.
               <br />
-              <br /> Technologies: React.js, Vite, the RadioBrowser API, and the
-              React H5 Audio Player component.
+              <br /> <strong>Technologies:</strong> React.js, Vite, the
+              RadioBrowser API, and the React H5 Audio Player component.
               <br />
               <br />
               Responsive web design.
@@ -153,7 +164,7 @@ const Cards = () => {
               shows.
               <br />
               <br />
-              Technologies: JavaScript and DOM.
+              <strong>Technologies:</strong> JavaScript and DOM.
               <br />
               <br />
               Responsive web design.
@@ -173,7 +184,7 @@ const Cards = () => {
               the train. <br />
               <br />
               <br />
-              Technologies: JavaScript.
+              <strong>Technologies:</strong> JavaScript.
               <br />
               <br />
               <br />

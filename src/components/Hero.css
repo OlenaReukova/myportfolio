@@ -1,0 +1,24 @@
+.title {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url('/src/image/back.png');
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: back 30s linear infinite;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+#home {
+  background: url('/src/image/bkg.png');
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    background-size: cover;
+  }
+}

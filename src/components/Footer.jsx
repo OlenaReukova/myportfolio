@@ -9,6 +9,15 @@ const Section = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  background: linear-gradient(
+    to top,
+    #051937,
+    #0b1e47,
+    #162356,
+    #252765,
+    #362a73
+  );
+  border-top: 2px solid white;
 
   @media only screen and (max-width: 768px) {
     width: 100%;
@@ -39,6 +48,7 @@ const Icons = styled.div`
   gap: 1.4rem;
   align-items: center;
   padding: 0.6rem 0.4rem;
+  margin-top: 20px;
   a:hover {
     transform: scale(1.5);
   }

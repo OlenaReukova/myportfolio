@@ -1,24 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BsGithub } from 'react-icons/bs';
-import { FaGlobe } from 'react-icons/fa';
+// import { BsGithub } from 'react-icons/bs';
+// import { FaGlobe } from 'react-icons/fa';
 
 const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px;
-  padding: 10px;
   width: calc(33.33% - 20px);
   max-width: 600px;
   margin: 20px auto;
-  border-radius: 18px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  background: transparent;
+  color: white;
   text-align: center;
   justify-content: space-around;
   justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(249, 248, 248, 0.1);
+  }
 
   @media (max-width: 768px) {
-    width: calc(95% - 5px);
+    width: calc(88% - 5px);
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    width: calc(50% - 20px);
   }
 `;
 
@@ -26,9 +37,8 @@ const CardImage = styled.div`
   background-image: url(${(props) => props.$background});
   width: 100%;
   vertical-align: middle;
-  border-radius: 15px;
+
   background-size: contain;
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 15rem;
@@ -40,20 +50,21 @@ const CardTextWrapper = styled.div`
 
 const CardTextTitle = styled.h2`
   margin-top: 0px;
-  font-size: 1.2rem;
+  font-size: 30px;
+  text-align: left;
 `;
 
 const CardTextBody = styled.p`
   text-align: left;
-  color: #fff;
-  font-weight: 300;
+  color: white;
+  font-size: 18px;
 `;
 
 const CardSubtitle = styled.p`
   padding: 10px 0;
   text-align: left;
-  color: #fff;
-  font-size: 0.8rem;
+  color: white;
+  font-size: 16px;
 `;
 
 const CardStatWrapper = styled.div`
@@ -61,7 +72,7 @@ const CardStatWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 `;
@@ -70,36 +81,43 @@ const CardStats = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: black;
   padding: 10px;
 `;
 
-const LinkText = styled.a`
-  background-color: none;
+const LinkButton = styled.a`
+  background-color: transparent;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: 0.5px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
   :hover {
-    color: blue;
-  }
-`;
-const IconB = styled(BsGithub)`
-  color: white;
-  margin-right: 5px;
-  :hover {
-    color: blue;
-  }
-`;
-const IconG = styled(FaGlobe)`
-  color: white;
-  margin-right: 5px;
-  :hover {
-    color: blue;
+    background-color: #32327a;
   }
 `;
 
+// const IconG = styled(FaGlobe)`
+//   margin-right: 5px;
+// `;
+
+// const IconB = styled(BsGithub)`
+//   margin-right: 5px;
+// `;
+
 const Card = ({ title, imgUrl, text, subtitle, websiteLink, githubLink }) => {
+  const handleButtonClick = (link) => {
+    window.open(link, '_blank');
+  };
   return (
     <CardWrapper>
       <CardImage $background={imgUrl} />
@@ -110,14 +128,14 @@ const Card = ({ title, imgUrl, text, subtitle, websiteLink, githubLink }) => {
       </CardTextWrapper>
       <CardStatWrapper>
         <CardStats>
-          <LinkText href={websiteLink} target='_blank'>
-            <IconG />
-          </LinkText>
+          <LinkButton onClick={() => handleButtonClick(websiteLink)}>
+            View Demo
+          </LinkButton>
         </CardStats>
         <CardStats>
-          <LinkText href={githubLink} target='_blank'>
-            <IconB />
-          </LinkText>
+          <LinkButton onClick={() => handleButtonClick(githubLink)}>
+            View GitHub
+          </LinkButton>
         </CardStats>
       </CardStatWrapper>
     </CardWrapper>

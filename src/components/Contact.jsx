@@ -2,35 +2,37 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import styled from 'styled-components';
 import Map from './Map';
-// import Footer from './Footer';
 
 const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-top: 80px;
-  padding-bottom: 60px;
-  width: 96%;
-  margin: 0 auto;
-  /* height: 100vh; */
+  background: #1f265c;
+  padding-top: 65px;
   @media only screen and (max-width: 768px) {
-    justify-content: start;
-    padding-top: 120px;
-    gap: 80px;
-    width: 100%;
-    /* height: 100hv; */
+    padding-top: 0;
   }
 `;
 
 const Container = styled.div`
   display: flex;
   gap: 2rem;
-  width: 100%;
+  width: 96%;
   max-width: 1280px;
-  margin: 0px auto;
+  margin: 60px auto;
   z-index: 1;
+  min-height: calc(100vh - 120px);
+  -webkit-box-pack: justify;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    width: 95%;
+    justify-content: start;
+    gap: 0rem;
+    margin: 0;
+  }
 `;
 
 const Left = styled.div`
@@ -44,8 +46,7 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-weight: 200;
-  font-size: 1.2rem;
+  font-size: 30px;
 `;
 
 const Form = styled.form`
@@ -76,24 +77,21 @@ const TextArea = styled.textarea`
 `;
 
 const Button = styled.button`
-  display: inline-block;
-  outline: none;
+  background-color: #1f265c;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 600;
-  border-radius: 8px;
-  padding: 14px 24px;
-  border: none;
-  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
-    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
-  background: linear-gradient(
-    to right,
-    rgb(230, 30, 77) 0%,
-    rgb(227, 28, 95) 50%,
-    rgb(215, 4, 102) 100%
-  );
-  color: #fff;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #32327a;
+  }
 `;
 
 const Right = styled.div`
@@ -154,8 +152,8 @@ const Contact = () => {
   };
 
   return (
-    <Section>
-      <Container id='contact'>
+    <Section id='contact'>
+      <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Get in touch</Title>
@@ -189,7 +187,6 @@ const Contact = () => {
           <Map />
         </Right>
       </Container>
-      {/* <Footer /> */}
     </Section>
   );
 };

@@ -2,12 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import './Hero.css';
 
 const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    min-height: 100v;
+  }
 `;
 
 const Container = styled.div`
@@ -25,10 +31,12 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     width: 100%;
-    /* justify-content: center; */
     justify-content: start;
     padding-top: 65px;
     gap: 0rem;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    margin-top: 65px;
   }
 `;
 
@@ -44,70 +52,56 @@ const Left = styled.div`
     text-align: center;
     flex: 0;
   }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 0;
+    padding-left: 20px;
+  }
 `;
 
 const Title = styled.h1`
-  font-size: 40px;
+  font-size: 80px;
+  font-weight: bold;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-weight: 200;
 
   @media only screen and (max-width: 768px) {
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
   }
 `;
 
 const Subtitle = styled.h2`
-  font-size: 60px;
-  font-weight: 800;
+  font-size: 40px;
+  font-weight: bold;
 `;
+// const Paragraph = styled.p`
+//   font-size: 30px;
+//   padding-top: 10px;
+//   padding-bottom: 10px;
+//   font-weight: 400;
 
-const Desc = styled.p`
-  color: white;
-  font-weight: normal;
-  font-size: 1.2rem;
-  margin: 40px 0px;
-  width: 50%;
-  padding-left: 0.4rem;
-  padding-top: 0.4rem;
-  border-left: 1px solid white;
-
-  @media only screen and (max-width: 768px) {
-    text-align: center;
-    width: 100%;
-    margin: 20px 0px;
-  }
-`;
-
-const Button = styled.button`
-  background-color: white;
-  color: #082162;
-  font-size: 1.2rem;
-  font-weight: 800;
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  :hover {
-    transform: scale(1.5);
-  }
-`;
-
+//   @media only screen and (max-width: 768px) {
+//     font-size: 40px;
+//     text-align: center;
+//   }
+// `;
 const Right = styled.div`
   flex: 2;
   position: relative;
 
   @media only screen and (max-width: 768px) {
-    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
   }
 `;
 
 const Img = styled.img`
   width: 100%;
-  /* height: 100%; */
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -119,14 +113,17 @@ const Img = styled.img`
   @media only screen and (max-width: 768px) {
     width: 100%;
     align-items: center;
-    position: relative;
+    position: unset;
+    margin: 50px auto;
   }
 `;
 
 const Icons = styled.div`
   display: flex;
+  font-size: 20px;
   gap: 1.4rem;
   align-items: center;
+  margin-top: 100px;
   padding: 0.6rem 0.4rem;
   a:hover {
     transform: scale(1.5);
@@ -134,8 +131,41 @@ const Icons = styled.div`
 
   @media only screen and (max-width: 768px) {
     justify-content: center;
+    display: none;
   }
 `;
+
+const Button = styled.button`
+  display: none;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    background: linear-gradient(
+      91.1deg,
+      rgb(57, 31, 105) -2.3%,
+      rgb(115, 43, 155) 44.4%,
+      rgb(231, 75, 184) 103.4%
+    );
+
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      --edge-light: hsla(0, 0%, 50%, 1);
+      text-shadow: 0px 0px 10px var(--text-light);
+      box-shadow: inset 0.4px 1px 4px var(--edge-light),
+        2px 4px 8px hsla(0, 0%, 0%, 0.295);
+      transform: scale(1.1);
+    }
+  }
+`;
+
 const Hero = () => {
   const downloadCV = () => {
     const cvURL =
@@ -143,17 +173,13 @@ const Hero = () => {
     window.open(cvURL, '_blank');
   };
   return (
-    <Section>
-      <Container id='home'>
+    <Section id='home'>
+      <Container>
         <Left>
-          <Title>SOFTWARE DEVELOPER</Title>
-          <Subtitle>OLENA REUKOVA</Subtitle>
-          <Desc>
-            Hi, I'm a Full-Stack Web Developer, currently based in London.
-            <br></br>
-            <br></br>
-          </Desc>
+          <Title className='title'>OLENA REUKOVA</Title>
+          <Subtitle>SOFTWARE DEVELOPER </Subtitle>
           <Icons>
+            <p>Social Links:</p>
             <a
               href='https://www.linkedin.com/in/olenareukova/'
               target='__blank'>
@@ -163,7 +189,7 @@ const Hero = () => {
                   color: '#fcfcfd',
                   cursor: 'pointer',
                 }}
-                size='3x'
+                size='2x'
               />
             </a>
             <a href='https://github.com/OlenaReukova' target='__blank'>
@@ -173,14 +199,14 @@ const Hero = () => {
                   color: '#fcfcfd',
                   cursor: 'pointer',
                 }}
-                size='3x'
+                size='2x'
               />
             </a>
-            <Button onClick={downloadCV}> CV</Button>
           </Icons>
         </Left>
         <Right>
-          <Img alt='' src='./img/photo.jpeg'></Img>
+          <Img alt='' src='./img/photo2.png'></Img>
+          <Button onClick={downloadCV}> Download CV</Button>
         </Right>
       </Container>
     </Section>
