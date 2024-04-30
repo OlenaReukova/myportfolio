@@ -90,12 +90,13 @@ const Container = styled.div`
 
 const Button = styled.button`
   /* Base button styles */
-  background: linear-gradient(
+  background-color: transparent;
+  /* background: linear-gradient(
     91.1deg,
     rgb(57, 31, 105) -2.3%,
     rgb(115, 43, 155) 44.4%,
     rgb(231, 75, 184) 103.4%
-  );
+  ); */
   margin-left: 15px;
   padding: 10px 20px;
   font-size: 16px;

@@ -142,12 +142,13 @@ const Button = styled.button`
 
   @media only screen and (max-width: 768px) {
     display: flex;
-    background: linear-gradient(
+    background: #1f265c;
+    /* background: linear-gradient(
       91.1deg,
       rgb(57, 31, 105) -2.3%,
       rgb(115, 43, 155) 44.4%,
       rgb(231, 75, 184) 103.4%
-    );
+    ); */
 
     padding: 10px 20px;
     font-size: 18px;
