@@ -15,11 +15,11 @@ const CardWrapper = styled.div`
   text-align: center;
   justify-content: space-around;
   justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease;
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 6px rgba(249, 248, 248, 0.1);
-  }
+  } */
 
   @media (max-width: 768px) {
     width: calc(88% - 5px);
@@ -45,10 +45,7 @@ const CardImage = styled.div`
 `;
 
 const CardTextWrapper = styled.div`
-  padding: 20px;
-  @media (max-width: 768px) {
-    padding: 20px 0px;
-  }
+  padding: 20px 0;
 `;
 
 const CardTextTitle = styled.h2`
@@ -62,6 +59,7 @@ const CardTextBody = styled.p`
   text-align: left;
   color: white;
   font-size: 18px;
+  margin: 10px 0;
 `;
 
 const CardSubtitle = styled.p`
@@ -79,21 +77,24 @@ const CardStatWrapper = styled.div`
   justify-content: flex-start;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  gap: 10px;
+  gap: 50px;
   @media (max-width: 768px) {
     justify-content: space-between;
+    gap: 10px;
   }
 `;
 
 const CardStats = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   color: black;
-  padding: 10px;
 `;
 
 const LinkButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   color: white;
   text-decoration: none;
@@ -101,13 +102,10 @@ const LinkButton = styled.a`
   font-size: 18px;
   display: inline-block;
   padding: 10px 20px;
-  margin-bottom: 20px;
+
   border: 0.5px solid white;
   border-radius: 5px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: background-color 0.3s ease;
   :hover {
     background-color: #32327a;

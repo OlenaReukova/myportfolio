@@ -80,7 +80,7 @@ const Footer = () => {
         </a>
       </Icons>
       <Container>
-        <Des>© 2023 - present Olena Reukova. All rights reserved.</Des>
+        <Des>© 2024 - present Olena Reukova. All rights reserved.</Des>
       </Container>
     </Section>
   );

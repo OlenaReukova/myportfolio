@@ -46,7 +46,7 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 30px;
+  font-size: 72px;
 `;
 
 const Form = styled.form`

@@ -14,13 +14,13 @@ const CardContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 60px;
+  font-size: 72px;
   font-weight: bold;
   text-align: left;
   margin-bottom: 1.5rem;
 
   @media only screen and (max-width: 768px) {
-    font-size: 40px;
+    /* font-size: 48px; */
     padding-bottom: 5px;
     padding-left: 30px;
   }
@@ -186,7 +186,6 @@ const Cards = () => {
               <br />
               <br />
               <strong>Technologies:</strong> JavaScript.
-              <br />
               <br />
               <br />
               Responsive web design.

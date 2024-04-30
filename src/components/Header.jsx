@@ -73,7 +73,23 @@ const Container = styled.div`
   }
 `;
 
+// const Button = styled.button`
+//   background-color: white;
+//   color: #082162;
+//   font-size: 1.2rem;
+//   font-weight: 800;
+//   width: 50px;
+//   height: 50px;
+//   border: none;
+//   border-radius: 50%;
+//   cursor: pointer;
+//   :hover {
+//     transform: scale(1.5);
+//   }
+// `;
+
 const Button = styled.button`
+  /* Base button styles */
   background: linear-gradient(
     91.1deg,
     rgb(57, 31, 105) -2.3%,
@@ -100,6 +116,7 @@ const Button = styled.button`
     transform: scale(1.1);
   }
 
+  /* Media query for smaller screens */
   @media only screen and (max-width: 768px) {
     display: none;
   }
@@ -160,6 +177,7 @@ const Nav = styled.div`
           rgb(115, 43, 155) 44.4%,
           rgb(231, 75, 184) 103.4%
         );
+        /* opacity: 0.7; */
       }
     }
   }
@@ -179,8 +197,7 @@ const Header = () => {
     }
   };
   const downloadCV = () => {
-    const cvURL =
-      'https://drive.google.com/file/d/1bh-Fg0qaLkWqNH0lY4nSKelt8ouwYipz/view?usp=sharing';
+    const cvURL = 'https://shorturl.at/qtwzR';
     window.open(cvURL, '_blank');
   };
   // const handleLogoClick = () => {

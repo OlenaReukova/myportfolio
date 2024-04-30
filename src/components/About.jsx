@@ -12,61 +12,51 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  display: flex;
-  gap: 10rem;
-  width: 96%;
   max-width: 1280px;
-  margin: 0px auto;
-  z-index: 1;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
+  width: 96%;
+  margin: 0 auto;
+`;
 
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-    flex-direction: column;
-    /* align-items: center; */
-    height: auto;
-    gap: 0;
-  }
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    gap: 3rem;
-  }
+const TitleWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
 `;
 
 const Title = styled.h1`
-  font-size: 60px;
+  font-size: 72px;
   padding-top: 10px;
   padding-bottom: 40px;
-  width: 90%;
-  text-align: left;
+  text-align: center;
 
   @media only screen and (max-width: 768px) {
-    font-size: 40px;
     padding-bottom: 30px;
     padding-left: 18px;
   }
 `;
 
-const Left = styled.div`
-  flex: 2;
+const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 
-  @media only screen and (max-width: 768px) {
-    width: 85%;
-    align-items: center;
+  @media only screen and (min-width: 769px) {
+    flex-direction: row;
+    gap: 10rem;
   }
 `;
 
-const Right = styled.div`
-  flex: 2;
-  position: relative;
+const Left = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 96%;
+`;
 
-  @media only screen and (max-width: 768px) {
-    width: 80%;
-    margin: auto;
-  }
+const Right = styled.div`
+  flex: 1;
+  position: relative;
+  padding-left: 20px; /* Adjust as needed for spacing */
 `;
 
 const Img = styled.img`
@@ -81,8 +71,6 @@ const Desc = styled.p`
 `;
 
 const Af = styled.p`
-  display: flex;
-  justify-content: end;
   font-size: 1rem;
   font-weight: normal;
   color: white;
@@ -94,39 +82,74 @@ const Af = styled.p`
   }
 `;
 
+const Button = styled.button`
+  background: transparent; /* Transparent background */
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  /* Hover effect */
+  &:hover {
+    --edge-light: hsla(0, 0%, 50%, 1);
+    text-shadow: 0px 0px 10px var(--text-light);
+    box-shadow: inset 0.4px 1px 4px var(--edge-light),
+      2px 4px 8px hsla(0, 0%, 0%, 0.295);
+    transform: scale(1.1);
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
 const About = () => {
   return (
     <Section id='who'>
-      <Title>About Me</Title>
       <Container>
-        <Left>
-          <Img alt='' src='./img/about1.png'></Img>
-        </Left>
-        <Right>
-          <Af>
-            "Everything you can imagine is real.” <br></br>-Pablo Picasso
-          </Af>
-          <Desc>
-            As a dedicated Software Developer, I possess a wide range of skills
-            in HTML, CSS, JavaScript, React.js, Node.js, Express.js, PostgreSQL,
-            and various other libraries and frameworks. I completed an intensive
-            800-hour full-stack web development course. Enthusiastic learner
-            building user-friendly websites with a focus on functionality and
-            design. Excited to collaborate and contribute to web applications
-            using my growing skillset in development tools and techniques. My
-            M.Sc. in Electrical Engineering brings a problem-solving approach to
-            web dev.<br></br>
-            <br></br>
-            <span style={{ fontSize: '16px' }}>
-              Behind the scenes:<br></br>
-              <br></br>
-              Dog walker by day, music lover by night, nature enthusiast always.
-            </span>
-            <br></br>
-            <br></br>
-          </Desc>
-          <SkillCard />
-        </Right>
+        <TitleWrapper>
+          <Title>About Me</Title>
+        </TitleWrapper>
+        <ContentWrapper>
+          <Left>
+            <Img alt='' src='./img/about1.png'></Img>
+          </Left>
+          <Right>
+            <Af>
+              "Everything you can imagine is real.” <br />
+              -Pablo Picasso
+            </Af>
+            <Desc>
+              As a dedicated Software Developer, I possess a wide range of
+              skills in HTML, CSS, JavaScript, React.js, Node.js, Express.js,
+              PostgreSQL, and various other libraries and frameworks. I
+              completed an intensive 800-hour full-stack web development course.
+              Enthusiastic learner building user-friendly websites with a focus
+              on functionality and design. Excited to collaborate and contribute
+              to web applications using my growing skillset in development tools
+              and techniques. My M.Sc. in Electrical Engineering brings a
+              problem-solving approach to web dev.
+              <br />
+              <br />
+              <span style={{ fontSize: '16px' }}>
+                Behind the scenes:
+                <br />
+                <br />
+                Dog walker by day, music lover by night, nature enthusiast
+                always.
+              </span>
+              <br />
+              <br />
+            </Desc>
+            <SkillCard />
+            <Button>Download CV</Button>
+          </Right>
+        </ContentWrapper>
       </Container>
     </Section>
   );

@@ -17,7 +17,7 @@
   }
 }
 #home {
-  background: url('/src/image/bkg.png');
+  background: url('/src/image/bkgR.png');
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     background-size: cover;
   }

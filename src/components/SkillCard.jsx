@@ -24,7 +24,7 @@ const CardContainer = styled.div`
   /* border: 1px solid #ccc;
   box-shadow: rgba(10, 1, 51, 0.5) 5px 5px 5px 5px;
   border-radius: 5px; */
-  padding: 20px;
+  padding: 20px 0;
 
   @media only screen and (max-width: 768px) {
     flex: 0 1 100%;
