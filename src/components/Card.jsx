@@ -81,6 +81,7 @@ const CardStatWrapper = styled.div`
   border-bottom-right-radius: 15px;
   gap: 10px;
   @media (max-width: 768px) {
+    justify-content: space-between;
   }
 `;
 
