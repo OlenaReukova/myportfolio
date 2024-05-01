@@ -47,9 +47,13 @@ const Left = styled.div`
 
 const Title = styled.h1`
   font-size: 72px;
-  @media only screen and (max-width: 1024px) {
-    display: 40px;
+  @media only screen and (max-width: 768px) {
+    font-size: 40px;
   }
+
+  /* @media only screen and (max-width: 1024px) {
+    display: 40px;
+  } */
 `;
 
 const Form = styled.form`

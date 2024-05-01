@@ -41,7 +41,6 @@ const ContentWrapper = styled.div`
 
   @media only screen and (min-width: 769px) {
     flex-direction: row;
-    gap: 10rem;
   }
 `;
 
@@ -54,9 +53,9 @@ const Left = styled.div`
 `;
 
 const Right = styled.div`
-  flex: 1;
+  flex: 2;
   position: relative;
-  padding-left: 20px; /* Adjust as needed for spacing */
+  padding-left: 20px;
 `;
 
 const Img = styled.img`
@@ -82,31 +81,31 @@ const Af = styled.p`
   }
 `;
 
-const Button = styled.button`
-  background: transparent; /* Transparent background */
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  border: 1px solid white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+// const Button = styled.button`
+//   background: transparent;
+//   margin-top: 20px;
+//   padding: 10px 20px;
+//   font-size: 16px;
+//   font-weight: bold;
+//   color: white;
+//   border: 1px solid white;
+//   border-radius: 5px;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
 
-  /* Hover effect */
-  &:hover {
-    --edge-light: hsla(0, 0%, 50%, 1);
-    text-shadow: 0px 0px 10px var(--text-light);
-    box-shadow: inset 0.4px 1px 4px var(--edge-light),
-      2px 4px 8px hsla(0, 0%, 0%, 0.295);
-    transform: scale(1.1);
-  }
+//   /* Hover effect */
+//   &:hover {
+//     --edge-light: hsla(0, 0%, 50%, 1);
+//     text-shadow: 0px 0px 10px var(--text-light);
+//     box-shadow: inset 0.4px 1px 4px var(--edge-light),
+//       2px 4px 8px hsla(0, 0%, 0%, 0.295);
+//     transform: scale(1.1);
+//   }
 
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
-`;
+//   @media only screen and (max-width: 768px) {
+//     display: none;
+//   }
+// `;
 
 const About = () => {
   return (
@@ -147,7 +146,7 @@ const About = () => {
               <br />
             </Desc>
             <SkillCard />
-            <Button>Download CV</Button>
+            {/* <Button>Download CV</Button> */}
           </Right>
         </ContentWrapper>
       </Container>

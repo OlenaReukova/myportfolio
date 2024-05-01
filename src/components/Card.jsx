@@ -38,7 +38,7 @@ const CardImage = styled.div`
   width: 100%;
   vertical-align: middle;
 
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 15rem;
