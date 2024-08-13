@@ -199,7 +199,7 @@ const Header = () => {
   };
   const downloadCV = () => {
     const cvURL =
-      'https://drive.google.com/file/d/1bh-Fg0qaLkWqNH0lY4nSKelt8ouwYipz/view?usp=sharing';
+      'https://docs.google.com/document/d/1lVIMsJ6h63iFKc4yKYYTSAwC6yd9taQe/edit?usp=sharing&ouid=105905514144930500511&rtpof=true&sd=true';
     window.open(cvURL, '_blank');
   };
   // const handleLogoClick = () => {
