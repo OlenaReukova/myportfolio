@@ -91,7 +91,7 @@ const Button = styled.button`
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  color: white;
+  color: ${(props) => (props.sent ? '#FFB3CF' : 'white')};
   border: 1px solid white;
   border-radius: 5px;
   cursor: pointer;
@@ -115,6 +115,7 @@ const Contact = () => {
   const ref = useRef();
   const [success, setSuccess] = useState(null);
   const [errors, setErrors] = useState({});
+  const [buttonText, setButtonText] = useState('Send');
 
   const validateForm = () => {
     const errors = {};
@@ -146,11 +147,13 @@ const Contact = () => {
           (result) => {
             console.log(result.text);
             setSuccess(true);
+            setButtonText('Sent');
             ref.current.reset();
           },
           (error) => {
             console.log(error.text);
             setSuccess(false);
+            setButtonText('Send');
           }
         );
     } else {
@@ -185,7 +188,9 @@ const Contact = () => {
               name='message'
               rows={10}
             />
-            <Button type='submit'>Send</Button>
+            <Button type='submit' sent={buttonText === 'Sent'}>
+              {buttonText}
+            </Button>
             {success &&
               "Your message has been sent. I'll get back to you soon."}
           </Form>
