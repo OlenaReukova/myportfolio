@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import SkillCard from './SkillCard';
+import React from "react";
+import styled from "styled-components";
+import SkillCard from "./SkillCard";
 
 const Section = styled.div`
   display: flex;
@@ -81,42 +81,16 @@ const Af = styled.p`
   }
 `;
 
-// const Button = styled.button`
-//   background: transparent;
-//   margin-top: 20px;
-//   padding: 10px 20px;
-//   font-size: 16px;
-//   font-weight: bold;
-//   color: white;
-//   border: 1px solid white;
-//   border-radius: 5px;
-//   cursor: pointer;
-//   transition: background-color 0.3s ease;
-
-//   /* Hover effect */
-//   &:hover {
-//     --edge-light: hsla(0, 0%, 50%, 1);
-//     text-shadow: 0px 0px 10px var(--text-light);
-//     box-shadow: inset 0.4px 1px 4px var(--edge-light),
-//       2px 4px 8px hsla(0, 0%, 0%, 0.295);
-//     transform: scale(1.1);
-//   }
-
-//   @media only screen and (max-width: 768px) {
-//     display: none;
-//   }
-// `;
-
 const About = () => {
   return (
-    <Section id='who'>
+    <Section id="who">
       <Container>
         <TitleWrapper>
           <Title>About Me</Title>
         </TitleWrapper>
         <ContentWrapper>
           <Left>
-            <Img alt='' src='./img/about1.png'></Img>
+            <Img alt="" src="./img/about1.png"></Img>
           </Left>
           <Right>
             <Af>
@@ -124,29 +98,50 @@ const About = () => {
               -Pablo Picasso
             </Af>
             <Desc>
-              As a dedicated Software Developer, I possess a wide range of
-              skills in HTML, CSS, JavaScript, React.js, Node.js, Express.js,
-              PostgreSQL, and various other libraries and frameworks. I
-              completed an intensive 800-hour full-stack web development course.
-              Enthusiastic learner building user-friendly websites with a focus
-              on functionality and design. Excited to collaborate and contribute
-              to web applications using my growing skillset in development tools
-              and techniques. My M.Sc. in Electrical Engineering brings a
-              problem-solving approach to web dev.
+              Hi, I’m a full-stack developer passionate about creating intuitive
+              and functional web applications. With hands-on experience in both
+              frontend and backend development, including technologies like
+              HTML, CSS, JavaScript, React.js, Nextjs, Tailwind CSS, TypeScript,
+              Node.js, Express.js, and PostgreSQL.
               <br />
               <br />
-              <span style={{ fontSize: '16px' }}>
+              I love turning ideas into user-friendly digital experiences and am
+              eager to collaborate and grow with every new project!
+              <br />
+              <br />
+              In addition to my personal development, I care deeply about the
+              society I live in. That’s why I collaborated with a volunteer
+              organization, Trafalgar Girls, and the core development team as a
+              Full Stack Developer to build an application called
+              <strong>
+                {" "}
+                <a
+                  href="https://cool-creponne-3e1272.netlify.app/"
+                  target="__blank"
+                  style={{
+                    color: "#fcfcfd",
+                    cursor: "pointer",
+                    textDecoration: "none",
+                  }}
+                >
+                  Kindly
+                </a>
+              </strong>
+              . We are working on an application that helps people exchange
+              items, providing support to those in difficult circumstances.
+              <br />
+              <br />
+              <span style={{ fontSize: "16px" }}>
                 Behind the scenes:
                 <br />
                 <br />
-                Dog walker by day, music lover by night, nature enthusiast
-                always.
+                Passionate about music and deeply connected to nature, always
+                finding joy in both.
               </span>
               <br />
               <br />
             </Desc>
             <SkillCard />
-            {/* <Button>Download CV</Button> */}
           </Right>
         </ContentWrapper>
       </Container>

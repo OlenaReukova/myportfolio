@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const Section = styled.div`
   display: flex;
@@ -46,11 +46,11 @@ const Container = styled.div`
         position: absolute;
         width: 100%;
         height: 2px;
-        background-color: ${(props) => (props.bar ? 'transparent' : '#fff')};
+        background-color: ${(props) => (props.bar ? "transparent" : "#fff")};
         transition: all 400ms ease-in-out;
         :before,
         :after {
-          content: '';
+          content: "";
           width: 100%;
           height: 2px;
           background-color: #fff;
@@ -59,34 +59,19 @@ const Container = styled.div`
 
         :before {
           transform: ${(props) =>
-            props.bar ? 'rotate(45deg)' : 'translateY(10px)'};
+            props.bar ? "rotate(45deg)" : "translateY(10px)"};
           transition: all 400ms ease-in-out;
         }
 
         :after {
           transform: ${(props) =>
-            props.bar ? 'rotate(-45deg)' : 'translateY(-10px)'};
+            props.bar ? "rotate(-45deg)" : "translateY(-10px)"};
           transition: all 400ms ease-in-out;
         }
       }
     }
   }
 `;
-
-// const Button = styled.button`
-//   background-color: white;
-//   color: #082162;
-//   font-size: 1.2rem;
-//   font-weight: 800;
-//   width: 50px;
-//   height: 50px;
-//   border: none;
-//   border-radius: 50%;
-//   cursor: pointer;
-//   :hover {
-//     transform: scale(1.5);
-//   }
-// `;
 
 const Button = styled.button`
   /* Base button styles */
@@ -122,10 +107,6 @@ const Button = styled.button`
     display: none;
   }
 `;
-// const Logo = styled.p`
-//   font-size: 1.6rem;
-//   cursor: pointer;
-// `;
 const Nav = styled.div`
   font-size: 1.2rem;
   @media (max-width: 640px) {
@@ -143,7 +124,7 @@ const Nav = styled.div`
     font-size: 2rem;
     gap: 2rem;
     font-weight: 700;
-    height: ${(props) => (props.bar ? '100vh' : 0)};
+    height: ${(props) => (props.bar ? "100vh" : 0)};
     transition: height 400ms ease-in-out;
     overflow: hidden;
     z-index: 100;
@@ -156,7 +137,7 @@ const Nav = styled.div`
       font-weight: 400;
       position: relative;
       :before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         right: 0;
@@ -190,7 +171,7 @@ const Header = () => {
   const handleLinkClick = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({ behavior: "smooth" });
     }
 
     if (window.innerWidth <= 640) {
@@ -199,41 +180,42 @@ const Header = () => {
   };
   const downloadCV = () => {
     const cvURL =
-      'https://drive.google.com/file/d/1xFrO_mHOFBDyNZrWos-T26hOewjn32Dz/view?usp=sharing';
-    window.open(cvURL, '_blank');
+      "https://drive.google.com/file/d/1pcgpf56_MXZ3fIUkkrhvuTc0OLJjSE7y/view?usp=sharing";
+    const anchor = document.createElement("a");
+    anchor.href = cvURL;
+    anchor.download = "Olena_Reukova_CV.pdf";
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
   };
-  // const handleLogoClick = () => {
-  //   handleLinkClick('home');
-  // };
   return (
     <Section>
       <Container bar={bar}>
-        {/* <Logo onClick={handleLogoClick}>Olena Reukova</Logo> */}
         <Nav bar={bar}>
           <span>
-            <a href='#home' onClick={() => handleLinkClick('home')}>
+            <a href="#home" onClick={() => handleLinkClick("home")}>
               Home
             </a>
           </span>
           <span>
-            <a href='#who' onClick={() => handleLinkClick('who')}>
+            <a href="#who" onClick={() => handleLinkClick("who")}>
               About Me
             </a>
           </span>
           <span>
-            <a href='#projects' onClick={() => handleLinkClick('works')}>
+            <a href="#projects" onClick={() => handleLinkClick("works")}>
               Projects
             </a>
           </span>
           <span>
-            <a href='#contact' onClick={() => handleLinkClick('contact')}>
+            <a href="#contact" onClick={() => handleLinkClick("contact")}>
               Contact
             </a>
           </span>
         </Nav>
         <Button onClick={downloadCV}> Download CV</Button>
-        <div onClick={() => setBar(!bar)} className='bars'>
-          <div className='bar'></div>
+        <div onClick={() => setBar(!bar)} className="bars">
+          <div className="bar"></div>
         </div>
       </Container>
     </Section>

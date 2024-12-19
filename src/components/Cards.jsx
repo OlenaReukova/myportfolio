@@ -1,13 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import Card from './Card';
-import './Cards.css';
+import React from "react";
+import styled from "styled-components";
+import Card from "./Card";
+import "./Cards.css";
 
 const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -28,16 +27,7 @@ const Title = styled.h1`
     padding-left: 20px;
   }
 `;
-const LinkWithBackground = styled.a`
-  background-color: none;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  :hover {
-    color: blue;
-  }
-`;
+
 const Separator = styled.span`
   margin-left: 10px;
   margin-right: 10px;
@@ -50,46 +40,39 @@ const Separator = styled.span`
 
 const Cards = () => {
   return (
-    <div className='Cards'>
+    <div className="Cards">
       <Title>Projects</Title>
       <CardContainer>
         <Card
-          title={'Trainee Progress Tracker'}
-          imgUrl={'/img/tracker.png'}
-          subtitle={'Team project'}
+          title={"The Big Alliance Donation"}
+          imgUrl={"/img/bigalliance.png"}
+          subtitle={"Team project"}
           text={
             <>
-              A full-stack project that consists of two Dashboards. In the{' '}
-              <LinkWithBackground
-                href='https://starter-kit-j8jj.onrender.com/'
-                target='_blank'
-                rel='noopener noreferrer'>
-                Trainee Dashboard
-              </LinkWithBackground>{' '}
-              trainees should log in with their GitHub usernames to check their
-              progress on the milestone goals. In the{' '}
-              <LinkWithBackground
-                href='https://starter-kit-j8jj.onrender.com/admin/cohorts/59'
-                target='_blank'
-                rel='noopener noreferrer'>
-                Manager Dashboard
-              </LinkWithBackground>{' '}
-              , product managers can manage cohorts and add trainees. <br />
+              This project was built during the Fitch Hackathon for Big
+              Alliance, September 2024, London.
               <br />
-              <strong>Technologies:</strong> Figma, React.js, Recharts, Node.js,
-              Express, React, PostgreSQL, Node.js database migration .
+              <br />
+              The Big Alliance Donation Website helps users donate to various
+              charity campaigns. It supports both individual and company
+              donations, and administrators can manage campaigns and view
+              reports.
+              <br />
+              <br />
+              <strong>Technologies:</strong> Next.js, TypeScript, Tailwind CSS,
+              Prisma, Clerk, PayPal, shadcn/ui, AG Grid Integrated Charts.
               <br />
               <br /> Responsive web design
             </>
           }
-          websiteLink={'https://starter-kit-j8jj.onrender.com/'}
-          githubLink={'https://github.com/BoshraM/ldn9-Ctrl-Shift-Learn'}
+          websiteLink={"https://bigalliance.vercel.app/"}
+          githubLink={"https://github.com/OlenaReukova/codeathon-team1"}
         />
         <Separator />
         <Card
-          title={'Triumph'}
-          imgUrl={'/img/Triumphapp.png'}
-          subtitle={'Personal project'}
+          title={"Triumph"}
+          imgUrl={"/img/Triumphapp.png"}
+          subtitle={"Personal project"}
           text={
             <>
               This is an MVP of an e-commerce website. Users can navigate to the
@@ -107,14 +90,14 @@ const Cards = () => {
               Responsive web design
             </>
           }
-          websiteLink={'https://ubiquitous-empanada-60d82a.netlify.app/'}
-          githubLink={'https://github.com/OlenaReukova/eShop-react'}
+          websiteLink={"https://ubiquitous-empanada-60d82a.netlify.app/"}
+          githubLink={"https://github.com/OlenaReukova/eShop-react"}
         />
         <Separator />
         <Card
-          title={'Artificial Intelligence'}
-          imgUrl={'/img/AIapp.png'}
-          subtitle={'Team project'}
+          title={"Artificial Intelligence"}
+          imgUrl={"/img/AIapp.png"}
+          subtitle={"Team project"}
           text={
             <>
               This MVP application offers customers AI-powered tools for
@@ -124,20 +107,20 @@ const Cards = () => {
               members, aiming to deliver the MVP app through the first
               experience of teamwork using Agile methodology. <br />
               <br />
-              <strong>Technologies:</strong> Figma, JavaScript, HTML5, CSS3.{' '}
+              <strong>Technologies:</strong> Figma, JavaScript, HTML5, CSS3.{" "}
               <br />
               <br />
               <br />
               Responsive web design with a mobile-first approach.
             </>
           }
-          websiteLink={'https://cyf-ofm-buddy-group-project.netlify.app/#'}
-          githubLink={'https://github.com/momahboobian/Buddy-Groups-Challenge'}
+          websiteLink={"https://cyf-ofm-buddy-group-project.netlify.app/#"}
+          githubLink={"https://github.com/momahboobian/Buddy-Groups-Challenge"}
         />
         <Card
-          title={'Radio Player'}
-          imgUrl={'/img/Radioapp.png'}
-          subtitle={'Personal project'}
+          title={"Radio Player"}
+          imgUrl={"/img/Radioapp.png"}
+          subtitle={"Personal project"}
           text={
             <>
               The radio app features clickable music types, with a simple and
@@ -150,14 +133,14 @@ const Cards = () => {
               Responsive web design.
             </>
           }
-          websiteLink={'https://radio-app-swart.vercel.app/'}
-          githubLink={'https://github.com/OlenaReukova/radio-app'}
+          websiteLink={"https://radio-app-swart.vercel.app/"}
+          githubLink={"https://github.com/OlenaReukova/radio-app"}
         />
         <Separator />
         <Card
-          title={'Tv Show'}
-          imgUrl={'/img/movie.jpg'}
-          subtitle={'Personal project'}
+          title={"Tv Show"}
+          imgUrl={"/img/movie.jpg"}
+          subtitle={"Personal project"}
           text={
             <>
               A dynamic TV show allows users to search for episodes by name or
@@ -171,14 +154,14 @@ const Cards = () => {
               Responsive web design.
             </>
           }
-          websiteLink={'https://cyf-olenareukova-tv.netlify.app/'}
-          githubLink={'https://github.com/OlenaReukova/tv-show-dom-project'}
+          websiteLink={"https://cyf-olenareukova-tv.netlify.app/"}
+          githubLink={"https://github.com/OlenaReukova/tv-show-dom-project"}
         />
         <Separator />
         <Card
-          title={'A passenger counter'}
-          imgUrl={'/img/counter.png'}
-          subtitle={'Personal project'}
+          title={"A passenger counter"}
+          imgUrl={"/img/counter.png"}
+          subtitle={"Personal project"}
           text={
             <>
               A passenger counter allows user to count the number of people in
@@ -191,8 +174,8 @@ const Cards = () => {
               Responsive web design.
             </>
           }
-          websiteLink={'https://magical-malasada-c11910.netlify.app/'}
-          githubLink={'https://github.com/OlenaReukova/a-passenger-counter-app'}
+          websiteLink={"https://magical-malasada-c11910.netlify.app/"}
+          githubLink={"https://github.com/OlenaReukova/a-passenger-counter-app"}
         />
       </CardContainer>
     </div>

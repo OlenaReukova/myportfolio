@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import './Hero.css';
+import React from "react";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import "./Hero.css";
 
 const Section = styled.div`
   display: flex;
@@ -76,17 +76,7 @@ const Subtitle = styled.h2`
   font-size: 40px;
   font-weight: bold;
 `;
-// const Paragraph = styled.p`
-//   font-size: 30px;
-//   padding-top: 10px;
-//   padding-bottom: 10px;
-//   font-weight: 400;
 
-//   @media only screen and (max-width: 768px) {
-//     font-size: 40px;
-//     text-align: center;
-//   }
-// `;
 const Right = styled.div`
   flex: 2;
   position: relative;
@@ -172,43 +162,44 @@ const Button = styled.button`
 const Hero = () => {
   const downloadCV = () => {
     const cvURL =
-      'https://drive.google.com/file/d/1z-UrgqmPLqD1sqB_S6BqRzi4cAsTIf99/view?usp=sharing';
-    window.open(cvURL, '_blank');
+      "https://drive.google.com/file/d/1z-UrgqmPLqD1sqB_S6BqRzi4cAsTIf99/view?usp=sharing";
+    window.open(cvURL, "_blank");
   };
   return (
-    <Section id='home'>
+    <Section id="home">
       <Container>
         <Left>
-          <Title className='title'>OLENA REUKOVA</Title>
+          <Title className="title">OLENA REUKOVA</Title>
           <Subtitle>SOFTWARE DEVELOPER </Subtitle>
           <Icons>
             <p>Social Links:</p>
             <a
-              href='https://www.linkedin.com/in/olenareukova/'
-              target='__blank'>
+              href="https://www.linkedin.com/in/olenareukova/"
+              target="__blank"
+            >
               <FontAwesomeIcon
                 icon={faLinkedin}
                 style={{
-                  color: '#fcfcfd',
-                  cursor: 'pointer',
+                  color: "#fcfcfd",
+                  cursor: "pointer",
                 }}
-                size='2x'
+                size="2x"
               />
             </a>
-            <a href='https://github.com/OlenaReukova' target='__blank'>
+            <a href="https://github.com/OlenaReukova" target="__blank">
               <FontAwesomeIcon
                 icon={faGithub}
                 style={{
-                  color: '#fcfcfd',
-                  cursor: 'pointer',
+                  color: "#fcfcfd",
+                  cursor: "pointer",
                 }}
-                size='2x'
+                size="2x"
               />
             </a>
           </Icons>
         </Left>
         <Right>
-          <Img alt='' src='./img/photo2.png'></Img>
+          <Img alt="" src="./img/photo2.png"></Img>
           <Button onClick={downloadCV}> Download CV</Button>
         </Right>
       </Container>

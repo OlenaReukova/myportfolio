@@ -1,7 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
-// import { BsGithub } from 'react-icons/bs';
-// import { FaGlobe } from 'react-icons/fa';
+import React from "react";
+import styled from "styled-components";
 
 const CardWrapper = styled.div`
   display: flex;
@@ -112,17 +110,9 @@ const LinkButton = styled.a`
   }
 `;
 
-// const IconG = styled(FaGlobe)`
-//   margin-right: 5px;
-// `;
-
-// const IconB = styled(BsGithub)`
-//   margin-right: 5px;
-// `;
-
 const Card = ({ title, imgUrl, text, subtitle, websiteLink, githubLink }) => {
   const handleButtonClick = (link) => {
-    window.open(link, '_blank');
+    window.open(link, "_blank");
   };
   return (
     <CardWrapper>

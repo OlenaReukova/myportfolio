@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHtml5,
   faCss3Alt,
@@ -8,7 +8,7 @@ import {
   faReact,
   faFigma,
   faNode,
-} from '@fortawesome/free-brands-svg-icons';
+} from "@fortawesome/free-brands-svg-icons";
 
 const CardSet = styled.div`
   display: flex;
@@ -70,12 +70,12 @@ const Card = ({ title, skills }) => {
       <SkillsList>
         {skills.map((skill, index) => (
           <SkillItem key={index}>
-            {typeof skill.icon === 'string' ? (
+            {typeof skill.icon === "string" ? (
               <StyledImg src={skill.icon} alt={skill.description} />
             ) : (
               <FontAwesomeIcon
                 icon={skill.icon}
-                style={{ marginRight: '10px' }}
+                style={{ marginRight: "10px" }}
               />
             )}
             {skill.description}
@@ -87,30 +87,30 @@ const Card = ({ title, skills }) => {
 };
 
 const frontendSkills = [
-  { icon: faCss3Alt, description: 'CSS' },
-  { icon: faHtml5, description: 'HTML' },
-  { icon: faJs, description: 'JavaScript' },
-  { icon: faFigma, description: 'Figma' },
+  { icon: faCss3Alt, description: "CSS" },
+  { icon: faHtml5, description: "HTML" },
+  { icon: faJs, description: "JavaScript" },
+  { icon: faFigma, description: "Figma" },
+  { icon: faReact, description: "React" },
+  { icon: "/img/nextjsicon.png", description: "Next.js" },
+  { icon: "/img/typescript.png", description: "Typescript" },
+  { icon: "/img/tailwind.png", description: "Tailwind CSS" },
 ];
 
 const backendSkills = [
-  { icon: faReact, description: 'React' },
-  { icon: faNode, description: 'Node.js' },
-  {
-    icon: <img src='/public/img/postgresql.png' alt='PostgreSQL' />,
-    description: 'PostgreSQL',
-  },
-  {
-    icon: <img src='/public/img/express.png' alt='Express.js' />,
-    description: 'Express.js',
-  },
+  { icon: faNode, description: "Node.js" },
+  { icon: "/img/PSQLicon.png", description: "PostgreSQL" },
+  { icon: "/img/supabase.png", description: "Supabase" },
+  { icon: "/img/prisma.png", description: "Prisma" },
+  { icon: "/img/postman.png", description: "Postman" },
+  { icon: "/img/docker.png", description: "Docker" },
 ];
 
 const SkillCard = () => {
   return (
     <CardSet>
-      <Card title='Frontend Development' skills={frontendSkills} />
-      <Card title='Backend Development' skills={backendSkills} />
+      <Card title="Frontend Development" skills={frontendSkills} />
+      <Card title="Backend Development" skills={backendSkills} />
     </CardSet>
   );
 };

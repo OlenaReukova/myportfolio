@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import Cards from './Cards';
+import React from "react";
+import styled from "styled-components";
+import Cards from "./Cards";
 
 const Section = styled.div`
   background-size: cover;
@@ -31,7 +31,7 @@ const Container = styled.div`
 
 const Projects = () => {
   return (
-    <Section id='projects'>
+    <Section id="projects">
       <Container>
         <Cards />
       </Container>
