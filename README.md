@@ -23,6 +23,11 @@ It includes information about my skills, projects I have worked on, and ways to 
 **Projects** Showcases a selection of projects I've worked on, including descriptions, technologies used, and links to GitHub repositories and live demos.
 
 **Technologies used:** React.js, Styled-Components.
+**How to Install and Run the Project:**  
+1. Clone the repository.
+2. Run `yarn install` to install dependencies.
+3. Run `yarn start` to start the development server.
+
 
 #### Contact
 kronverk01@gmail.com\
