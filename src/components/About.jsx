@@ -15,6 +15,7 @@ const Container = styled.div`
   max-width: 1280px;
   width: 96%;
   margin: 0 auto;
+  width: calc(88% - 5px);
 `;
 
 const TitleWrapper = styled.div`
@@ -49,13 +50,16 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 96%;
+  width: 100%;
 `;
 
 const Right = styled.div`
   flex: 2;
   position: relative;
   padding-left: 20px;
+  @media only screen and (max-width: 768px) {
+    padding-left: 0px;
+  }
 `;
 
 const Img = styled.img`
