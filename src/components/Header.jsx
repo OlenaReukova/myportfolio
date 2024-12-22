@@ -24,54 +24,72 @@ const Container = styled.div`
   width: 96%;
   max-height: 60px;
   margin: 0 auto;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
   position: relative;
   animation: header 500ms ease-in-out;
 
-  .bars {
-    display: none;
-  }
   @media (max-width: 640px) {
     justify-content: flex-end;
-    .bars {
+  }
+
+  .bars {
+    display: none;
+
+    @media (max-width: 640px) {
+      display: flex;
       width: 40px;
       height: 40px;
       position: relative;
-      display: flex;
+      z-index: 9999; /* Ensure it's above other elements */
       align-items: center;
-      justify-content: center;
-      padding: 0.5rem;
-      z-index: 100;
+      justify-content: flex-end;
+      cursor: pointer;
+
       .bar {
         position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: ${(props) => (props.bar ? "transparent" : "#fff")};
+        width: 30px; /* Ensure proper sizing */
+        height: 3px;
+        background-color: ${(props) => (props.bar ? "transparent" : "white")};
         transition: all 400ms ease-in-out;
-        :before,
-        :after {
+
+        &::before,
+        &::after {
           content: "";
-          width: 100%;
-          height: 2px;
-          background-color: #fff;
           position: absolute;
+          width: 100%;
+          height: 3px;
+          background-color: white; /* Explicit color */
+          transition: transform 400ms ease-in-out;
         }
 
-        :before {
+        &::before {
           transform: ${(props) =>
-            props.bar ? "rotate(45deg)" : "translateY(10px)"};
-          transition: all 400ms ease-in-out;
+            props.bar ? "rotate(45deg)" : "translateY(-10px)"};
         }
 
-        :after {
+        &::after {
           transform: ${(props) =>
-            props.bar ? "rotate(-45deg)" : "translateY(-10px)"};
-          transition: all 400ms ease-in-out;
+            props.bar ? "rotate(-45deg)" : "translateY(10px)"};
         }
       }
     }
   }
 `;
+
+// const Button = styled.button`
+//   background-color: white;
+//   color: #082162;
+//   font-size: 1.2rem;
+//   font-weight: 800;
+//   width: 50px;
+//   height: 50px;
+//   border: none;
+//   border-radius: 50%;
+//   cursor: pointer;
+//   :hover {
+//     transform: scale(1.5);
+//   }
+// `;
 
 const Button = styled.button`
   /* Base button styles */
@@ -107,6 +125,10 @@ const Button = styled.button`
     display: none;
   }
 `;
+// const Logo = styled.p`
+//   font-size: 1.6rem;
+//   cursor: pointer;
+// `;
 const Nav = styled.div`
   font-size: 1.2rem;
   @media (max-width: 640px) {
