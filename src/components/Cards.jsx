@@ -95,6 +95,25 @@ const Cards = () => {
         />
         <Separator />
         <Card
+          title={"Radio Player"}
+          imgUrl={"/img/Radioapp.png"}
+          subtitle={"Personal project"}
+          text={
+            <>
+              The radio app features clickable music types, with a simple and
+              user-friendly interface.
+              <br />
+              <br /> <strong>Technologies:</strong> React.js, Vite, the
+              RadioBrowser API, and the React H5 Audio Player component.
+              <br />
+              <br />
+              Responsive web design.
+            </>
+          }
+          websiteLink={"https://radio-app-client.vercel.app"}
+          githubLink={"https://github.com/OlenaReukova/radio-app"}
+        />
+        <Card
           title={"Artificial Intelligence"}
           imgUrl={"/img/AIapp.png"}
           subtitle={"Team project"}
@@ -116,25 +135,6 @@ const Cards = () => {
           }
           websiteLink={"https://cyf-ofm-buddy-group-project.netlify.app/#"}
           githubLink={"https://github.com/momahboobian/Buddy-Groups-Challenge"}
-        />
-        <Card
-          title={"Radio Player"}
-          imgUrl={"/img/Radioapp.png"}
-          subtitle={"Personal project"}
-          text={
-            <>
-              The radio app features clickable music types, with a simple and
-              user-friendly interface.
-              <br />
-              <br /> <strong>Technologies:</strong> React.js, Vite, the
-              RadioBrowser API, and the React H5 Audio Player component.
-              <br />
-              <br />
-              Responsive web design.
-            </>
-          }
-          websiteLink={"https://radio-app-swart.vercel.app/"}
-          githubLink={"https://github.com/OlenaReukova/radio-app"}
         />
         <Separator />
         <Card
