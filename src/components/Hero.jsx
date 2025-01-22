@@ -92,23 +92,23 @@ const Right = styled.div`
   }
 `;
 
-const Img = styled.img`
-  width: 100%;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+// const Img = styled.img`
+//   width: 100%;
+//   object-fit: contain;
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   margin: auto;
 
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-    align-items: center;
-    position: unset;
-    margin: 50px auto;
-  }
-`;
+//   @media only screen and (max-width: 768px) {
+//     width: 100%;
+//     align-items: center;
+//     position: unset;
+//     margin: 50px auto;
+//   }
+// `;
 
 const Icons = styled.div`
   display: flex;
@@ -199,7 +199,6 @@ const Hero = () => {
           </Icons>
         </Left>
         <Right>
-          <Img alt="" src="./img/photo2.png"></Img>
           <Button onClick={downloadCV}> Download CV</Button>
         </Right>
       </Container>
