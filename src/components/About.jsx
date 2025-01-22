@@ -54,7 +54,7 @@ const Left = styled.div`
 `;
 
 const Right = styled.div`
-  flex: 2;
+  flex: 1;
   position: relative;
   padding-left: 20px;
   @media only screen and (max-width: 768px) {
@@ -62,9 +62,9 @@ const Right = styled.div`
   }
 `;
 
-const Img = styled.img`
-  width: 100%;
-`;
+// const Img = styled.img`
+//   width: 100%;
+// `;
 
 const Desc = styled.p`
   font-size: 1.2rem;
@@ -94,9 +94,6 @@ const About = () => {
         </TitleWrapper>
         <ContentWrapper>
           <Left>
-            <Img alt="" src="./img/about1.png"></Img>
-          </Left>
-          <Right>
             <Af>
               "Everything you can imagine is real.” <br />
               -Pablo Picasso
@@ -145,6 +142,8 @@ const About = () => {
               <br />
               <br />
             </Desc>
+          </Left>
+          <Right>
             <SkillCard />
           </Right>
         </ContentWrapper>
