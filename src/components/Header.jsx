@@ -202,7 +202,7 @@ const Header = () => {
   };
   const downloadCV = () => {
     const cvURL =
-      "https://drive.google.com/file/d/1pcgpf56_MXZ3fIUkkrhvuTc0OLJjSE7y/view?usp=sharing";
+      "https://drive.google.com/file/d/1DhRvIpGzTXTwKo0Ckn0ZY1TZu1KtpVR6/view?usp=sharing";
     const anchor = document.createElement("a");
     anchor.href = cvURL;
     anchor.download = "Olena_Reukova_CV.pdf";
