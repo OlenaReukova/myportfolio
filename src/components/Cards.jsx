@@ -71,7 +71,7 @@ const Cards = () => {
         <Separator />
         <Card
           title={"Triumph"}
-          imgUrl={"/img/Triumphapp.png"}
+          imgUrl={"/img/Triumphapp1.png"}
           subtitle={"Personal project"}
           text={
             <>
