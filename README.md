@@ -1,8 +1,10 @@
 ## Olena Reukova's Portfolio
-<img width="1437" alt="portdimag" src="https://github.com/OlenaReukova/myportfolio/assets/34659641/e64d9613-25de-49ce-a6cc-794662d0f085">
 
-## Welcome to my portfolio! 
-This portfolio showcases my skills, projects, and information about me as a Full Stack Developer. 
+<img width="1437" alt="portdimag" src="./public/img/readme_image.png">
+
+## Welcome to my portfolio!
+
+This portfolio showcases my skills, projects, and information about me as a Full Stack Developer.
 
 #### Content
 
@@ -23,13 +25,14 @@ It includes information about my skills, projects I have worked on, and ways to 
 **Projects** Showcases a selection of projects I've worked on, including descriptions, technologies used, and links to GitHub repositories and live demos.
 
 **Technologies used:** React.js, Styled-Components.
-**How to Install and Run the Project:**  
+**How to Install and Run the Project:**
+
 1. Clone the repository.
 2. Run `yarn install` to install dependencies.
 3. Run `yarn start` to start the development server.
 
-
 #### Contact
+
 kronverk01@gmail.com\
 [LinkedIn](http://www.linkedin.com/in/olenareukova/ "LinkedIn")\
 [Codewars](https://www.codewars.com/users/OlenaReukova "Codewars")
