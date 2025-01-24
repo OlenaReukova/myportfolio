@@ -33,6 +33,6 @@ It includes information about my skills, projects I have worked on, and ways to 
 
 #### Contact
 
-kronverk01@gmail.com\
+olena.reukova@yahoo.com\
 [LinkedIn](http://www.linkedin.com/in/olenareukova/ "LinkedIn")\
 [Codewars](https://www.codewars.com/users/OlenaReukova "Codewars")
