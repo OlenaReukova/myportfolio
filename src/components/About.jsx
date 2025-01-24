@@ -99,11 +99,11 @@ const About = () => {
               -Pablo Picasso
             </Af>
             <Desc>
-              Hi, I’m a full-stack developer passionate about creating intuitive
+              Hi, I’m a Full Stack Developer passionate about creating intuitive
               and functional web applications. With hands-on experience in both
-              frontend and backend development, including technologies like
-              HTML, CSS, JavaScript, React.js, Nextjs, Tailwind CSS, TypeScript,
-              Node.js, Express.js, and PostgreSQL.
+              frontend and backend development, I work with technologies such as
+              HTML, CSS, JavaScript, React.js, Next.js, Tailwind CSS,
+              TypeScript, Node.js, Express.js, and PostgreSQL.
               <br />
               <br />
               I love turning ideas into user-friendly digital experiences and am
@@ -112,7 +112,7 @@ const About = () => {
               <br />
               In addition to my personal development, I care deeply about the
               society I live in. That’s why I collaborated with a volunteer
-              organization, Trafalgar Girls, and the core development team as a
+              organisation, Trafalgar Girls, and the core development team as a
               Full Stack Developer to build an application called
               <strong>
                 {" "}
