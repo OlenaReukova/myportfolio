@@ -205,7 +205,12 @@ const Header = () => {
       "https://drive.google.com/uc?export=download&id=1m38ijZ3dXRcESeEkhJHtujY0hiFGrP5T";
     const anchor = document.createElement("a");
     anchor.href = cvURL;
-    anchor.download = "Olena Reukova_Software Developer.pdf";
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      anchor.target = "_blank";
+    } else {
+      anchor.download = "Olena_Reukova_Software_Developer.pdf";
+    }
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
