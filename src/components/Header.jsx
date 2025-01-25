@@ -202,15 +202,11 @@ const Header = () => {
   };
   const downloadCV = () => {
     const cvURL =
-      "https://drive.google.com/uc?export=download&id=1m38ijZ3dXRcESeEkhJHtujY0hiFGrP5T";
+      "https://drive.google.com/file/d/1m38ijZ3dXRcESeEkhJHtujY0hiFGrP5T/view?usp=sharing";
+    window.open(cvURL, "_blank");
     const anchor = document.createElement("a");
     anchor.href = cvURL;
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    if (isMobile) {
-      anchor.target = "_blank";
-    } else {
-      anchor.download = "Olena_Reukova_Software_Developer.pdf";
-    }
+    anchor.download = "Olena_Reukova_CV.pdf";
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
