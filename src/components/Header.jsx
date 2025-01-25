@@ -201,12 +201,11 @@ const Header = () => {
     }
   };
   const downloadCV = () => {
-    const cvURL =
-      "https://drive.google.com/file/d/1m38ijZ3dXRcESeEkhJHtujY0hiFGrP5T/view?usp=sharing";
+    const cvURL = "https://shorturl.at/y2ICq";
     window.open(cvURL, "_blank");
     const anchor = document.createElement("a");
     anchor.href = cvURL;
-    anchor.download = "Olena_Reukova_CV.pdf";
+    anchor.download = "Olena Reukova_Software Developer.pdf";
     document.body.appendChild(anchor);
     anchor.click();
     document.body.removeChild(anchor);
