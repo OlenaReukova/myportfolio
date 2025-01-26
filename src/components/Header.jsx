@@ -202,7 +202,7 @@ const Header = () => {
   };
   const downloadCV = () => {
     const cvURL =
-      "https://www.dropbox.com/scl/fi/gecjedqwf4wm5x2n3opxw/Olena-Reukova_Software-Developer.pdf?rlkey=7cxcgsvdi9escmduk35cylb34&st=ntu2sl4t&dl=0";
+      "https://docs.google.com/document/d/1cPyvHQWv3cWCJVB-WSU9Y615-wl0VCJumH13gUJ2qZk/edit?usp=sharing";
     window.open(cvURL, "_blank");
     const anchor = document.createElement("a");
     anchor.href = cvURL;
