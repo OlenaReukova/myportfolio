@@ -1,4 +1,4 @@
-## Olena Reukova's Portfolio
+## Portfolio
 
 <img width="1437" alt="portdimag" src="./public/img/readme_image.png">
 
