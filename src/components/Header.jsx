@@ -202,7 +202,7 @@ const Header = () => {
   };
   const downloadCV = () => {
     const cvURL =
-      "https://docs.google.com/document/d/1cPyvHQWv3cWCJVB-WSU9Y615-wl0VCJumH13gUJ2qZk/edit?usp=sharing";
+      "https://drive.google.com/file/d/1VEfxqLbWsuMjJ5f2dNhHgFyqipq46KfX/view?usp=sharing";
     window.open(cvURL, "_blank");
     const anchor = document.createElement("a");
     anchor.href = cvURL;
