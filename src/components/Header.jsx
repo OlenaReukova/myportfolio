@@ -204,12 +204,6 @@ const Header = () => {
     const cvURL =
       "https://drive.google.com/file/d/1VEfxqLbWsuMjJ5f2dNhHgFyqipq46KfX/view?usp=sharing";
     window.open(cvURL, "_blank");
-    const anchor = document.createElement("a");
-    anchor.href = cvURL;
-    anchor.download = "Olena Reukova_Software Developer.pdf";
-    document.body.appendChild(anchor);
-    anchor.click();
-    document.body.removeChild(anchor);
   };
   return (
     <Section>
