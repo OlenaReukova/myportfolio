@@ -1,13 +1,12 @@
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import styled from 'styled-components';
-import Map from './Map';
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import styled from "styled-components";
+import Map from "./Map";
 
 const Section = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   background: #1f265c;
   padding-top: 65px;
   @media only screen and (max-width: 768px) {
@@ -50,10 +49,11 @@ const Title = styled.h1`
   @media only screen and (max-width: 768px) {
     font-size: 40px;
   }
-
-  /* @media only screen and (max-width: 1024px) {
-    display: 40px;
-  } */
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 30px;
+    font-size: 2rem;
+    font-weight: normal;
+  }
 `;
 
 const Form = styled.form`
@@ -88,16 +88,20 @@ const Button = styled.button`
   padding: 10px 20px;
   font-size: 18px;
   font-weight: bold;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  color: ${(props) => (props.sent ? '#FFB3CF' : 'white')};
+  color: ${(props) => (props.sent ? "#FFB3CF" : "white")};
   border: 1px solid white;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
     background-color: #32327a;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+    fontt-weght: normal;
   }
 `;
 
@@ -115,17 +119,17 @@ const Contact = () => {
   const ref = useRef();
   const [success, setSuccess] = useState(null);
   const [errors, setErrors] = useState({});
-  const [buttonText, setButtonText] = useState('Send');
+  const [buttonText, setButtonText] = useState("Send");
 
   const validateForm = () => {
     const errors = {};
     if (!ref.current.name.value.trim()) {
-      errors.name = 'Name is required';
+      errors.name = "Name is required";
     }
     if (!ref.current.email.value.trim()) {
-      errors.email = 'Email is required';
+      errors.email = "Email is required";
     } else if (!/^\S+@\S+\.\S+$/.test(ref.current.email.value.trim())) {
-      errors.email = 'Invalid email format';
+      errors.email = "Invalid email format";
     }
     return errors;
   };
@@ -138,22 +142,22 @@ const Contact = () => {
     if (Object.keys(errors).length === 0) {
       emailjs
         .sendForm(
-          'service_wr8c149',
-          'template_va0waf2',
+          "service_wr8c149",
+          "template_va0waf2",
           ref.current,
-          'jbb-FyJ6Bb0yJ74s0'
+          "jbb-FyJ6Bb0yJ74s0"
         )
         .then(
           (result) => {
             console.log(result.text);
             setSuccess(true);
-            setButtonText('Sent');
+            setButtonText("Sent");
             ref.current.reset();
           },
           (error) => {
             console.log(error.text);
             setSuccess(false);
-            setButtonText('Send');
+            setButtonText("Send");
           }
         );
     } else {
@@ -162,33 +166,33 @@ const Contact = () => {
   };
 
   return (
-    <Section id='contact'>
+    <Section id="contact">
       <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
             <Title>Get in touch</Title>
             <Input
-              placeholder='Name'
-              name='name'
-              autoComplete='name'
-              style={{ borderColor: errors.name && 'red' }}
+              placeholder="Name"
+              name="name"
+              autoComplete="name"
+              style={{ borderColor: errors.name && "red" }}
             />
-            {errors.name && <span style={{ color: 'red' }}>{errors.name}</span>}
+            {errors.name && <span style={{ color: "red" }}>{errors.name}</span>}
             <Input
-              placeholder='Email'
-              name='email'
-              autoComplete='email'
-              style={{ borderColor: errors.email && 'red' }}
+              placeholder="Email"
+              name="email"
+              autoComplete="email"
+              style={{ borderColor: errors.email && "red" }}
             />
             {errors.email && (
-              <span style={{ color: 'red' }}>{errors.email}</span>
+              <span style={{ color: "red" }}>{errors.email}</span>
             )}
             <TextArea
-              placeholder='Write your message'
-              name='message'
+              placeholder="Write your message"
+              name="message"
               rows={10}
             />
-            <Button type='submit' sent={buttonText === 'Sent'}>
+            <Button type="submit" sent={buttonText === "Sent"}>
               {buttonText}
             </Button>
             {success &&
