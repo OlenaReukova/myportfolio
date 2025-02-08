@@ -71,9 +71,16 @@ const Form = styled.form`
 const Input = styled.input`
   padding: 20px;
   background-color: white;
+  border: 2px solid ${(props) => (props.error ? "red" : "transparent")};
   border: none;
   border-radius: 5px;
   font-size: 16px;
+  outline: none;
+  transittion: border-color 0.3s ease;
+
+  &:focus {
+    border-color: ${(props) => (props.error ? "darked" : "#1f265c")};
+  }
 `;
 
 const TextArea = styled.textarea`
@@ -175,7 +182,7 @@ const Contact = () => {
               placeholder="Name"
               name="name"
               autoComplete="name"
-              style={{ borderColor: errors.name && "red" }}
+              error={errors.name}
             />
             {errors.name && <span style={{ color: "red" }}>{errors.name}</span>}
             <Input
