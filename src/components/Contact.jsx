@@ -105,7 +105,7 @@ const Button = styled.button`
   }
   @media only screen and (max-width: 768px) {
     font-size: 16px;
-    fontt-weght: normal;
+    font-weght: normal;
   }
 `;
 
