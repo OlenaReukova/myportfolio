@@ -98,7 +98,7 @@ const Button = styled.button`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  color: ${(props) => (props.sent ? "#FFB3CF" : "white")};
+  color: ${(props) => (props.$sent ? "#FFB3CF" : "white")};
   border: 1px solid white;
   border-radius: 5px;
   cursor: pointer;
@@ -199,7 +199,7 @@ const Contact = () => {
               name="message"
               rows={10}
             />
-            <Button type="submit" sent={buttonText === "Sent"}>
+            <Button type="submit" $sent={buttonText === "Sent"}>
               {buttonText}
             </Button>
             {success &&
