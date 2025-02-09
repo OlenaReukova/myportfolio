@@ -13,19 +13,8 @@ const CardWrapper = styled.div`
   text-align: center;
   justify-content: space-around;
   justify-content: space-between;
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 6px rgba(249, 248, 248, 0.1);
-  }
-  */ @media (max-width: 768px) {
+  @media (max-width: 768px) {
     width: calc(88% - 5px);
-    &:hover {
-      transform: none;
-      box-shadow: none;
-    }
-  }
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    width: calc(50% - 20px);
   }
 `;
 
