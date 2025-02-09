@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkAlt } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import "./Hero.css";
 
@@ -9,11 +11,6 @@ const Section = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    min-height: 100v;
-  }
 `;
 
 const Container = styled.div`
@@ -24,7 +21,6 @@ const Container = styled.div`
   margin: 60px auto;
   z-index: 1;
   min-height: calc(100vh - 120px);
-  -webkit-box-pack: justify;
   justify-content: space-between;
 
   @media only screen and (max-width: 768px) {
@@ -32,17 +28,12 @@ const Container = styled.div`
     align-items: center;
     width: 100%;
     justify-content: start;
-    /* padding-top: 65px; */
-    gap: 0rem;
-    min-height: calc(100vh - 60px);
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    margin-top: 65px;
+    gap: 5rem;
   }
 `;
 
 const Left = styled.div`
-  flex: 2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,10 +45,6 @@ const Left = styled.div`
     flex: 0;
     padding-top: 20px;
   }
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    margin: 0;
-    padding-left: 20px;
-  }
 `;
 
 const Title = styled.h1`
@@ -67,139 +54,148 @@ const Title = styled.h1`
   padding-bottom: 10px;
 
   @media only screen and (max-width: 768px) {
-    font-size: 60px;
+    font-size: 2.2rem;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 0;
+    line-height: 50px;
   }
 `;
 
 const Subtitle = styled.h2`
   font-size: 40px;
   font-weight: bold;
+  @media only screen and (max-width: 768px) {
+    font-size: 1.75rem;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+  }
 `;
 
 const Right = styled.div`
-  flex: 2;
-  position: relative;
-
-  @media only screen and (max-width: 768px) {
-    display: flex;
-    /* justify-content: center; */
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  }
-`;
-
-// const Img = styled.img`
-//   width: 100%;
-//   object-fit: contain;
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   margin: auto;
-
-//   @media only screen and (max-width: 768px) {
-//     width: 100%;
-//     align-items: center;
-//     position: unset;
-//     margin: 50px auto;
-//   }
-// `;
-
-const Icons = styled.div`
+  flex: 1;
   display: flex;
-  font-size: 20px;
-  gap: 1.4rem;
-  align-items: center;
-  margin-top: 100px;
-  padding: 0.6rem 0.4rem;
-  a:hover {
-    transform: scale(1.5);
-  }
-
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
   @media only screen and (max-width: 768px) {
-    justify-content: center;
-    display: none;
+    width: 80%;
+    text-align: center;
+    margin: 40px 0;
+    display: block;
   }
 `;
 
-const Button = styled.button`
-  display: none;
-
+const Card = styled(motion.div)`
+  color: white;
+  font-size: 1.2rem;
+  overflow: hidden;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   @media only screen and (max-width: 768px) {
     display: flex;
-    background: #1f265c;
-    /* background: linear-gradient(
-      91.1deg,
-      rgb(57, 31, 105) -2.3%,
-      rgb(115, 43, 155) 44.4%,
-      rgb(231, 75, 184) 103.4%
-    ); */
+    flex-direction: column;
+    gap: 30px;
+  }
+`;
 
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    margin-top: 20px;
-    border: 1px solid white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+const CardTitle = styled(motion.h3)`
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  @media only screen and (max-width: 768px) {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+`;
+
+const DiscussionList = styled.ul`
+  list-style: none;
+  padding: 0;
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+`;
+
+const DiscussionItem = styled.li`
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    @media only screen and (max-width: 768px) {
+      font-size: 1rem;
+      text-align: left;
+      font-weight: normal;
+    }
     &:hover {
-      --edge-light: hsla(0, 0%, 50%, 1);
-      text-shadow: 0px 0px 10px var(--text-light);
-      box-shadow: inset 0.4px 1px 4px var(--edge-light),
-        2px 4px 8px hsla(0, 0%, 0%, 0.295);
-      transform: scale(1.1);
+      color: #00bcd4;
     }
   }
 `;
 
 const Hero = () => {
-  const downloadCV = () => {
-    const cvURL =
-      "https://drive.google.com/file/d/1z-UrgqmPLqD1sqB_S6BqRzi4cAsTIf99/view?usp=sharing";
-    window.open(cvURL, "_blank");
-  };
   return (
     <Section id="home">
       <Container>
         <Left>
-          <Title className="title">OLENA REUKOVA</Title>
-          <Subtitle>SOFTWARE DEVELOPER </Subtitle>
-          <Icons>
-            <p>Social Links:</p>
-            <a
-              href="https://www.linkedin.com/in/olenareukova/"
-              target="__blank"
-            >
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                style={{
-                  color: "#fcfcfd",
-                  cursor: "pointer",
-                }}
-                size="2x"
-              />
-            </a>
-            <a href="https://github.com/OlenaReukova" target="__blank">
-              <FontAwesomeIcon
-                icon={faGithub}
-                style={{
-                  color: "#fcfcfd",
-                  cursor: "pointer",
-                }}
-                size="2x"
-              />
-            </a>
-          </Icons>
+          <Title className="title">SOFTWARE DEVELOPER</Title>
+          <Subtitle>Olena Reukova</Subtitle>
         </Left>
+
         <Right>
-          <Button onClick={downloadCV}> Download CV</Button>
+          <Card
+            initial={{ x: 300, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+          >
+            <CardTitle>🔥 What I’m Up To</CardTitle>
+            <DiscussionList>
+              <DiscussionItem>
+                <a
+                  href="https://github.com/OlenaReukova"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contributing to Open Source – Check out my GitHub for my
+                  latest projects <FontAwesomeIcon icon={faGithub} />.
+                </a>
+              </DiscussionItem>
+              <DiscussionItem>
+                <a
+                  href="https://www.linkedin.com/in/olenareukova/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Sharing insights & connecting with devs - find me on LinkedIn{" "}
+                  <FontAwesomeIcon icon={faLinkedin} />.
+                </a>
+              </DiscussionItem>
+              <DiscussionItem>
+                <a
+                  href="https://www.meetup.com/london-js/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Engaging in Tech Communities - You might spot me at ReactJS,
+                  London.JS, and JavaScript London{" "}
+                  <FontAwesomeIcon icon={faExternalLinkAlt} />.
+                </a>
+              </DiscussionItem>
+            </DiscussionList>
+          </Card>
         </Right>
       </Container>
     </Section>

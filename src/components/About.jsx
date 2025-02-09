@@ -13,7 +13,6 @@ const Section = styled.div`
 
 const Container = styled.div`
   max-width: 1280px;
-  width: 96%;
   margin: 0 auto;
   width: calc(88% - 5px);
 `;
@@ -32,17 +31,23 @@ const Title = styled.h1`
 
   @media only screen and (max-width: 768px) {
     padding-bottom: 30px;
-    padding-left: 18px;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+`;
+
+const SubTitle = styled.h2`
+  font-size: 1.875rem;
+  margin: 30px 0;
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 30px;
+    font-size: 1.5rem;
   }
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-
-  @media only screen and (min-width: 769px) {
-    flex-direction: row;
-  }
 `;
 
 const Left = styled.div`
@@ -56,30 +61,16 @@ const Left = styled.div`
 const Right = styled.div`
   flex: 1;
   position: relative;
-  padding-left: 20px;
   @media only screen and (max-width: 768px) {
     padding-left: 0px;
   }
 `;
-
-// const Img = styled.img`
-//   width: 100%;
-// `;
 
 const Desc = styled.p`
   font-size: 1.2rem;
   color: white;
   font-weight: normal;
   margin-top: 30px;
-`;
-
-const Af = styled.p`
-  font-size: 1rem;
-  font-weight: normal;
-  color: white;
-  padding: 10px 30px;
-  font-style: italic;
-
   @media only screen and (max-width: 768px) {
     font-size: 1rem;
   }
@@ -94,56 +85,24 @@ const About = () => {
         </TitleWrapper>
         <ContentWrapper>
           <Left>
-            <Af>
-              "Everything you can imagine is real.” <br />
-              -Pablo Picasso
-            </Af>
             <Desc>
-              Hi, I’m a Full Stack Developer passionate about creating intuitive
-              and functional web applications. With hands-on experience in both
-              frontend and backend development, I work with technologies such as
-              HTML, CSS, JavaScript, React.js, Next.js, Tailwind CSS,
-              TypeScript, Node.js, Express.js, and PostgreSQL.
+              Hey there!
               <br />
               <br />
-              I love turning ideas into user-friendly digital experiences and am
-              eager to collaborate and grow with every new project!
+              Here, you’ll find projects I’ve worked on or continue to develop.
+              <br />
+              <br />I love collaborating with others to create meaningful
+              digital experiences that are both functional and user-centred.
               <br />
               <br />
-              In addition to my personal development, I care deeply about the
-              society I live in. That’s why I collaborated with a volunteer
-              organisation, Trafalgar Girls, and the core development team as a
-              Full Stack Developer to build an application called
-              <strong>
-                {" "}
-                <a
-                  href="https://cool-creponne-3e1272.netlify.app/"
-                  target="__blank"
-                  style={{
-                    color: "#fcfcfd",
-                    cursor: "pointer",
-                    textDecoration: "none",
-                  }}
-                >
-                  Kindly
-                </a>
-              </strong>
-              . We are working on an application that helps people exchange
-              items, providing support to those in difficult circumstances.
-              <br />
-              <br />
-              <span style={{ fontSize: "16px" }}>
-                Behind the scenes:
-                <br />
-                <br />
-                Passionate about music and deeply connected to nature, always
-                finding joy in both.
-              </span>
+              Passionate about music and deeply connected to nature, always
+              finding joy in both.🎶🌿
               <br />
               <br />
             </Desc>
           </Left>
           <Right>
+            <SubTitle className="title">My Skills</SubTitle>
             <SkillCard />
           </Right>
         </ContentWrapper>
