@@ -77,7 +77,7 @@ const Input = styled.input`
   transition: border-color 0.3s ease;
 
   &:focus {
-    border-color: ${({ error }) => (error ? "darked" : "#1f265c")};
+    border-color: ${({ error }) => (error ? "darkred" : "#1f265c")};
   }
 `;
 
@@ -106,7 +106,7 @@ const Button = styled.button`
   }
   @media only screen and (max-width: 768px) {
     font-size: 16px;
-    font-weght: normal;
+    font-weight: normal;
   }
 `;
 
@@ -174,18 +174,25 @@ const Contact = () => {
               })}
             />
             {errors.email && (
-              <p style={{ color: "red" }}>{errors.email.message}</p>
+              <p style={{ color: "red" }}>
+                {errors.email.message || "Invalid email format"}
+              </p>
             )}
             <TextArea
               placeholder="Write your message"
               rows={10}
               {...register("message", { required: "Message is required" })}
             />
-            {errors.message && <p style={{ color: "red" }}>{errors.message}</p>}
+            {errors.message && (
+              <p style={{ color: "red" }}>
+                {errors.message.message || "Message is required"}
+              </p>
+            )}
             {sent && (
-              <p style={{ color: " #00bcd4" }}>Message sent successfully!</p>
+              <p style={{ color: "#00bcd4" }}>Message sent successfully!</p>
             )}
             {error && <p style={{ color: "red" }}>{error}</p>}
+
             <Button type="submit" $sent={sent}>
               Send
             </Button>
