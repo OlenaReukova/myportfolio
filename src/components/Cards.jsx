@@ -19,12 +19,10 @@ const Title = styled.h1`
   margin-bottom: 1.5rem;
 
   @media only screen and (max-width: 768px) {
-    /* font-size: 48px; */
     padding-bottom: 5px;
-    padding-left: 30px;
-  }
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    padding-left: 20px;
+    padding-left: 24px;
+    font-weight: normal;
+    font-size: 2rem;
   }
 `;
 
@@ -43,6 +41,31 @@ const Cards = () => {
     <div className="Cards">
       <Title>Projects</Title>
       <CardContainer>
+        <Card
+          title={"Kindly"}
+          imgUrl={"/img/kindly.png"}
+          subtitle={"Open Source Team project"}
+          text={
+            <>
+              Kindly is a free web app built as an open-source project for
+              Trafalgar Girls, a charitable organisation dedicated to helping
+              refugees in the UK.
+              <br />
+              <br />
+              The project is currently in the UI/UX design phase, with ongoing
+              efforts to refine user flows and visual elements. <br />
+              <br />
+              <strong>Technologies:</strong> Next.js, TypeScript, Tailwind CSS,
+              Supabase, Cypress, Storybook. <br />
+              <br />
+              <br />
+              Responsive web design with a mobile-first approach.
+            </>
+          }
+          websiteLink={"https://cool-creponne-3e1272.netlify.app/"}
+          githubLink={"https://github.com/enBloc-org/kindly"}
+        />
+        <Separator />
         <Card
           title={"The Big Alliance Donation"}
           imgUrl={"/img/bigalliance.png"}
@@ -71,7 +94,7 @@ const Cards = () => {
         <Separator />
         <Card
           title={"Triumph"}
-          imgUrl={"/img/Triumphapp1.png"}
+          imgUrl={"/img/Triumphapp2.png"}
           subtitle={"Personal project"}
           text={
             <>
@@ -113,29 +136,7 @@ const Cards = () => {
           websiteLink={"https://radio-app-client.vercel.app"}
           githubLink={"https://github.com/OlenaReukova/radio-app"}
         />
-        <Card
-          title={"Artificial Intelligence"}
-          imgUrl={"/img/AIapp.png"}
-          subtitle={"Team project"}
-          text={
-            <>
-              This MVP application offers customers AI-powered tools for
-              generating video and photo content. <br />
-              <br />
-              This project is the result of a collaborative effort by three team
-              members, aiming to deliver the MVP app through the first
-              experience of teamwork using Agile methodology. <br />
-              <br />
-              <strong>Technologies:</strong> Figma, JavaScript, HTML5, CSS3.{" "}
-              <br />
-              <br />
-              <br />
-              Responsive web design with a mobile-first approach.
-            </>
-          }
-          websiteLink={"https://cyf-ofm-buddy-group-project.netlify.app/#"}
-          githubLink={"https://github.com/momahboobian/Buddy-Groups-Challenge"}
-        />
+
         <Separator />
         <Card
           title={"Tv Show"}
