@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const Section = styled.div`
+const Section = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,9 +11,6 @@ const Section = styled.div`
   top: 0;
   z-index: 999;
   background: #282962;
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-  }
 `;
 
 const Container = styled.div`
@@ -31,87 +28,20 @@ const Container = styled.div`
   @media (max-width: 640px) {
     justify-content: flex-end;
   }
-
-  .bars {
-    display: none;
-
-    @media (max-width: 640px) {
-      display: flex;
-      width: 40px;
-      height: 40px;
-      position: relative;
-      z-index: 9999; /* Ensure it's above other elements */
-      align-items: center;
-      justify-content: flex-end;
-      cursor: pointer;
-
-      .bar {
-        position: absolute;
-        width: 30px; /* Ensure proper sizing */
-        height: 3px;
-        background-color: ${(props) => (props.bar ? "transparent" : "white")};
-        transition: all 400ms ease-in-out;
-
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 3px;
-          background-color: white; /* Explicit color */
-          transition: transform 400ms ease-in-out;
-        }
-
-        &::before {
-          transform: ${(props) =>
-            props.bar ? "rotate(45deg)" : "translateY(-10px)"};
-        }
-
-        &::after {
-          transform: ${(props) =>
-            props.bar ? "rotate(-45deg)" : "translateY(10px)"};
-        }
-      }
-    }
-  }
 `;
 
-// const Button = styled.button`
-//   background-color: white;
-//   color: #082162;
-//   font-size: 1.2rem;
-//   font-weight: 800;
-//   width: 50px;
-//   height: 50px;
-//   border: none;
-//   border-radius: 50%;
-//   cursor: pointer;
-//   :hover {
-//     transform: scale(1.5);
-//   }
-// `;
-
 const Button = styled.button`
-  /* Base button styles */
   background-color: transparent;
-  /* background: linear-gradient(
-    91.1deg,
-    rgb(57, 31, 105) -2.3%,
-    rgb(115, 43, 155) 44.4%,
-    rgb(231, 75, 184) 103.4%
-  ); */
   margin-left: 15px;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
   color: white;
-
   border: 1px solid white;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
-  /* Hover effect */
   &:hover {
     --edge-light: hsla(0, 0%, 50%, 1);
     text-shadow: 0px 0px 10px var(--text-light);
@@ -120,17 +50,14 @@ const Button = styled.button`
     transform: scale(1.1);
   }
 
-  /* Media query for smaller screens */
   @media only screen and (max-width: 768px) {
     display: none;
   }
 `;
-// const Logo = styled.p`
-//   font-size: 1.6rem;
-//   cursor: pointer;
-// `;
-const Nav = styled.div`
+
+const Nav = styled.nav`
   font-size: 1.2rem;
+
   @media (max-width: 640px) {
     position: fixed;
     display: flex;
@@ -146,18 +73,25 @@ const Nav = styled.div`
     font-size: 2rem;
     gap: 2rem;
     font-weight: 700;
-    height: ${(props) => (props.bar ? "100vh" : 0)};
+    height: 0;
     transition: height 400ms ease-in-out;
     overflow: hidden;
     z-index: 100;
   }
+
+  &.open {
+    height: 100vh;
+  }
+
   span {
     margin-left: 1rem;
+
     a {
       color: #fff;
       text-decoration: none;
       font-weight: 400;
       position: relative;
+
       :before {
         content: "";
         position: absolute;
@@ -170,18 +104,63 @@ const Nav = styled.div`
         transform-origin: right;
         transition: transform 400ms ease-in-out;
       }
+
       :hover:before {
         transform: scale(1);
         transform-origin: left;
       }
-      :hover {
-        color: linear-gradient(
-          91.1deg,
-          rgb(57, 31, 105) -2.3%,
-          rgb(115, 43, 155) 44.4%,
-          rgb(231, 75, 184) 103.4%
-        );
-        /* opacity: 0.7; */
+    }
+  }
+`;
+
+const Bars = styled.div`
+  display: none;
+
+  @media (max-width: 640px) {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 9999;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+
+    .bar {
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      transition: all 400ms ease-in-out;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: transform 400ms ease-in-out;
+      }
+
+      &::before {
+        transform: translateY(-10px);
+      }
+
+      &::after {
+        transform: translateY(10px);
+      }
+    }
+
+    &.open .bar {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
       }
     }
   }
@@ -200,15 +179,11 @@ const Header = () => {
       setBar(false);
     }
   };
-  const downloadCV = () => {
-    const cvURL =
-      "https://drive.google.com/file/d/1VEfxqLbWsuMjJ5f2dNhHgFyqipq46KfX/view?usp=sharing";
-    window.open(cvURL, "_blank");
-  };
+
   return (
     <Section>
-      <Container bar={bar}>
-        <Nav bar={bar}>
+      <Container>
+        <Nav className={bar ? "open" : ""}>
           <span>
             <a href="#home" onClick={() => handleLinkClick("home")}>
               Home
@@ -230,10 +205,10 @@ const Header = () => {
             </a>
           </span>
         </Nav>
-        <Button onClick={downloadCV}> Download CV</Button>
-        <div onClick={() => setBar(!bar)} className="bars">
+        <Button>Download CV</Button>
+        <Bars className={bar ? "open" : ""} onClick={() => setBar(!bar)}>
           <div className="bar"></div>
-        </div>
+        </Bars>
       </Container>
     </Section>
   );
