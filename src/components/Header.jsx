@@ -30,31 +30,6 @@ const Container = styled.div`
   }
 `;
 
-const Button = styled.button`
-  background-color: transparent;
-  margin-left: 15px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  border: 1px solid white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    --edge-light: hsla(0, 0%, 50%, 1);
-    text-shadow: 0px 0px 10px var(--text-light);
-    box-shadow: inset 0.4px 1px 4px var(--edge-light),
-      2px 4px 8px hsla(0, 0%, 0%, 0.295);
-    transform: scale(1.1);
-  }
-
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-
 const Nav = styled.nav`
   font-size: 1.2rem;
 
@@ -205,7 +180,7 @@ const Header = () => {
             </a>
           </span>
         </Nav>
-        <Button>Download CV</Button>
+
         <Bars className={bar ? "open" : ""} onClick={() => setBar(!bar)}>
           <div className="bar"></div>
         </Bars>
