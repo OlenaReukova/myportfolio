@@ -42,28 +42,36 @@ const Cards = () => {
       <Title>Projects</Title>
       <CardContainer>
         <Card
-          title={"Kindly"}
-          imgUrl={"/img/kindly.png"}
-          subtitle={"Open Source Team project"}
+          title={"Radio Player"}
+          imgUrl={"/img/RadioWave.png"}
+          subtitle={"Personal project"}
           text={
             <>
-              Kindly is a free web app built as an open-source project for
-              Trafalgar Girls, a charitable organisation dedicated to helping
-              refugees in the UK.
+              The web radio application that allows users to discover, play, and
+              organise radio stations from around the world..
+              <br />
+              <br /> <strong>Technologies:</strong> React.js, Vite, the
+              RadioBrowser API, TypeScript, Tailwind CSS.
               <br />
               <br />
-              The project is currently in the UI/UX design phase, with ongoing
-              efforts to refine user flows and visual elements. <br />
-              <br />
-              <strong>Technologies:</strong> Next.js, TypeScript, Tailwind CSS,
-              Supabase, Cypress, Storybook. <br />
+              Responsive web design.
               <br />
               <br />
-              Responsive web design with a mobile-first approach.
+              Current status: In progress.
+              <br />
+              <a
+                href={"https://github.com/OlenaReukova/radio-app"}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View RadioWave project source code on GitHub"
+              >
+                {" "}
+                Read docs
+              </a>
             </>
           }
-          websiteLink={"https://cool-creponne-3e1272.netlify.app/"}
-          githubLink={"https://github.com/enBloc-org/kindly"}
+          websiteLink={"https://radio-app-client.vercel.app"}
+          githubLink={"https://github.com/OlenaReukova/radio-app"}
         />
         <Separator />
         <Card
@@ -94,23 +102,28 @@ const Cards = () => {
         <Separator />
 
         <Card
-          title={"Radio Player"}
-          imgUrl={"/img/Radioapp.png"}
-          subtitle={"Personal project"}
+          title={"Kindly"}
+          imgUrl={"/img/kindly.png"}
+          subtitle={"Open Source Team project"}
           text={
             <>
-              The radio app features clickable music types, with a simple and
-              user-friendly interface.
-              <br />
-              <br /> <strong>Technologies:</strong> React.js, Vite, the
-              RadioBrowser API, and the React H5 Audio Player component.
+              Kindly is a free web app built as an open-source project for
+              Trafalgar Girls, a charitable organisation dedicated to helping
+              refugees in the UK.
               <br />
               <br />
-              Responsive web design.
+              The project is currently in the UI/UX design phase, with ongoing
+              efforts to refine user flows and visual elements. <br />
+              <br />
+              <strong>Technologies:</strong> Next.js, TypeScript, Tailwind CSS,
+              Supabase, Cypress, Storybook. <br />
+              <br />
+              <br />
+              Responsive web design with a mobile-first approach.
             </>
           }
-          websiteLink={"https://radio-app-client.vercel.app"}
-          githubLink={"https://github.com/OlenaReukova/radio-app"}
+          websiteLink={"https://cool-creponne-3e1272.netlify.app/"}
+          githubLink={"https://github.com/enBloc-org/kindly"}
         />
 
         <Separator />
